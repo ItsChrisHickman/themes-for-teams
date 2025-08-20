@@ -1,0 +1,128 @@
+/* Professional Blue Theme for Microsoft Teams - Corporate and Trustworthy */
+
+/* Comprehensive professional blue theme with all color variables */
+:root,
+html,
+body,
+#app,
+.fui-FluentProvider,
+.fui-FluentProvider[class*="fui-FluentProvider"],
+[data-theme],
+.app-chrome {
+    /* Primary Brand Colors - Professional Blue */
+    --colorBrandBackground: #4F6D87 !important;
+    --colorBrandBackgroundHover: #5A7A96 !important;
+    --colorBrandBackgroundPressed: #445F78 !important;
+    --colorBrandBackgroundSelected: #4F6D87 !important;
+    --colorCompoundBrandBackground: #5A7A96 !important;
+    --colorCompoundBrandBackgroundHover: #6587A0 !important;
+    --colorCompoundBrandBackgroundPressed: #4F6D87 !important;
+    --colorBrandBackgroundStatic: #4F6D87 !important;
+    --colorBrandBackground2: #3A5269 !important;
+    --colorBrandBackground2Hover: #445F78 !important;
+    --colorBrandBackground2Pressed: #2F4559 !important;
+    --colorBrandBackground3Static: #445F78 !important;
+    --colorBrandBackground4Static: #3A5269 !important;
+    
+    /* Brand Foreground Colors - Professional Blue */
+    --colorBrandForeground1: #4F6D87 !important;
+    --colorBrandForeground2: #5A7A96 !important;
+    --colorBrandForegroundLink: #445F78 !important;
+    --colorBrandForegroundLinkHover: #4F6D87 !important;
+    --colorBrandForegroundLinkPressed: #3A5269 !important;
+    --colorBrandForegroundLinkSelected: #4F6D87 !important;
+    --colorCompoundBrandForeground1: #4F6D87 !important;
+    --colorCompoundBrandForeground1Hover: #5A7A96 !important;
+    --colorCompoundBrandForeground1Pressed: #445F78 !important;
+    --colorBrandForegroundInverted: #445F78 !important;
+    --colorBrandForegroundInvertedHover: #3A5269 !important;
+    --colorBrandForegroundInvertedPressed: #2F4559 !important;
+    --colorBrandForegroundOnLight: #445F78 !important;
+    --colorBrandForegroundOnLightHover: #3A5269 !important;
+    --colorBrandForegroundOnLightPressed: #2F4559 !important;
+    --colorBrandForegroundOnLightSelected: #3A5269 !important;
+    
+    /* Neutral Foreground Brand Colors - Professional Blue */
+    --colorNeutralForeground2BrandHover: #5A7A96 !important;
+    --colorNeutralForeground2BrandPressed: #4F6D87 !important;
+    --colorNeutralForeground2BrandSelected: #5A7A96 !important;
+    --colorNeutralForeground3BrandHover: #5A7A96 !important;
+    --colorNeutralForeground3BrandPressed: #4F6D87 !important;
+    --colorNeutralForeground3BrandSelected: #FFFFFF !important;
+    --colorNeutralBackground1:  #1A2733 !important;
+    --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
+    --colorNeutralBackground2: #1A2733 !important;
+    --colorNeutralBackground2: #1A2733 !important;
+    --colorNeutralBackground3: #1A2733 !important;
+    --colorNeutralBackground4: #3A5269 !important;
+    --colorNeutralCardBackground: #445F78 !important;
+    
+    /* Stroke Colors - Professional Blue */
+    --colorBrandStroke1: #5A7A96 !important;
+    --colorBrandStroke2: #3A5269 !important;
+    --colorBrandStroke2Hover: #445F78 !important;
+    --colorBrandStroke2Pressed: #2F4559 !important;
+    --colorBrandStroke2Contrast: #3A5269 !important;
+    --colorCompoundBrandStroke: #4F6D87 !important;
+    --colorCompoundBrandStrokeHover: #5A7A96 !important;
+    --colorCompoundBrandStrokePressed: #445F78 !important;
+    --colorNeutralStrokeAccessibleSelected: #5A7A96 !important;
+    
+    /* Avatar Colors - Professional Blue */
+    --colorAvatar: #5A7A96 !important;
+    --colorAvatarBackground: #445F78 !important;
+    
+    /* Teams Specific Colors - Professional Blue */
+    --colorTeamsBrand1Hover: #5A7A96 !important;
+    --colorTeamsBrand1Pressed: #4F6D87 !important;
+    --colorTeamsBrand1Selected: #5A7A96 !important;
+
+    /* Default Backgrounds - Professional Blue, progressively darker */
+    --colorDefaultBackground1: #5A7A96 !important;
+    --colorDefaultBackground2: #4F6D87 !important;
+    --colorDefaultBackground3: #445F78 !important;
+    --colorDefaultBackground4: #3A5269 !important;
+    --colorDefaultBackground5: #2F4559 !important;
+    --colorDefaultBackground6: #1A2733 !important;
+    --colorDefaultBackground7: #0D141A !important;
+
+    /* Subtle background - medium blue */
+    --colorSubtleBackground: transparent !important;
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorTransparentBackgroundSelected: rgba(90, 122, 150, 0.25) !important;
+    --colorNeutralBackground5: #3A5269 !important;
+}
+
+/* Subtle blue-gray accent on primary buttons only */
+.ui-button--primary,
+.ms-Button--primary,
+.fui-Button[data-variant="primary"] {
+    background-color: #4F6D87 !important;
+    border-color: #4F6D87 !important;
+}
+
+.ui-button--primary:hover,
+.ms-Button--primary:hover,
+.fui-Button[data-variant="primary"]:hover {
+    background-color: #5A7A96 !important;
+    border-color: #5A7A96 !important;
+}
+
+/* Subtle accent on active/selected items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: #4F6D87 !important;
+}
+
+/* Very subtle cool tint to user's chat messages */
+.message-body-content[data-tid="messageBodyContent"]:has([data-tid="outgoing-message"]) {
+    background-color: rgba(79, 109, 135, 0.05) !important;
+}
+
+/* Presence indicators in a complementary professional green */
+.presence-indicator,
+.activity-indicator {
+    color: #5A8A5A !important;
+}

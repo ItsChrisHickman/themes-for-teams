@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teams Theme</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Lato', Arial, sans-serif;
+            background: var(--popup-bg, #f7f7f7);
+            color: var(--popup-fg, #222);
+            padding: 0;
+            min-width: 240px;
+        }
+        .settings-card {
+            background: var(--popup-bg, #fff);
+            padding: 20px 18px 16px 18px;
+        }
+        h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        label {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 8px;
+        }
+        select {
+            padding: 6px 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            background: var(--popup-select-bg, #f7f7f7);
+            color: var(--popup-fg, #222);
+            transition: border-color 0.2s;
+        }
+        select:focus, select:hover {
+            border-color: #ff305a;
+        }
+        #status {
+            margin-top:10px;
+            color: #2e7d32;
+            font-size: 0.95em;
+        }
+        @media (prefers-color-scheme: dark) {
+            body, .settings-card {
+                --popup-bg: #23272f;
+                --popup-fg: #f7f7f7;
+                --popup-select-bg: #23272f;
+            }
+            .settings-card {
+                box-shadow: 0 2px 12px rgba(0,0,0,0.32);
+            }
+            select {
+                border: 1px solid #444;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="settings-card">
+        <h3>Settings</h3>
+        <div style="margin-bottom: 15px;">
+            <label for="theme-select">Theme:</label>
+            <select id="theme-select" style="width: 150px;">
+                <option value="default">Default</option>
+                <option value="purple">Purple</option>
+                <option value="lagoon">Lagoon</option>
+                <option value="laser">Laser</option>
+                <option value="dracula">Dracula</option>
+                <option value="monokai">Monokai</option>
+                <option value="nord">Nord</option>
+                <option value="solarized">Solarized</option>
+            </select>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="font-select">Font:</label>
+            <select id="font-select" style="width: 150px;">
+                <option value="default">Default</option>
+                <option value="Lato">Lato</option>
+                <option value="georgia">Georgia</option>
+                <option value="noto-sans">Noto Sans</option>
+                <option value="roboto-mono">Roboto Mono</option>
+                <option value="verdana">Verdana</option>
+            </select>
+        </div>
+        <div style="margin-bottom: 15px;">
+            <label for="improvements-toggle">Alternate Layout:</label>
+            <input type="checkbox" id="improvements-toggle" checked>
+        </div>
+        <div id="status"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="128" height="128" rx="16" fill="#6264A7"/>
+  
+  <!-- Chat bubble 1 -->
+  <rect x="20" y="25" width="50" height="20" rx="10" fill="white" opacity="0.9"/>
+  
+  <!-- Chat bubble 2 -->
+  <rect x="58" y="50" width="50" height="20" rx="10" fill="white" opacity="0.7"/>
+  
+  <!-- Chat bubble 3 -->
+  <rect x="20" y="75" width="45" height="20" rx="10" fill="white" opacity="0.9"/>
+  
+  <!-- Compression arrows -->
+  <path d="M85 35 L95 40 L85 45 M95 40 L105 40" stroke="white" stroke-width="2" fill="none"/>
+  <path d="M85 85 L95 80 L85 75 M95 80 L105 80" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Title text -->
+  <text x="64" y="110" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">COMPACT</text>
+</svg>

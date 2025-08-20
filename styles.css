@@ -1,0 +1,100 @@
+/* Microsoft Teams Chat Padding Reduction */
+
+/* Get rid of excessive padding!! */
+div[data-tid*='chat-pane-item'],
+div[data-tid*="message-pane-layout"] > .fui-Primitive {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+}
+
+/* Make chat boxes 100% */
+div[data-tid*='message-pane-list-runway'],
+div[data-tid*="channel-pane-message"] {
+    max-width: 100% !important;
+    padding: 0 16px 0 0 !important;
+}
+
+/* Borders are ugly */
+.fui-Flex,
+div[data-tid*="channel-pane-message"] {
+    border-bottom-color: transparent !important;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    border-top-color: transparent !important;
+}
+div[data-tid*="title-bar"] {
+    border-bottom-width: 0px !important;
+}
+
+div[data-tid*="channel-pane-runway"] {
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+/* Bold face names in replies */
+div[data-tid*="reply-message-header"] > div > div > span {
+    font-weight: bold !important;
+}
+div[data-tid*="reply-message-header"] > div > div > time {
+    color: #999;
+} 
+
+/* Move next to avatar */
+h2[data-tid*="subject-line"] {
+    position: absolute !important;
+    top: 11px !important;
+    left: 60px !important;
+    text-transform: capitalize;
+}
+div[data-tid*="post-message-subheader"] {
+    position: absolute !important;
+    top: 36px !important;
+    left: 60px !important;
+}
+
+/* Expand the 'Post in channel' box */
+div[data-tid*="message-pane-layout"] > .fui-Primitive > .fui-Flex {
+    max-width: 100% !important;
+}
+
+/* Reduce 14px on the left side of the list of chats/channels */
+div[data-tid*="simple-collab-dnd-rail"] {
+    margin-left: 0 !important; /* 14px */
+}
+
+/* Get rid of gap on right side of 'my message' */
+.fui-ChatMyMessage {
+   margin-right: 0px !important; /* */
+}
+
+/* Fix 'reply area' width */
+div.fui-Flex { 
+    max-width: 100% !important;
+    width: auto !important;
+}
+
+div[data-tid*="message-tombstone"] {
+    color: #666 !important;
+}
+
+/* Force all links to be bright blue */
+a, a:link, .ui-link {
+    color: rgb(29, 155, 209) !important;
+    text-decoration-color: rgb(29, 155, 209) !important;
+    font-weight: 400 !important;
+}
+a:hover {
+    color: rgb(64, 179, 228) !important;
+    text-decoration-color: rgb(64, 179, 228) !important;
+}
+
+/* Always Blue Links */
+:root, html, body, #app, .fui-FluentProvider, .fui-FluentProvider[class*="fui-FluentProvider"], [data-theme], .app-chrome {
+    --colorStrokeFocus2: transparent !important;
+    --colorBrandForeground1: rgb(29, 155, 209) !important;
+    --colorBrandForegroundLink: rgb(29, 155, 209) !important;
+    --colorBrandForegroundLinkHover: rgb(29, 155, 209) !important;
+    --colorBrandForegroundLinkPressed: rgb(29, 155, 209) !important;
+    --colorBrandForegroundLinkSelected: rgb(29, 155, 209) !important;
+}

@@ -1,0 +1,118 @@
+/* Lagoon Theme for Microsoft Teams - Ocean Blue Accents */
+
+/* Comprehensive lagoon theme with all color variables */
+:root,
+html,
+body,
+#app,
+.fui-FluentProvider,
+.fui-FluentProvider[class*="fui-FluentProvider"],
+[data-theme],
+.app-chrome {
+    /* Primary Brand Colors - Ocean Blue */
+    --colorBrandBackground: #20B2AA !important;
+    --colorBrandBackgroundHover: #48CAE4 !important;
+    --colorBrandBackgroundPressed: #0077B6 !important;
+    --colorBrandBackgroundSelected: #20B2AA !important;
+    --colorCompoundBrandBackground: #48CAE4 !important;
+    --colorCompoundBrandBackgroundHover: #90E0EF !important;
+    --colorCompoundBrandBackgroundPressed: #20B2AA !important;
+    --colorBrandBackgroundStatic: #20B2AA !important;
+    --colorBrandBackground2: #005577 !important;
+    --colorBrandBackground2Hover: #0077B6 !important;
+    --colorBrandBackground2Pressed: #003355 !important;
+    --colorBrandBackground3Static: #0077B6 !important;
+    --colorBrandBackground4Static: #005577 !important;
+    
+    /* Brand Foreground Colors - Ocean Blue */
+    --colorBrandForeground1: #20B2AA !important;
+    --colorBrandForeground2: #48CAE4 !important;
+    --colorBrandForegroundLink: #0077B6 !important;
+    --colorBrandForegroundLinkHover: #20B2AA !important;
+    --colorBrandForegroundLinkPressed: #005577 !important;
+    --colorBrandForegroundLinkSelected: #20B2AA !important;
+    --colorCompoundBrandForeground1: #20B2AA !important;
+    --colorCompoundBrandForeground1Hover: #48CAE4 !important;
+    --colorCompoundBrandForeground1Pressed: #0077B6 !important;
+    --colorBrandForegroundInverted: #0077B6 !important;
+    --colorBrandForegroundInvertedHover: #005577 !important;
+    --colorBrandForegroundInvertedPressed: #003355 !important;
+    --colorBrandForegroundOnLight: #0077B6 !important;
+    --colorBrandForegroundOnLightHover: #005577 !important;
+    --colorBrandForegroundOnLightPressed: #003355 !important;
+    --colorBrandForegroundOnLightSelected: #005577 !important;
+    
+    /* Neutral Foreground Brand Colors - Ocean Blue */
+    --colorNeutralForeground2BrandHover: #48CAE4 !important;
+    --colorNeutralForeground2BrandPressed: #20B2AA !important;
+    --colorNeutralForeground2BrandSelected: #48CAE4 !important;
+    --colorNeutralForeground3BrandHover: #48CAE4 !important;
+    --colorNeutralForeground3BrandPressed: #20B2AA !important;
+    --colorNeutralForeground3BrandSelected: #FFFFFF !important;
+    --colorNeutralBackground1: #002233 !important;
+    --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
+    --colorNeutralBackground2: #002233 !important;
+    --colorNeutralBackground2: #002233 !important;
+    --colorNeutralBackground3: #002233 !important;
+    --colorNeutralBackground4: #005577 !important;
+    --colorNeutralCardBackground: #0077B6 !important;
+    
+    /* Stroke Colors - Ocean Blue */
+    --colorBrandStroke1: #48CAE4 !important;
+    --colorBrandStroke2: #005577 !important;
+    --colorBrandStroke2Hover: #0077B6 !important;
+    --colorBrandStroke2Pressed: #003355 !important;
+    --colorBrandStroke2Contrast: #005577 !important;
+    --colorCompoundBrandStroke: #20B2AA !important;
+    --colorCompoundBrandStrokeHover: #48CAE4 !important;
+    --colorCompoundBrandStrokePressed: #0077B6 !important;
+    --colorNeutralStrokeAccessibleSelected: #48CAE4 !important;
+    
+    /* Avatar Colors - Ocean Blue */
+    --colorAvatar: #48CAE4 !important;
+    --colorAvatarBackground: #0077B6 !important;
+    
+    /* Teams Specific Colors - Ocean Blue */
+    --colorTeamsBrand1Hover: #48CAE4 !important;
+    --colorTeamsBrand1Pressed: #20B2AA !important;
+    --colorTeamsBrand1Selected: #48CAE4 !important;
+
+    /* Default Backgrounds - Ocean Blue, progressively darker */
+    --colorDefaultBackground1: #48CAE4 !important;
+    --colorDefaultBackground2: #20B2AA !important;
+    --colorDefaultBackground3: #0077B6 !important;
+    --colorDefaultBackground4: #005577 !important;
+    --colorDefaultBackground5: #003355 !important;
+    --colorDefaultBackground6: #002233 !important;
+    --colorDefaultBackground7: #00111A !important;
+
+    /* Subtle background - medium ocean blue */
+    --colorSubtleBackground: transparent !important;
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorTransparentBackgroundSelected: rgba(32, 178, 170, 0.25) !important;
+    --colorNeutralBackground5: #005577 !important;
+}
+
+/* Ocean blue accent on primary buttons only */
+.ui-button--primary,
+.ms-Button--primary,
+.fui-Button[data-variant="primary"] {
+    background-color: #20B2AA !important;
+    border-color: #20B2AA !important;
+}
+
+.ui-button--primary:hover,
+.ms-Button--primary:hover,
+.fui-Button[data-variant="primary"]:hover {
+    background-color: #48CAE4 !important;
+    border-color: #48CAE4 !important;
+}
+
+/* Ocean accent on active/selected items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: #20B2AA !important;
+}
+

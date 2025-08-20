@@ -1,0 +1,155 @@
+/* Rose Pink Theme for Microsoft Teams - Elegant and Warm */
+
+/* Comprehensive rose pink theme with all color variables */
+:root,
+html,
+body,
+#app,
+.fui-FluentProvider,
+.fui-FluentProvider[class*="fui-FluentProvider"],
+[data-theme],
+.app-chrome {
+    /* Primary Brand Colors - Rose Pink */
+    --colorBrandBackground: #E91E63 !important;
+    --colorBrandBackgroundHover: #F06292 !important;
+    --colorBrandBackgroundPressed: #C2185B !important;
+    --colorBrandBackgroundSelected: #E91E63 !important;
+    --colorCompoundBrandBackground: #F06292 !important;
+    --colorCompoundBrandBackgroundHover: #F48FB1 !important;
+    --colorCompoundBrandBackgroundPressed: #E91E63 !important;
+    --colorBrandBackgroundStatic: #E91E63 !important;
+    --colorBrandBackground2: #AD1457 !important;
+    --colorBrandBackground2Hover: #C2185B !important;
+    --colorBrandBackground2Pressed: #880E4F !important;
+    --colorBrandBackground3Static: #C2185B !important;
+    --colorBrandBackground4Static: #AD1457 !important;
+    
+    /* Brand Foreground Colors - Rose Pink */
+    --colorBrandForeground1: #E91E63 !important;
+    --colorBrandForeground2: #F06292 !important;
+    --colorBrandForegroundLink: #C2185B !important;
+    --colorBrandForegroundLinkHover: #E91E63 !important;
+    --colorBrandForegroundLinkPressed: #AD1457 !important;
+    --colorBrandForegroundLinkSelected: #E91E63 !important;
+    --colorCompoundBrandForeground1: #E91E63 !important;
+    --colorCompoundBrandForeground1Hover: #F06292 !important;
+    --colorCompoundBrandForeground1Pressed: #C2185B !important;
+    --colorBrandForegroundInverted: #C2185B !important;
+    --colorBrandForegroundInvertedHover: #AD1457 !important;
+    --colorBrandForegroundInvertedPressed: #880E4F !important;
+    --colorBrandForegroundOnLight: #C2185B !important;
+    --colorBrandForegroundOnLightHover: #AD1457 !important;
+    --colorBrandForegroundOnLightPressed: #880E4F !important;
+    --colorBrandForegroundOnLightSelected: #AD1457 !important;
+    
+    /* Neutral Foreground Brand Colors - Rose Pink */
+    --colorNeutralForeground2BrandHover: #F06292 !important;
+    --colorNeutralForeground2BrandPressed: #E91E63 !important;
+    --colorNeutralForeground2BrandSelected: #F06292 !important;
+    --colorNeutralForeground3BrandHover: #F06292 !important;
+    --colorNeutralForeground3BrandPressed: #E91E63 !important;
+    --colorNeutralForeground3BrandSelected: #FFFFFF !important;
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground4: #483D8B !important;
+    --colorNeutralBackground4: #AD1457 !important;
+    --colorNeutralCardBackground: #C2185B !important;
+    
+    /* Stroke Colors - Rose Pink */
+    --colorBrandStroke1: #F06292 !important;
+    --colorBrandStroke2: #AD1457 !important;
+    --colorBrandStroke2Hover: #C2185B !important;
+    --colorBrandStroke2Pressed: #880E4F !important;
+    --colorBrandStroke2Contrast: #AD1457 !important;
+    --colorCompoundBrandStroke: #E91E63 !important;
+    --colorCompoundBrandStrokeHover: #F06292 !important;
+    --colorCompoundBrandStrokePressed: #C2185B !important;
+    --colorNeutralStrokeAccessibleSelected: #F06292 !important;
+    
+    /* Avatar Colors - Rose Pink */
+    --colorAvatar: #F06292 !important;
+    --colorAvatarBackground: #C2185B !important;
+    
+    /* Teams Specific Colors - Rose Pink */
+    --colorTeamsBrand1Hover: #F06292 !important;
+    --colorTeamsBrand1Pressed: #E91E63 !important;
+    --colorTeamsBrand1Selected: #F06292 !important;
+
+    /* Default Backgrounds - Rose Pink, progressively darker */
+    --colorDefaultBackground1: #F06292 !important;
+    --colorDefaultBackground2: #E91E63 !important;
+    --colorDefaultBackground3: #C2185B !important;
+    --colorDefaultBackground4: #AD1457 !important;
+    --colorDefaultBackground5: #880E4F !important;
+    --colorDefaultBackground6: #660A37 !important;
+    --colorDefaultBackground7: #44071F !important;
+
+    /* Subtle background - medium rose pink */
+    --colorSubtleBackground: transparent !important;
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorTransparentBackgroundSelected: rgba(240, 98, 146, 0.25) !important;
+    --colorNeutralBackground5: #AD1457 !important;
+}
+
+/* Target Teams-specific button classes */
+.ui-button--primary,
+.ms-Button--primary,
+.fui-Button[data-variant="primary"],
+button[data-tid="send-button"],
+button[data-tid*="call"],
+button[data-tid*="join"],
+.call-button,
+.send-button,
+.primary-button {
+    background-color: #E91E63 !important;
+    border-color: #E91E63 !important;
+}
+
+.ui-button--primary:hover,
+.ms-Button--primary:hover,
+.fui-Button[data-variant="primary"]:hover,
+button[data-tid="send-button"]:hover,
+button[data-tid*="call"]:hover,
+button[data-tid*="join"]:hover,
+.call-button:hover,
+.send-button:hover,
+.primary-button:hover {
+    background-color: #F06292 !important;
+    border-color: #F06292 !important;
+}
+
+/* Target Teams navigation and selection elements */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"],
+.app-chrome .left-rail .team.active,
+.app-chrome .left-rail .channel.active,
+.navigation-item.active,
+.channel-item.active,
+.team-item.active {
+    border-left-color: #E91E63 !important;
+    background-color: rgba(233, 30, 99, 0.1) !important;
+}
+
+/* Target Teams message reactions and interactive elements */
+.reaction-button,
+.emoji-reaction,
+.message-action-button,
+.thread-reply-button {
+    color: #E91E63 !important;
+}
+
+.reaction-button:hover,
+.emoji-reaction:hover,
+.message-action-button:hover,
+.thread-reply-button:hover {
+    background-color: rgba(233, 30, 99, 0.1) !important;
+}
+
+div[data-tid*="channel-message-action-menu"],
+.fui-MenuPopover {
+    background: var(--colorNeutralBackground3) !important;
+}
