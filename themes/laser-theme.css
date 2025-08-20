@@ -53,7 +53,7 @@ body,
     --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
     --colorNeutralBackground2: rgb(26, 29, 33) !important;
     --colorNeutralBackground3: rgb(26, 29, 33) !important;
-    --colorNeutralCardBackground: #ff305a !important;
+    --colorNeutralCardBackground:rgb(26, 29, 33) !important;
 
     /* Stroke Colors - Laser Pink */
     --colorBrandStroke1: #ff5a7a !important;

@@ -55,7 +55,7 @@ body,
     --colorNeutralBackground2: rgb(26, 29, 33) !important;
     --colorNeutralBackground3: rgb(26, 29, 33) !important;
     --colorNeutralBackground4: #483D8B !important;
-    --colorNeutralCardBackground: #6A5ACD !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
     
     /* Stroke Colors - Purple */
     --colorBrandStroke1: #9370DB !important;

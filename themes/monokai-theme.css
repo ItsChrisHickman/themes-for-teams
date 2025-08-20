@@ -55,7 +55,8 @@ body,
     --colorNeutralBackground3: rgb(26, 29, 33) !important;
     --colorNeutralBackground4: #483D8B !important;
     --colorNeutralBackground4: #8B4513 !important;
-    --colorNeutralCardBackground: #A0522D !important;
+    --colorNeutralCardBackground:rgb(26, 29, 33) !important;
+
     
     /* Stroke Colors - Orange */
     --colorBrandStroke1: #E6852E !important;

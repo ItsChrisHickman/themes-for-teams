@@ -55,7 +55,7 @@ body,
     --colorNeutralBackground3: rgb(26, 29, 33) !important;
     --colorNeutralBackground4: #483D8B !important;
     --colorNeutralBackground4: #AD1457 !important;
-    --colorNeutralCardBackground: #C2185B !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
     
     /* Stroke Colors - Rose Pink */
     --colorBrandStroke1: #F06292 !important;

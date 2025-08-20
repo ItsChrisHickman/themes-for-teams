@@ -52,10 +52,9 @@ body,
     --colorNeutralBackground1:  #1A2733 !important;
     --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
     --colorNeutralBackground2: #1A2733 !important;
-    --colorNeutralBackground2: #1A2733 !important;
     --colorNeutralBackground3: #1A2733 !important;
     --colorNeutralBackground4: #3A5269 !important;
-    --colorNeutralCardBackground: #445F78 !important;
+    --colorNeutralCardBackground:  #1A2733 !important;
     
     /* Stroke Colors - Professional Blue */
     --colorBrandStroke1: #5A7A96 !important;

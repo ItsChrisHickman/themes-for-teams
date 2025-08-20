@@ -98,3 +98,7 @@ a:hover {
     --colorBrandForegroundLinkPressed: rgb(29, 155, 209) !important;
     --colorBrandForegroundLinkSelected: rgb(29, 155, 209) !important;
 }
+
+div.ac-adaptiveCard {
+    border-left: 3px solid #2684ff !important;
+}

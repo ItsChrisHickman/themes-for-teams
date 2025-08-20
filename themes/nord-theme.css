@@ -53,9 +53,8 @@ body,
     --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
     --colorNeutralBackground2: rgb(26, 29, 33) !important;
     --colorNeutralBackground3: rgb(26, 29, 33) !important;
-    --colorNeutralBackground4: #483D8B !important;
     --colorNeutralBackground4: #2F6B5F !important;
-    --colorNeutralCardBackground: #3A8B7E !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
     
     /* Stroke Colors - Teal */
     --colorBrandStroke1: #5CAAA0 !important;
