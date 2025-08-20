@@ -84,13 +84,13 @@ body,
     --colorDefaultBackground4: #483D8B !important;
     --colorDefaultBackground5: #2E2B5F !important;
     --colorDefaultBackground6: #1A1833 !important;
-    --colorDefaultBackground7: #0D0C1A !important;
+    --colorDefaultBackground7: #211125 !important;
 
     /* Subtle background - medium purple */
     --colorSubtleBackground: transparent !important;
     --colorNeutralForeground3: #FAFAFA !important;
     --colorTransparentBackgroundSelected: rgba(147, 112, 219, 0.25) !important;
-    --colorNeutralBackground5: #483D8B !important;
+    --colorNeutralBackground5:#3a0f3e !important;
 }
 
 /* Purple accent on primary buttons only */
