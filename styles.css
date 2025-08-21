@@ -108,3 +108,9 @@ a:hover {
 div.ac-adaptiveCard {
     border-left: 3px solid #2684ff !important;
 }
+
+/* Better Emojis */
+button[data-tid="diverse-reaction-pill-button"] {
+    border: none !important;
+    background: #282a2e !important;
+}
