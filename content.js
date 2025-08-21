@@ -169,10 +169,10 @@
         }
     }
 
-    chrome.storage.sync.get(['teamsTheme', 'teamsFont', 'teamsImprovements'], function(result) {
+    chrome.storage.sync.get(['teamsTheme', 'teamsFont'], function(result) {
         injectTheme(result.teamsTheme || 'default');
         injectFont(result.teamsFont || 'default');
-        injectImprovements(result.teamsImprovements !== false); // default ON
+        injectImprovements(true);
     });
 
     // Listen for changes and apply live
@@ -183,9 +183,6 @@
             }
             if (changes.teamsFont) {
                 injectFont(changes.teamsFont.newValue || 'default');
-            }
-            if (changes.teamsImprovements) {
-                injectImprovements(changes.teamsImprovements.newValue !== false);
             }
         }
     });
