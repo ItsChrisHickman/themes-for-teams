@@ -1,5 +1,26 @@
 /* Microsoft Teams Chat Padding Reduction */
 
+/* Apply font with anti-aliasing to common Teams elements */
+body,
+div,
+p,
+span,
+button,
+input,
+textarea,
+h1, h2, h3, h4, h5, h6,
+select {   
+    /* Enhanced font smoothing and anti-aliasing */
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+    text-rendering: optimizeLegibility !important;
+    font-smooth: always !important;
+    
+    /* Additional rendering improvements */
+    font-variant-ligatures: common-ligatures !important;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1 !important;
+}
+
 /* Get rid of excessive padding!! */
 div[data-tid='chat-pane-item'],
 div[data-tid="message-pane-layout"] > .fui-Primitive {
@@ -52,7 +73,10 @@ h2[data-tid="subject-line"] {
     position: absolute !important;
     top: 11px !important;
     left: 60px !important;
-    text-transform: capitalize;
+    max-width: calc(100% - 80px) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 div[data-tid="post-message-subheader"] {
     position: absolute !important;

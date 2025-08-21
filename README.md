@@ -33,6 +33,13 @@ suit my purposes.  It works with Firefox too!
 
 ## Changelog
 
+v0.1.2
+   - Handles long titles with full width, no wrap, ellipses ...
+   - Font Smoothing
+
+v0.1.1 
+  - Fixed click target area on replies for emojis
+
 v0.1.0 - Beta
   - Gradient UI borders, more tweaks, better themes.  Supports Firefox.
 

@@ -72,7 +72,7 @@
             document.head.appendChild(link);
         }
 
-        // Create CSS for font override
+        // Create CSS for font override with anti-aliasing
         const fontCSS = `
             :root,
             html,
@@ -84,24 +84,6 @@
             .app-chrome {
                 --fontFamilyBase: ${fontFamily} !important;
                 --fontFamilyMonospace: ${font === 'roboto-mono' ? fontFamily : '"Roboto Mono", "Cascadia Mono", Consolas, ui-monospace, Menlo, Monaco, monospace'} !important;
-            }
-
-            /* Apply font to common Teams elements */
-            body,
-            .app-chrome,
-            .app-chrome *,
-            .ui-message,
-            .message-content,
-            .chat-message,
-            .channel-content,
-            .conversation-content,
-            .fui-Text,
-            .ui-text,
-            button,
-            input,
-            textarea,
-            select {
-                font-family: ${fontFamily} !important;
             }
         `;
 
