@@ -1,6 +1,7 @@
-Privacy Policy
---------------
+# Privacy Policy
 
-In compliance with Google's Chrome Web Store, this is included to state - this doesn't gather anything.
+Nothing is collected, gathered or sent.
 
-It's just CSS.
+Your preferred font and theme is saved to your localStorage in your browser.
+
+It's like customizing a MySpace page. :)
