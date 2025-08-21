@@ -49,11 +49,11 @@ body,
     --colorNeutralForeground3BrandHover: #48CAE4 !important;
     --colorNeutralForeground3BrandPressed: #20B2AA !important;
     --colorNeutralForeground3BrandSelected: #FFFFFF !important;
-    --colorNeutralBackground1: #002233 !important;
+    /* Channel Background */
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
     --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
-    --colorNeutralBackground2: #002233 !important;
-    --colorNeutralBackground2: #002233 !important;
-    --colorNeutralBackground3: #002233 !important;
     --colorNeutralBackground4: #005577 !important;
     --colorNeutralCardBackground: #002233 !important;
 
@@ -117,3 +117,35 @@ body,
     border-left-color: #20B2AA !important;
 }
 
+/* Gradient App Border */
+
+:root, .fui-FluentProvider {
+    --dt_color-plt-lagoon-0: 0, 26, 45;
+    --dt_color-plt-lagoon-5: 0, 47, 75;
+    --dt_color-plt-lagoon-10: 0, 61, 97;
+}
+
+div[data-tid="experience-layout"] {
+    background: radial-gradient(circle at 50% 50%,
+            rgb(var(--dt_color-plt-lagoon-10)) 20%,
+            transparent 80%),
+        conic-gradient(from 45deg at 50% 50%,
+            rgb(var(--dt_color-plt-lagoon-0)) 0%,
+            rgb(var(--dt_color-plt-lagoon-10)) 25%,
+            rgb(var(--dt_color-plt-lagoon-0)) 50%,
+            rgb(var(--dt_color-plt-lagoon-10)) 75%,
+            rgb(var(--dt_color-plt-lagoon-0)) 100%) !important;
+}
+
+/* Allow Gradient Background */
+button[data-tid="post-new-message-type"],
+div[data-tid="app-layout-area--nav"],
+div[data-tid="app-bar-wrapper"] > div,
+div[data-tid="app-layout-area--header"],
+div[data-tid="title-bar"] {
+    background-color: transparent !important;
+}
+button[data-tid="post-new-message-type"],
+button[data-tid="quick-reply-placeholder-reply"] {
+    color: var(--colorBrandForeground2) !important;
+}

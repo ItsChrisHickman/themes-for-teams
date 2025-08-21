@@ -1,65 +1,72 @@
 /* Microsoft Teams Chat Padding Reduction */
 
 /* Get rid of excessive padding!! */
-div[data-tid*='chat-pane-item'],
-div[data-tid*="message-pane-layout"] > .fui-Primitive {
+div[data-tid='chat-pane-item'],
+div[data-tid="message-pane-layout"] > .fui-Primitive {
     padding-left: 16px !important;
     padding-right: 16px !important;
     max-width: 100% !important;
 }
 
 /* Make chat boxes 100% */
-div[data-tid*='message-pane-list-runway'],
-div[data-tid*="channel-pane-message"] {
+div[data-tid='message-pane-list-runway'],
+div[data-tid="channel-pane-message"] {
     max-width: 100% !important;
     padding: 0 16px 0 0 !important;
 }
 
 /* Borders are ugly */
 .fui-Flex,
-div[data-tid*="channel-pane-message"] {
+div[data-tid="channel-pane-message"] {
     border-bottom-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
     border-top-color: transparent !important;
 }
-div[data-tid*="title-bar"] {
+div[data-tid="title-bar"] {
     border-bottom-width: 0px !important;
 }
 
-div[data-tid*="channel-pane-runway"] {
+div[data-tid="channel-pane-runway"] {
     max-width: 100% !important;
     padding: 0 !important;
 }
 
 /* Bold face names in replies */
-div[data-tid*="reply-message-header"] > div > div > span {
+div[data-tid="reply-message-header"] > div > div > span {
     font-weight: bold !important;
 }
-div[data-tid*="reply-message-header"] > div > div > time {
-    color: #999;
+
+/* Fade time stamps and message statuses */
+time[data-tid="timestamp"],
+div[data-tid="reply-message-header"] > div > div > time {
+    color: #999 !important;
 } 
+div[data-tid="status-bar"] div span {
+    color: #999 !important;
+    font-style: italic;
+}
 
 /* Move next to avatar */
-h2[data-tid*="subject-line"] {
+h2[data-tid="subject-line"] {
     position: absolute !important;
     top: 11px !important;
     left: 60px !important;
     text-transform: capitalize;
 }
-div[data-tid*="post-message-subheader"] {
+div[data-tid="post-message-subheader"] {
     position: absolute !important;
     top: 36px !important;
     left: 60px !important;
 }
 
 /* Expand the 'Post in channel' box */
-div[data-tid*="message-pane-layout"] > .fui-Primitive > .fui-Flex {
+div[data-tid="message-pane-layout"] > .fui-Primitive > .fui-Flex {
     max-width: 100% !important;
 }
 
 /* Reduce 14px on the left side of the list of chats/channels */
-div[data-tid*="simple-collab-dnd-rail"] {
+div[data-tid="simple-collab-dnd-rail"] {
     margin-left: 0 !important; /* 14px */
 }
 
@@ -68,13 +75,11 @@ div[data-tid*="simple-collab-dnd-rail"] {
    margin-right: 0px !important; /* */
 }
 
-/* Fix 'reply area' width */
-div.fui-Flex { 
-    max-width: 100% !important;
-    width: auto !important;
+div[data-tid="entity-header"] {
+    width: 100% !important;
 }
 
-div[data-tid*="message-tombstone"] {
+div[data-tid="message-tombstone"] {
     color: #666 !important;
 }
 
@@ -90,13 +95,14 @@ a:hover {
 }
 
 /* Always Blue Links */
-:root, html, body, #app, .fui-FluentProvider, .fui-FluentProvider[class*="fui-FluentProvider"], [data-theme], .app-chrome {
+.fui-FluentProvider {
     --colorStrokeFocus2: transparent !important;
-    --colorBrandForeground1: rgb(29, 155, 209) !important;
-    --colorBrandForegroundLink: rgb(29, 155, 209) !important;
-    --colorBrandForegroundLinkHover: rgb(29, 155, 209) !important;
-    --colorBrandForegroundLinkPressed: rgb(29, 155, 209) !important;
-    --colorBrandForegroundLinkSelected: rgb(29, 155, 209) !important;
+    --colorBrandForeground1: #2784ff !important;
+    --colorBrandForeground2: #2784ff !important;
+    --colorBrandForegroundLink: #2784ff !important;
+    --colorBrandForegroundLinkHover: #2784ff !important;
+    --colorBrandForegroundLinkPressed: #2784ff !important;
+    --colorBrandForegroundLinkSelected: #2784ff !important;
 }
 
 div.ac-adaptiveCard {

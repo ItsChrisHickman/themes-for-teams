@@ -1,129 +1,150 @@
-/* Warm Orange Theme for Microsoft Teams - Energetic yet Professional */
+/* Monokai Theme for Microsoft Teams - VS Code Monokai Style */
 
-/* Comprehensive orange theme with all color variables */
-:root,
-html,
-body,
-#app,
-.fui-FluentProvider,
-.fui-FluentProvider[class*="fui-FluentProvider"],
-[data-theme],
-.app-chrome {
-    /* Primary Brand Colors - Orange */
-    --colorBrandBackground: #D2691E !important;
-    --colorBrandBackgroundHover: #E6852E !important;
-    --colorBrandBackgroundPressed: #B85C14 !important;
-    --colorBrandBackgroundSelected: #D2691E !important;
-    --colorCompoundBrandBackground: #E6852E !important;
-    --colorCompoundBrandBackgroundHover: #F4A460 !important;
-    --colorCompoundBrandBackgroundPressed: #D2691E !important;
-    --colorBrandBackgroundStatic: #D2691E !important;
-    --colorBrandBackground2: #8B4513 !important;
-    --colorBrandBackground2Hover: #A0522D !important;
-    --colorBrandBackground2Pressed: #654321 !important;
-    --colorBrandBackground3Static: #A0522D !important;
-    --colorBrandBackground4Static: #8B4513 !important;
+/* Comprehensive monokai theme with all color variables */
+:root, .fui-FluentProvider {
+
+    /* Primary Brand Colors - Monokai Green/Yellow */
+    --colorBrandBackground: #A6E22E !important;
+    --colorBrandBackgroundHover: #F92672 !important;
+    --colorBrandBackgroundPressed: #FD971F !important;
+    --colorBrandBackgroundSelected: #E6DB74 !important;
+    --colorCompoundBrandBackground: #F92672 !important;
+    --colorCompoundBrandBackgroundHover: #FD971F !important;
+    --colorCompoundBrandBackgroundPressed: #E6DB74 !important;
+    --colorBrandBackgroundStatic: #E6DB74 !important;
+    --colorBrandBackground2: #66D9EF !important;
+    --colorBrandBackground2Hover: #A6E22E !important;
+    --colorBrandBackground2Pressed: #F92672 !important;
+    --colorBrandBackground3Static: #A6E22E !important;
+    --colorBrandBackground4Static: #66D9EF !important;
+
+    /* Brand Foreground Colors - Monokai */
+    --colorBrandForeground1: #E6DB74 !important;
+    --colorBrandForeground2: #A6E22E !important;
+    --colorBrandForegroundLink: #66D9EF !important; 
+    --colorBrandForegroundLinkHover: #E6DB74 !important;
+    --colorBrandForegroundLinkPressed: #F92672 !important;
+    --colorBrandForegroundLinkSelected: #E6DB74 !important;
     
-    /* Brand Foreground Colors - Orange */
-    --colorBrandForeground1: #D2691E !important;
-    --colorBrandForeground2: #E6852E !important;
-/*    --colorBrandForegroundLink: #B85C14 !important; */
-    --colorBrandForegroundLinkHover: #D2691E !important;
-    --colorBrandForegroundLinkPressed: #A0522D !important;
-    --colorBrandForegroundLinkSelected: #D2691E !important;
-    --colorCompoundBrandForeground1: #D2691E !important;
-    --colorCompoundBrandForeground1Hover: #E6852E !important;
-    --colorCompoundBrandForeground1Pressed: #B85C14 !important;
-    --colorBrandForegroundInverted: #B85C14 !important;
-    --colorBrandForegroundInvertedHover: #A0522D !important;
-    --colorBrandForegroundInvertedPressed: #8B4513 !important;
-    --colorBrandForegroundOnLight: #B85C14 !important;
-    --colorBrandForegroundOnLightHover: #A0522D !important;
-    --colorBrandForegroundOnLightPressed: #8B4513 !important;
-    --colorBrandForegroundOnLightSelected: #A0522D !important;
-    
-    /* Neutral Foreground Brand Colors - Orange */
-    --colorNeutralForeground2BrandHover: #E6852E !important;
-    --colorNeutralForeground2BrandPressed: #D2691E !important;
-    --colorNeutralForeground2BrandSelected: #E6852E !important;
-    --colorNeutralForeground3BrandHover: #E6852E !important;
-    --colorNeutralForeground3BrandPressed: #D2691E !important;
-    --colorNeutralForeground3BrandSelected: #FFFFFF !important;
+    --colorCompoundBrandForeground1: #E6DB74 !important;
+    --colorCompoundBrandForeground1Hover: #A6E22E !important;
+    --colorCompoundBrandForeground1Pressed: #66D9EF !important;
+    --colorBrandForegroundInverted: #66D9EF !important;
+    --colorBrandForegroundInvertedHover: #F92672 !important;
+    --colorBrandForegroundInvertedPressed: #FD971F !important;
+    --colorBrandForegroundOnLight: #66D9EF !important;
+    --colorBrandForegroundOnLightHover: #F92672 !important;
+    --colorBrandForegroundOnLightPressed: #FD971F !important;
+    --colorBrandForegroundOnLightSelected: #F92672 !important;
+
+    /* Neutral Foreground Brand Colors - Monokai */
+    --colorNeutralForeground2BrandHover: #A6E22E !important;
+    --colorNeutralForeground2BrandPressed: #E6DB74 !important;
+    --colorNeutralForeground2BrandSelected: #A6E22E !important;
+    --colorNeutralForeground3BrandHover: #A6E22E !important;
+    --colorNeutralForeground3BrandPressed: #E6DB74 !important;
+    --colorNeutralForeground3BrandSelected: rgba(255,255,255,.8) !important;
+
+    /* Channel Background */
     --colorNeutralBackground1: rgb(26, 29, 33) !important;
-    --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
     --colorNeutralBackground2: rgb(26, 29, 33) !important;
     --colorNeutralBackground3: rgb(26, 29, 33) !important;
-    --colorNeutralBackground4: #483D8B !important;
-    --colorNeutralBackground4: #8B4513 !important;
-    --colorNeutralCardBackground:rgb(26, 29, 33) !important;
+    --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
+    --colorNeutralBackground4: #3E3D32 !important;
+    /* Hover State on Left Toolbar */
+    --colorNeutralBackground4Selected: transparent !important;
+    --colorNeutralCardBackground: #272822 !important;
 
-    
-    /* Stroke Colors - Orange */
-    --colorBrandStroke1: #E6852E !important;
-    --colorBrandStroke2: #8B4513 !important;
-    --colorBrandStroke2Hover: #A0522D !important;
-    --colorBrandStroke2Pressed: #654321 !important;
-    --colorBrandStroke2Contrast: #8B4513 !important;
-    --colorCompoundBrandStroke: #D2691E !important;
-    --colorCompoundBrandStrokeHover: #E6852E !important;
-    --colorCompoundBrandStrokePressed: #B85C14 !important;
-    --colorNeutralStrokeAccessibleSelected: #E6852E !important;
-    
-    /* Avatar Colors - Orange */
-    --colorAvatar: #E6852E !important;
-    --colorAvatarBackground: #A0522D !important;
-    
-    /* Teams Specific Colors - Orange */
-    --colorTeamsBrand1Hover: #E6852E !important;
-    --colorTeamsBrand1Pressed: #D2691E !important;
-    --colorTeamsBrand1Selected: #E6852E !important;
+    /* Stroke Colors - Monokai */
+    --colorBrandStroke1: #A6E22E !important;
+    --colorBrandStroke2: #66D9EF !important;
+    --colorBrandStroke2Hover: #A6E22E !important;
+    --colorBrandStroke2Pressed: #F92672 !important;
+    --colorBrandStroke2Contrast: #66D9EF !important;
+    --colorCompoundBrandStroke: #E6DB74 !important;
+    --colorCompoundBrandStrokeHover: #A6E22E !important;
+    --colorCompoundBrandStrokePressed: #66D9EF !important;
+    --colorNeutralStrokeAccessibleSelected: #A6E22E !important;
 
-    /* Default Backgrounds - Orange, progressively darker */
-    --colorDefaultBackground1: #E6852E !important;
-    --colorDefaultBackground2: #D2691E !important;
-    --colorDefaultBackground3: #A0522D !important;
-    --colorDefaultBackground4: #8B4513 !important;
-    --colorDefaultBackground5: #654321 !important;
-    --colorDefaultBackground6: #432100 !important;
-    --colorDefaultBackground7: #221100 !important;
+    /* Avatar Colors - Monokai */
+    --colorAvatar: #A6E22E !important;
+    --colorAvatarBackground: #66D9EF !important;
 
-    /* Subtle background - medium orange */
+    /* Teams Specific Colors - Monokai */
+    --colorTeamsBrand1Hover: #A6E22E !important;
+    --colorTeamsBrand1Pressed: #E6DB74 !important;
+    --colorTeamsBrand1Selected: #A6E22E !important;
+
+    /* Default Backgrounds - Monokai, progressively darker */
+    --colorDefaultBackground1: #A6E22E !important;
+    --colorDefaultBackground2: #E6DB74 !important;
+    --colorDefaultBackground3: #66D9EF !important;
+    --colorDefaultBackground4: #3E3D32 !important;
+    --colorDefaultBackground5: #272822 !important;
+    --colorDefaultBackground6: #1E1F1C !important;
+    --colorDefaultBackground7: #0F100E !important;
+
+    /* Subtle background - monokai style */
     --colorSubtleBackground: transparent !important;
-    --colorNeutralForeground3: #FAFAFA !important;
-    --colorTransparentBackgroundSelected: rgba(230, 133, 46, 0.25) !important;
-    --colorNeutralBackground5: #8B4513 !important;
+    --colorNeutralForeground3: #F8F8F2 !important;
+    --colorTransparentBackgroundSelected: rgba(166, 226, 46, 0.25) !important;
+    --colorNeutralBackground5: #3E3D32 !important;
 }
 
-/* Subtle orange accent on primary buttons only */
+/* Monokai accent on primary buttons only */
 .ui-button--primary,
 .ms-Button--primary,
 .fui-Button[data-variant="primary"] {
-    background-color: #D2691E !important;
-    border-color: #D2691E !important;
+    background-color: #A6E22E !important;
+    border-color: #A6E22E !important;
+    color: #272822 !important;
 }
 
 .ui-button--primary:hover,
 .ms-Button--primary:hover,
 .fui-Button[data-variant="primary"]:hover {
-    background-color: #E6852E !important;
-    border-color: #E6852E !important;
+    background-color: #F92672 !important;
+    border-color: #F92672 !important;
+    color: #F8F8F2 !important;
 }
 
-/* Subtle accent on active/selected items */
+/* Monokai accent on active/selected items */
 .selected,
 .active,
 .is-selected,
 [aria-selected="true"] {
-    border-left-color: #D2691E !important;
+    border-left-color: #A6E22E !important;
 }
 
-/* Very subtle warm tint to user's chat messages */
-.message-body-content[data-tid="messageBodyContent"]:has([data-tid="outgoing-message"]) {
-    background-color: rgba(210, 105, 30, 0.05) !important;
+/* Gradient App Border */
+
+:root, .fui-FluentProvider {
+    --dt_color-plt-monokai-0: 15, 16, 14;
+    --dt_color-plt-monokai-10: 39, 40, 34;
+    --dt_color-plt-monokai-20: 62, 61, 50;
 }
 
-/* Presence indicators in a complementary warm green */
-.presence-indicator,
-.activity-indicator {
-    color: #8FBC8F !important;
+div[data-tid="experience-layout"] {
+    background: radial-gradient(circle at 50% 50%,
+            rgb(var(--dt_color-plt-monokai-10)) 20%,
+            transparent 80%),
+        conic-gradient(from 45deg at 50% 50%,
+            rgb(var(--dt_color-plt-monokai-0)) 0%,
+            rgb(var(--dt_color-plt-monokai-10)) 25%,
+            rgb(var(--dt_color-plt-monokai-0)) 50%,
+            rgb(var(--dt_color-plt-monokai-10)) 75%,
+            rgb(var(--dt_color-plt-monokai-0)) 100%) !important;
+}
+
+/* Allow Gradient Background */
+button[data-tid="post-new-message-type"],
+div[data-tid="app-layout-area--nav"],
+div[data-tid="app-bar-wrapper"] > div,
+div[data-tid="app-layout-area--header"],
+div[data-tid="title-bar"] {
+    background-color: transparent !important;
+}
+button[data-tid="post-new-message-type"],
+button[data-tid="quick-reply-placeholder-reply"] {
+    color: var(--colorBrandForeground2) !important;
 }

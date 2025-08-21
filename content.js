@@ -34,6 +34,7 @@
 
         // Define font families with fallbacks
         const fontFamilies = {
+            'default': '-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif',
             'lato': '"Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif',
             'georgia': '"Georgia", "Times New Roman", Times, serif, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui',
             'noto-sans': '"Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif',
@@ -119,6 +120,11 @@
         let themeFile = 'styles.css'; // default
         if (theme === 'purple') themeFile = 'themes/purple-theme.css';
         if (theme === 'lagoon') themeFile = 'themes/lagoon-theme.css';
+        if (theme === 'amber') themeFile = 'themes/amber-theme.css';
+        if (theme === 'forest') themeFile = 'themes/forest-theme.css';
+        if (theme === 'midnight') themeFile = 'themes/midnight-theme.css';
+        if (theme === 'rose') themeFile = 'themes/rose-theme.css';
+        if (theme === 'sunset') themeFile = 'themes/sunset-theme.css';
         if (theme === 'laser') themeFile = 'themes/laser-theme.css';
         if (theme === 'dracula') themeFile = 'themes/dracula-theme.css';
         if (theme === 'monokai') themeFile = 'themes/monokai-theme.css';

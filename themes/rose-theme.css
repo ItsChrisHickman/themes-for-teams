@@ -1,0 +1,149 @@
+/* Rose Theme for Microsoft Teams - Classic Pink Accents */
+
+/* Comprehensive rose theme with all color variables */
+:root, .fui-FluentProvider {
+
+    /* Primary Brand Colors - Rose Pink */
+    --colorBrandBackground: #C2185B !important;
+    --colorBrandBackgroundHover: #E91E63 !important;
+    --colorBrandBackgroundPressed: #F06292 !important;
+    --colorBrandBackgroundSelected: #F8BBD9 !important;
+    --colorCompoundBrandBackground: #E91E63 !important;
+    --colorCompoundBrandBackgroundHover: #F06292 !important;
+    --colorCompoundBrandBackgroundPressed: #F8BBD9 !important;
+    --colorBrandBackgroundStatic: #F8BBD9 !important;
+    --colorBrandBackground2: #AD1457 !important;
+    --colorBrandBackground2Hover: #E91E63 !important;
+    --colorBrandBackground2Pressed: #C2185B !important;
+    --colorBrandBackground3Static: #E91E63 !important;
+    --colorBrandBackground4Static: #AD1457 !important;
+
+    /* Brand Foreground Colors - Rose Pink */
+    --colorBrandForeground1: #F8BBD9 !important;
+    --colorBrandForeground2: #E91E63 !important;
+    --colorBrandForegroundLink: #E91E63 !important; 
+    --colorBrandForegroundLinkHover: #F8BBD9 !important;
+    --colorBrandForegroundLinkPressed: #AD1457 !important;
+    --colorBrandForegroundLinkSelected: #F8BBD9 !important;
+    
+    --colorCompoundBrandForeground1: #F8BBD9 !important;
+    --colorCompoundBrandForeground1Hover: #E91E63 !important;
+    --colorCompoundBrandForeground1Pressed: #E91E63 !important;
+    --colorBrandForegroundInverted: #E91E63 !important;
+    --colorBrandForegroundInvertedHover: #AD1457 !important;
+    --colorBrandForegroundInvertedPressed: #C2185B !important;
+    --colorBrandForegroundOnLight: #E91E63 !important;
+    --colorBrandForegroundOnLightHover: #AD1457 !important;
+    --colorBrandForegroundOnLightPressed: #C2185B !important;
+    --colorBrandForegroundOnLightSelected: #AD1457 !important;
+
+    /* Neutral Foreground Brand Colors - Rose Pink */
+    --colorNeutralForeground2BrandHover: #E91E63 !important;
+    --colorNeutralForeground2BrandPressed: #F8BBD9 !important;
+    --colorNeutralForeground2BrandSelected: #E91E63 !important;
+    --colorNeutralForeground3BrandHover: #E91E63 !important;
+    --colorNeutralForeground3BrandPressed: #F8BBD9 !important;
+    --colorNeutralForeground3BrandSelected: rgba(255,255,255,.8) !important;
+
+    /* Message Hover */
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    /* Channel Background */
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground4: #AD1457 !important;
+    /* Hover State on Left Toolbar */
+    --colorNeutralBackground4Selected: transparent !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
+
+    /* Stroke Colors - Rose Pink */
+    --colorBrandStroke1: #E91E63 !important;
+    --colorBrandStroke2: #AD1457 !important;
+    --colorBrandStroke2Hover: #E91E63 !important;
+    --colorBrandStroke2Pressed: #C2185B !important;
+    --colorBrandStroke2Contrast: #AD1457 !important;
+    --colorCompoundBrandStroke: #F8BBD9 !important;
+    --colorCompoundBrandStrokeHover: #E91E63 !important;
+    --colorCompoundBrandStrokePressed: #E91E63 !important;
+    --colorNeutralStrokeAccessibleSelected: #E91E63 !important;
+
+    /* Avatar Colors - Rose Pink */
+    --colorAvatar: #E91E63 !important;
+    --colorAvatarBackground: #E91E63 !important;
+
+    /* Teams Specific Colors - Rose Pink */
+    --colorTeamsBrand1Hover: #E91E63 !important;
+    --colorTeamsBrand1Pressed: #F8BBD9 !important;
+    --colorTeamsBrand1Selected: #E91E63 !important;
+
+    /* Default Backgrounds - Rose Pink, progressively darker */
+    --colorDefaultBackground1: #E91E63 !important;
+    --colorDefaultBackground2: #F8BBD9 !important;
+    --colorDefaultBackground3: #E91E63 !important;
+    --colorDefaultBackground4: #AD1457 !important;
+    --colorDefaultBackground5: #C2185B !important;
+    --colorDefaultBackground6: #880E4F !important;
+    --colorDefaultBackground7: #4A0E2D !important;
+
+    /* Subtle background - medium pink */
+    --colorSubtleBackground: transparent !important;
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorTransparentBackgroundSelected: rgba(233, 30, 99, 0.25) !important;
+    --colorNeutralBackground5: #C2185B !important;
+}
+
+/* Rose pink accent on primary buttons only */
+.ui-button--primary,
+.ms-Button--primary,
+.fui-Button[data-variant="primary"] {
+    background-color: #F8BBD9 !important;
+    border-color: #F8BBD9 !important;
+}
+
+.ui-button--primary:hover,
+.ms-Button--primary:hover,
+.fui-Button[data-variant="primary"]:hover {
+    background-color: #E91E63 !important;
+    border-color: #E91E63 !important;
+}
+
+/* Rose pink accent on active/selected items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: #F8BBD9 !important;
+}
+
+/* Gradient App Border */
+
+:root, .fui-FluentProvider {
+    --dt_color-plt-rose-0: 74, 14, 45;
+    --dt_color-plt-rose-10: 194, 24, 91;
+    --dt_color-plt-rose-20: 233, 30, 99;
+}
+
+div[data-tid="experience-layout"] {
+    background: radial-gradient(circle at 50% 50%,
+            rgb(var(--dt_color-plt-rose-10)) 20%,
+            transparent 80%),
+        conic-gradient(from 45deg at 50% 50%,
+            rgb(var(--dt_color-plt-rose-0)) 0%,
+            rgb(var(--dt_color-plt-rose-10)) 25%,
+            rgb(var(--dt_color-plt-rose-0)) 50%,
+            rgb(var(--dt_color-plt-rose-10)) 75%,
+            rgb(var(--dt_color-plt-rose-0)) 100%) !important;
+}
+
+/* Allow Gradient Background */
+button[data-tid="post-new-message-type"],
+div[data-tid="app-layout-area--nav"],
+div[data-tid="app-bar-wrapper"] > div,
+div[data-tid="app-layout-area--header"],
+div[data-tid="title-bar"] {
+    background-color: transparent !important;
+}
+button[data-tid="post-new-message-type"],
+button[data-tid="quick-reply-placeholder-reply"] {
+    color: var(--colorBrandForeground2) !important;
+}

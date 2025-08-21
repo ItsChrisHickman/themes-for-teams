@@ -1,0 +1,149 @@
+/* Midnight Theme for Microsoft Teams - Classic Dark Blue Accents */
+
+/* Comprehensive midnight theme with all color variables */
+:root, .fui-FluentProvider {
+
+    /* Primary Brand Colors - Midnight Blue */
+    --colorBrandBackground: #191970 !important;
+    --colorBrandBackgroundHover: #4169E1 !important;
+    --colorBrandBackgroundPressed: #6495ED !important;
+    --colorBrandBackgroundSelected: #87CEEB !important;
+    --colorCompoundBrandBackground: #4169E1 !important;
+    --colorCompoundBrandBackgroundHover: #6495ED !important;
+    --colorCompoundBrandBackgroundPressed: #87CEEB !important;
+    --colorBrandBackgroundStatic: #87CEEB !important;
+    --colorBrandBackground2: #2F4F4F !important;
+    --colorBrandBackground2Hover: #4169E1 !important;
+    --colorBrandBackground2Pressed: #191970 !important;
+    --colorBrandBackground3Static: #4169E1 !important;
+    --colorBrandBackground4Static: #2F4F4F !important;
+
+    /* Brand Foreground Colors - Midnight Blue */
+    --colorBrandForeground1: #87CEEB !important;
+    --colorBrandForeground2: #4169E1 !important;
+    --colorBrandForegroundLink: #4169E1 !important; 
+    --colorBrandForegroundLinkHover: #87CEEB !important;
+    --colorBrandForegroundLinkPressed: #2F4F4F !important;
+    --colorBrandForegroundLinkSelected: #87CEEB !important;
+    
+    --colorCompoundBrandForeground1: #87CEEB !important;
+    --colorCompoundBrandForeground1Hover: #4169E1 !important;
+    --colorCompoundBrandForeground1Pressed: #4169E1 !important;
+    --colorBrandForegroundInverted: #4169E1 !important;
+    --colorBrandForegroundInvertedHover: #2F4F4F !important;
+    --colorBrandForegroundInvertedPressed: #191970 !important;
+    --colorBrandForegroundOnLight: #4169E1 !important;
+    --colorBrandForegroundOnLightHover: #2F4F4F !important;
+    --colorBrandForegroundOnLightPressed: #191970 !important;
+    --colorBrandForegroundOnLightSelected: #2F4F4F !important;
+
+    /* Neutral Foreground Brand Colors - Midnight Blue */
+    --colorNeutralForeground2BrandHover: #4169E1 !important;
+    --colorNeutralForeground2BrandPressed: #87CEEB !important;
+    --colorNeutralForeground2BrandSelected: #4169E1 !important;
+    --colorNeutralForeground3BrandHover: #4169E1 !important;
+    --colorNeutralForeground3BrandPressed: #87CEEB !important;
+    --colorNeutralForeground3BrandSelected: rgba(255,255,255,.8) !important;
+
+    /* Message Hover */
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    /* Channel Background */
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground4: #2F4F4F !important;
+    /* Hover State on Left Toolbar */
+    --colorNeutralBackground4Selected: transparent !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
+
+    /* Stroke Colors - Midnight Blue */
+    --colorBrandStroke1: #4169E1 !important;
+    --colorBrandStroke2: #2F4F4F !important;
+    --colorBrandStroke2Hover: #4169E1 !important;
+    --colorBrandStroke2Pressed: #191970 !important;
+    --colorBrandStroke2Contrast: #2F4F4F !important;
+    --colorCompoundBrandStroke: #87CEEB !important;
+    --colorCompoundBrandStrokeHover: #4169E1 !important;
+    --colorCompoundBrandStrokePressed: #4169E1 !important;
+    --colorNeutralStrokeAccessibleSelected: #4169E1 !important;
+
+    /* Avatar Colors - Midnight Blue */
+    --colorAvatar: #4169E1 !important;
+    --colorAvatarBackground: #4169E1 !important;
+
+    /* Teams Specific Colors - Midnight Blue */
+    --colorTeamsBrand1Hover: #4169E1 !important;
+    --colorTeamsBrand1Pressed: #87CEEB !important;
+    --colorTeamsBrand1Selected: #4169E1 !important;
+
+    /* Default Backgrounds - Midnight Blue, progressively darker */
+    --colorDefaultBackground1: #4169E1 !important;
+    --colorDefaultBackground2: #87CEEB !important;
+    --colorDefaultBackground3: #4169E1 !important;
+    --colorDefaultBackground4: #2F4F4F !important;
+    --colorDefaultBackground5: #191970 !important;
+    --colorDefaultBackground6: #0B0B2F !important;
+    --colorDefaultBackground7: #050517 !important;
+
+    /* Subtle background - medium blue */
+    --colorSubtleBackground: transparent !important;
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorTransparentBackgroundSelected: rgba(65, 105, 225, 0.25) !important;
+    --colorNeutralBackground5: #191970 !important;
+}
+
+/* Midnight blue accent on primary buttons only */
+.ui-button--primary,
+.ms-Button--primary,
+.fui-Button[data-variant="primary"] {
+    background-color: #87CEEB !important;
+    border-color: #87CEEB !important;
+}
+
+.ui-button--primary:hover,
+.ms-Button--primary:hover,
+.fui-Button[data-variant="primary"]:hover {
+    background-color: #4169E1 !important;
+    border-color: #4169E1 !important;
+}
+
+/* Midnight blue accent on active/selected items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: #87CEEB !important;
+}
+
+/* Gradient App Border */
+
+:root, .fui-FluentProvider {
+    --dt_color-plt-midnight-0: 5, 5, 23;
+    --dt_color-plt-midnight-10: 25, 25, 112;
+    --dt_color-plt-midnight-20: 65, 105, 225;
+}
+
+div[data-tid="experience-layout"] {
+    background: radial-gradient(circle at 50% 50%,
+            rgb(var(--dt_color-plt-midnight-10)) 20%,
+            transparent 80%),
+        conic-gradient(from 45deg at 50% 50%,
+            rgb(var(--dt_color-plt-midnight-0)) 0%,
+            rgb(var(--dt_color-plt-midnight-10)) 25%,
+            rgb(var(--dt_color-plt-midnight-0)) 50%,
+            rgb(var(--dt_color-plt-midnight-10)) 75%,
+            rgb(var(--dt_color-plt-midnight-0)) 100%) !important;
+}
+
+/* Allow Gradient Background */
+button[data-tid="post-new-message-type"],
+div[data-tid="app-layout-area--nav"],
+div[data-tid="app-bar-wrapper"] > div,
+div[data-tid="app-layout-area--header"],
+div[data-tid="title-bar"] {
+    background-color: transparent !important;
+}
+button[data-tid="post-new-message-type"],
+button[data-tid="quick-reply-placeholder-reply"] {
+    color: var(--colorBrandForeground2) !important;
+}

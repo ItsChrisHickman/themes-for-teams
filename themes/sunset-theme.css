@@ -1,0 +1,149 @@
+/* Sunset Theme for Microsoft Teams - Classic Orange/Red Accents */
+
+/* Comprehensive sunset theme with all color variables */
+:root, .fui-FluentProvider {
+
+    /* Primary Brand Colors - Sunset Orange */
+    --colorBrandBackground: #CC4125 !important;
+    --colorBrandBackgroundHover: #FF6B35 !important;
+    --colorBrandBackgroundPressed: #FF8E53 !important;
+    --colorBrandBackgroundSelected: #FFB997 !important;
+    --colorCompoundBrandBackground: #FF6B35 !important;
+    --colorCompoundBrandBackgroundHover: #FF8E53 !important;
+    --colorCompoundBrandBackgroundPressed: #FFB997 !important;
+    --colorBrandBackgroundStatic: #FFB997 !important;
+    --colorBrandBackground2: #B8860B !important;
+    --colorBrandBackground2Hover: #FF6B35 !important;
+    --colorBrandBackground2Pressed: #CC4125 !important;
+    --colorBrandBackground3Static: #FF6B35 !important;
+    --colorBrandBackground4Static: #B8860B !important;
+
+    /* Brand Foreground Colors - Sunset Orange */
+    --colorBrandForeground1: #FFB997 !important;
+    --colorBrandForeground2: #FF6B35 !important;
+    --colorBrandForegroundLink: #FF6B35 !important; 
+    --colorBrandForegroundLinkHover: #FFB997 !important;
+    --colorBrandForegroundLinkPressed: #B8860B !important;
+    --colorBrandForegroundLinkSelected: #FFB997 !important;
+    
+    --colorCompoundBrandForeground1: #FFB997 !important;
+    --colorCompoundBrandForeground1Hover: #FF6B35 !important;
+    --colorCompoundBrandForeground1Pressed: #FF6B35 !important;
+    --colorBrandForegroundInverted: #FF6B35 !important;
+    --colorBrandForegroundInvertedHover: #B8860B !important;
+    --colorBrandForegroundInvertedPressed: #CC4125 !important;
+    --colorBrandForegroundOnLight: #FF6B35 !important;
+    --colorBrandForegroundOnLightHover: #B8860B !important;
+    --colorBrandForegroundOnLightPressed: #CC4125 !important;
+    --colorBrandForegroundOnLightSelected: #B8860B !important;
+
+    /* Neutral Foreground Brand Colors - Sunset Orange */
+    --colorNeutralForeground2BrandHover: #FF6B35 !important;
+    --colorNeutralForeground2BrandPressed: #FFB997 !important;
+    --colorNeutralForeground2BrandSelected: #FF6B35 !important;
+    --colorNeutralForeground3BrandHover: #FF6B35 !important;
+    --colorNeutralForeground3BrandPressed: #FFB997 !important;
+    --colorNeutralForeground3BrandSelected: rgba(255,255,255,.8) !important;
+
+    /* Message Hover */
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    /* Channel Background */
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground4: #B8860B !important;
+    /* Hover State on Left Toolbar */
+    --colorNeutralBackground4Selected: transparent !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
+
+    /* Stroke Colors - Sunset Orange */
+    --colorBrandStroke1: #FF6B35 !important;
+    --colorBrandStroke2: #B8860B !important;
+    --colorBrandStroke2Hover: #FF6B35 !important;
+    --colorBrandStroke2Pressed: #CC4125 !important;
+    --colorBrandStroke2Contrast: #B8860B !important;
+    --colorCompoundBrandStroke: #FFB997 !important;
+    --colorCompoundBrandStrokeHover: #FF6B35 !important;
+    --colorCompoundBrandStrokePressed: #FF6B35 !important;
+    --colorNeutralStrokeAccessibleSelected: #FF6B35 !important;
+
+    /* Avatar Colors - Sunset Orange */
+    --colorAvatar: #FF6B35 !important;
+    --colorAvatarBackground: #FF6B35 !important;
+
+    /* Teams Specific Colors - Sunset Orange */
+    --colorTeamsBrand1Hover: #FF6B35 !important;
+    --colorTeamsBrand1Pressed: #FFB997 !important;
+    --colorTeamsBrand1Selected: #FF6B35 !important;
+
+    /* Default Backgrounds - Sunset Orange, progressively darker */
+    --colorDefaultBackground1: #FF6B35 !important;
+    --colorDefaultBackground2: #FFB997 !important;
+    --colorDefaultBackground3: #FF6B35 !important;
+    --colorDefaultBackground4: #B8860B !important;
+    --colorDefaultBackground5: #CC4125 !important;
+    --colorDefaultBackground6: #8B4513 !important;
+    --colorDefaultBackground7: #5D2F0A !important;
+
+    /* Subtle background - medium orange */
+    --colorSubtleBackground: transparent !important;
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorTransparentBackgroundSelected: rgba(255, 107, 53, 0.25) !important;
+    --colorNeutralBackground5: #CC4125 !important;
+}
+
+/* Sunset orange accent on primary buttons only */
+.ui-button--primary,
+.ms-Button--primary,
+.fui-Button[data-variant="primary"] {
+    background-color: #FFB997 !important;
+    border-color: #FFB997 !important;
+}
+
+.ui-button--primary:hover,
+.ms-Button--primary:hover,
+.fui-Button[data-variant="primary"]:hover {
+    background-color: #FF6B35 !important;
+    border-color: #FF6B35 !important;
+}
+
+/* Sunset orange accent on active/selected items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: #FFB997 !important;
+}
+
+/* Gradient App Border */
+
+:root, .fui-FluentProvider {
+    --dt_color-plt-sunset-0: 93, 47, 10;
+    --dt_color-plt-sunset-10: 204, 65, 37;
+    --dt_color-plt-sunset-20: 255, 107, 53;
+}
+
+div[data-tid="experience-layout"] {
+    background: radial-gradient(circle at 50% 50%,
+            rgb(var(--dt_color-plt-sunset-10)) 20%,
+            transparent 80%),
+        conic-gradient(from 45deg at 50% 50%,
+            rgb(var(--dt_color-plt-sunset-0)) 0%,
+            rgb(var(--dt_color-plt-sunset-10)) 25%,
+            rgb(var(--dt_color-plt-sunset-0)) 50%,
+            rgb(var(--dt_color-plt-sunset-10)) 75%,
+            rgb(var(--dt_color-plt-sunset-0)) 100%) !important;
+}
+
+/* Allow Gradient Background */
+button[data-tid="post-new-message-type"],
+div[data-tid="app-layout-area--nav"],
+div[data-tid="app-bar-wrapper"] > div,
+div[data-tid="app-layout-area--header"],
+div[data-tid="title-bar"] {
+    background-color: transparent !important;
+}
+button[data-tid="post-new-message-type"],
+button[data-tid="quick-reply-placeholder-reply"] {
+    color: var(--colorBrandForeground2) !important;
+}

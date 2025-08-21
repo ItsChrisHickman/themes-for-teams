@@ -1,0 +1,149 @@
+/* Forest Theme for Microsoft Teams - Classic Green Accents */
+
+/* Comprehensive forest theme with all color variables */
+:root, .fui-FluentProvider {
+
+    /* Primary Brand Colors - Forest Green */
+    --colorBrandBackground: #1B4332 !important;
+    --colorBrandBackgroundHover: #2D5A3D !important;
+    --colorBrandBackgroundPressed: #40916C !important;
+    --colorBrandBackgroundSelected: #52B788 !important;
+    --colorCompoundBrandBackground: #2D5A3D !important;
+    --colorCompoundBrandBackgroundHover: #40916C !important;
+    --colorCompoundBrandBackgroundPressed: #52B788 !important;
+    --colorBrandBackgroundStatic: #52B788 !important;
+    --colorBrandBackground2: #2D5A3D !important;
+    --colorBrandBackground2Hover: #40916C !important;
+    --colorBrandBackground2Pressed: #1B4332 !important;
+    --colorBrandBackground3Static: #40916C !important;
+    --colorBrandBackground4Static: #2D5A3D !important;
+
+    /* Brand Foreground Colors - Forest Green */
+    --colorBrandForeground1: #52B788 !important;
+    --colorBrandForeground2: #2D5A3D !important;
+    --colorBrandForegroundLink: #40916C !important; 
+    --colorBrandForegroundLinkHover: #52B788 !important;
+    --colorBrandForegroundLinkPressed: #2D5A3D !important;
+    --colorBrandForegroundLinkSelected: #52B788 !important;
+    
+    --colorCompoundBrandForeground1: #52B788 !important;
+    --colorCompoundBrandForeground1Hover: #2D5A3D !important;
+    --colorCompoundBrandForeground1Pressed: #40916C !important;
+    --colorBrandForegroundInverted: #40916C !important;
+    --colorBrandForegroundInvertedHover: #2D5A3D !important;
+    --colorBrandForegroundInvertedPressed: #1B4332 !important;
+    --colorBrandForegroundOnLight: #40916C !important;
+    --colorBrandForegroundOnLightHover: #2D5A3D !important;
+    --colorBrandForegroundOnLightPressed: #1B4332 !important;
+    --colorBrandForegroundOnLightSelected: #2D5A3D !important;
+
+    /* Neutral Foreground Brand Colors - Forest Green */
+    --colorNeutralForeground2BrandHover: #2D5A3D !important;
+    --colorNeutralForeground2BrandPressed: #52B788 !important;
+    --colorNeutralForeground2BrandSelected: #2D5A3D !important;
+    --colorNeutralForeground3BrandHover: #2D5A3D !important;
+    --colorNeutralForeground3BrandPressed: #52B788 !important;
+    --colorNeutralForeground3BrandSelected: rgba(255,255,255,.8) !important;
+
+    /* Message Hover */
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    /* Channel Background */
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground4: #2D5A3D !important;
+    /* Hover State on Left Toolbar */
+    --colorNeutralBackground4Selected: transparent !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
+
+    /* Stroke Colors - Forest Green */
+    --colorBrandStroke1: #2D5A3D !important;
+    --colorBrandStroke2: #2D5A3D !important;
+    --colorBrandStroke2Hover: #40916C !important;
+    --colorBrandStroke2Pressed: #1B4332 !important;
+    --colorBrandStroke2Contrast: #2D5A3D !important;
+    --colorCompoundBrandStroke: #52B788 !important;
+    --colorCompoundBrandStrokeHover: #2D5A3D !important;
+    --colorCompoundBrandStrokePressed: #40916C !important;
+    --colorNeutralStrokeAccessibleSelected: #2D5A3D !important;
+
+    /* Avatar Colors - Forest Green */
+    --colorAvatar: #2D5A3D !important;
+    --colorAvatarBackground: #40916C !important;
+
+    /* Teams Specific Colors - Forest Green */
+    --colorTeamsBrand1Hover: #2D5A3D !important;
+    --colorTeamsBrand1Pressed: #52B788 !important;
+    --colorTeamsBrand1Selected: #2D5A3D !important;
+
+    /* Default Backgrounds - Forest Green, progressively darker */
+    --colorDefaultBackground1: #2D5A3D !important;
+    --colorDefaultBackground2: #52B788 !important;
+    --colorDefaultBackground3: #40916C !important;
+    --colorDefaultBackground4: #2D5A3D !important;
+    --colorDefaultBackground5: #1B4332 !important;
+    --colorDefaultBackground6: #081C15 !important;
+    --colorDefaultBackground7: #052E16 !important;
+
+    /* Subtle background - medium green */
+    --colorSubtleBackground: transparent !important;
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorTransparentBackgroundSelected: rgba(45, 90, 61, 0.25) !important;
+    --colorNeutralBackground5: #1B4332 !important;
+}
+
+/* Forest green accent on primary buttons only */
+.ui-button--primary,
+.ms-Button--primary,
+.fui-Button[data-variant="primary"] {
+    background-color: #52B788 !important;
+    border-color: #52B788 !important;
+}
+
+.ui-button--primary:hover,
+.ms-Button--primary:hover,
+.fui-Button[data-variant="primary"]:hover {
+    background-color: #2D5A3D !important;
+    border-color: #2D5A3D !important;
+}
+
+/* Forest green accent on active/selected items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: #52B788 !important;
+}
+
+/* Gradient App Border */
+
+:root, .fui-FluentProvider {
+    --dt_color-plt-forest-0: 8, 28, 21;
+    --dt_color-plt-forest-10: 27, 67, 50;
+    --dt_color-plt-forest-20: 45, 90, 61;
+}
+
+div[data-tid="experience-layout"] {
+    background: radial-gradient(circle at 50% 50%,
+            rgb(var(--dt_color-plt-forest-10)) 20%,
+            transparent 80%),
+        conic-gradient(from 45deg at 50% 50%,
+            rgb(var(--dt_color-plt-forest-0)) 0%,
+            rgb(var(--dt_color-plt-forest-10)) 25%,
+            rgb(var(--dt_color-plt-forest-0)) 50%,
+            rgb(var(--dt_color-plt-forest-10)) 75%,
+            rgb(var(--dt_color-plt-forest-0)) 100%) !important;
+}
+
+/* Allow Gradient Background */
+button[data-tid="post-new-message-type"],
+div[data-tid="app-layout-area--nav"],
+div[data-tid="app-bar-wrapper"] > div,
+div[data-tid="app-layout-area--header"],
+div[data-tid="title-bar"] {
+    background-color: transparent !important;
+}
+button[data-tid="post-new-message-type"],
+button[data-tid="quick-reply-placeholder-reply"] {
+    color: var(--colorBrandForeground2) !important;
+}

@@ -1,0 +1,149 @@
+/* Amber Theme for Microsoft Teams - Classic Gold/Yellow Accents */
+
+/* Comprehensive amber theme with all color variables */
+:root, .fui-FluentProvider {
+
+    /* Primary Brand Colors - Amber Gold */
+    --colorBrandBackground: #F57C00 !important;
+    --colorBrandBackgroundHover: #FFA726 !important;
+    --colorBrandBackgroundPressed: #FFB74D !important;
+    --colorBrandBackgroundSelected: #FFE082 !important;
+    --colorCompoundBrandBackground: #FFA726 !important;
+    --colorCompoundBrandBackgroundHover: #FFB74D !important;
+    --colorCompoundBrandBackgroundPressed: #FFE082 !important;
+    --colorBrandBackgroundStatic: #FFE082 !important;
+    --colorBrandBackground2: #E65100 !important;
+    --colorBrandBackground2Hover: #FFA726 !important;
+    --colorBrandBackground2Pressed: #F57C00 !important;
+    --colorBrandBackground3Static: #FFA726 !important;
+    --colorBrandBackground4Static: #E65100 !important;
+
+    /* Brand Foreground Colors - Amber Gold */
+    --colorBrandForeground1: #FFE082 !important;
+    --colorBrandForeground2: #FFA726 !important;
+    --colorBrandForegroundLink: #FFA726 !important; 
+    --colorBrandForegroundLinkHover: #FFE082 !important;
+    --colorBrandForegroundLinkPressed: #E65100 !important;
+    --colorBrandForegroundLinkSelected: #FFE082 !important;
+    
+    --colorCompoundBrandForeground1: #FFE082 !important;
+    --colorCompoundBrandForeground1Hover: #FFA726 !important;
+    --colorCompoundBrandForeground1Pressed: #FFA726 !important;
+    --colorBrandForegroundInverted: #FFA726 !important;
+    --colorBrandForegroundInvertedHover: #E65100 !important;
+    --colorBrandForegroundInvertedPressed: #F57C00 !important;
+    --colorBrandForegroundOnLight: #FFA726 !important;
+    --colorBrandForegroundOnLightHover: #E65100 !important;
+    --colorBrandForegroundOnLightPressed: #F57C00 !important;
+    --colorBrandForegroundOnLightSelected: #E65100 !important;
+
+    /* Neutral Foreground Brand Colors - Amber Gold */
+    --colorNeutralForeground2BrandHover: #FFA726 !important;
+    --colorNeutralForeground2BrandPressed: #FFE082 !important;
+    --colorNeutralForeground2BrandSelected: #FFA726 !important;
+    --colorNeutralForeground3BrandHover: #FFA726 !important;
+    --colorNeutralForeground3BrandPressed: #FFE082 !important;
+    --colorNeutralForeground3BrandSelected: rgba(255,255,255,.8) !important;
+
+    /* Message Hover */
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    /* Channel Background */
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground4: #E65100 !important;
+    /* Hover State on Left Toolbar */
+    --colorNeutralBackground4Selected: transparent !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
+
+    /* Stroke Colors - Amber Gold */
+    --colorBrandStroke1: #FFA726 !important;
+    --colorBrandStroke2: #E65100 !important;
+    --colorBrandStroke2Hover: #FFA726 !important;
+    --colorBrandStroke2Pressed: #F57C00 !important;
+    --colorBrandStroke2Contrast: #E65100 !important;
+    --colorCompoundBrandStroke: #FFE082 !important;
+    --colorCompoundBrandStrokeHover: #FFA726 !important;
+    --colorCompoundBrandStrokePressed: #FFA726 !important;
+    --colorNeutralStrokeAccessibleSelected: #FFA726 !important;
+
+    /* Avatar Colors - Amber Gold */
+    --colorAvatar: #FFA726 !important;
+    --colorAvatarBackground: #FFA726 !important;
+
+    /* Teams Specific Colors - Amber Gold */
+    --colorTeamsBrand1Hover: #FFA726 !important;
+    --colorTeamsBrand1Pressed: #FFE082 !important;
+    --colorTeamsBrand1Selected: #FFA726 !important;
+
+    /* Default Backgrounds - Amber Gold, progressively darker */
+    --colorDefaultBackground1: #FFA726 !important;
+    --colorDefaultBackground2: #FFE082 !important;
+    --colorDefaultBackground3: #FFA726 !important;
+    --colorDefaultBackground4: #E65100 !important;
+    --colorDefaultBackground5: #F57C00 !important;
+    --colorDefaultBackground6: #BF360C !important;
+    --colorDefaultBackground7: #5D1A00 !important;
+
+    /* Subtle background - medium amber */
+    --colorSubtleBackground: transparent !important;
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorTransparentBackgroundSelected: rgba(255, 167, 38, 0.25) !important;
+    --colorNeutralBackground5: #F57C00 !important;
+}
+
+/* Amber gold accent on primary buttons only */
+.ui-button--primary,
+.ms-Button--primary,
+.fui-Button[data-variant="primary"] {
+    background-color: #FFE082 !important;
+    border-color: #FFE082 !important;
+}
+
+.ui-button--primary:hover,
+.ms-Button--primary:hover,
+.fui-Button[data-variant="primary"]:hover {
+    background-color: #FFA726 !important;
+    border-color: #FFA726 !important;
+}
+
+/* Amber gold accent on active/selected items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: #FFE082 !important;
+}
+
+/* Gradient App Border */
+
+:root, .fui-FluentProvider {
+    --dt_color-plt-amber-0: 93, 26, 0;
+    --dt_color-plt-amber-10: 245, 124, 0;
+    --dt_color-plt-amber-20: 255, 167, 38;
+}
+
+div[data-tid="experience-layout"] {
+    background: radial-gradient(circle at 50% 50%,
+            rgb(var(--dt_color-plt-amber-10)) 20%,
+            transparent 80%),
+        conic-gradient(from 45deg at 50% 50%,
+            rgb(var(--dt_color-plt-amber-0)) 0%,
+            rgb(var(--dt_color-plt-amber-10)) 25%,
+            rgb(var(--dt_color-plt-amber-0)) 50%,
+            rgb(var(--dt_color-plt-amber-10)) 75%,
+            rgb(var(--dt_color-plt-amber-0)) 100%) !important;
+}
+
+/* Allow Gradient Background */
+button[data-tid="post-new-message-type"],
+div[data-tid="app-layout-area--nav"],
+div[data-tid="app-bar-wrapper"] > div,
+div[data-tid="app-layout-area--header"],
+div[data-tid="title-bar"] {
+    background-color: transparent !important;
+}
+button[data-tid="post-new-message-type"],
+button[data-tid="quick-reply-placeholder-reply"] {
+    color: var(--colorBrandForeground2) !important;
+}
