@@ -27,5 +27,10 @@
   ],
   "action": {
     "default_popup": "popup.html"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "themes-for-teams@goshow.me"
+    }
   }
 }

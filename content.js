@@ -1,20 +1,38 @@
 // Teams Chat Padding Fix Content Script
 
-(function() {
+(function () {
     'use strict';
-    
-    console.log('Teams Chat Padding Fix extension loaded');
-    
-    // Function to apply any additional dynamic fixes if needed
-    function applyDynamicFixes() {
-        // Placeholder for any dynamic CSS fixes
-        console.log('Dynamic fixes applied');
+
+    const ext = typeof browser !== 'undefined' ? browser : chrome;
+
+    // Cross-browser storage helper
+    function storageGet(keys) {
+        return new Promise((resolve) => {
+            if (ext.storage.sync.get.length > 1) {
+                // Chrome-style callback
+                ext.storage.sync.get(keys, resolve);
+            } else {
+                // Firefox-style promise
+                ext.storage.sync.get(keys).then(resolve);
+            }
+        });
     }
-    
+
+    function storageSet(items) {
+        return new Promise((resolve) => {
+            if (ext.storage.sync.set.length > 1) {
+                // Chrome-style callback
+                ext.storage.sync.set(items, resolve);
+            } else {
+                // Firefox-style promise
+                ext.storage.sync.set(items).then(resolve);
+            }
+        });
+    }
+
     // Font selection function
     function injectFont(font) {
-        console.log('Teams Theme Extension: Applying font -', font);
-        
+
         // Remove any previously injected font
         const oldFontStyle = document.getElementById('teams-font-style');
         if (oldFontStyle) {
@@ -92,25 +110,11 @@
         style.id = 'teams-font-style';
         style.textContent = fontCSS;
         document.head.appendChild(style);
+    }
 
-        console.log('Teams Theme Extension: Font applied successfully -', font);
-    }
-    
-    // Initialize when DOM is ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', applyDynamicFixes);
-    } else {
-        applyDynamicFixes();
-    }
-    
-    // Also apply fixes when the page is fully loaded
-    window.addEventListener('load', function() {
-        setTimeout(applyDynamicFixes, 2000);
-    });
     // Theme selection logic
     function injectTheme(theme) {
-        console.log('Teams Theme Extension: Applying theme -', theme);
-        
+
         // Remove any previously injected theme
         const oldStyle = document.getElementById('teams-theme-style');
         if (oldStyle) {
@@ -131,7 +135,7 @@
         if (theme === 'nord') themeFile = 'themes/nord-theme.css';
         if (theme === 'solarized') themeFile = 'themes/solarized-theme.css';
 
-        fetch(chrome.runtime.getURL(themeFile))
+        fetch(ext.runtime.getURL(themeFile))
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
@@ -143,14 +147,11 @@
                 style.id = 'teams-theme-style';
                 style.textContent = css;
                 document.head.appendChild(style);
-                console.log('Teams Theme Extension: Theme applied successfully -', theme);
             })
             .catch(error => {
                 console.error('Teams Theme Extension: Error loading theme:', error);
             });
     }
-
-    // Read theme and font from chrome.storage and inject
 
     // Inject Teams Improvements CSS if enabled
     function injectImprovements(enabled) {
@@ -158,7 +159,7 @@
         const oldStyle = document.getElementById(styleId);
         if (oldStyle) oldStyle.remove();
         if (enabled) {
-            fetch(chrome.runtime.getURL('styles.css'))
+            fetch(ext.runtime.getURL('styles.css'))
                 .then(response => response.text())
                 .then(css => {
                     const style = document.createElement('style');
@@ -169,14 +170,14 @@
         }
     }
 
-    chrome.storage.sync.get(['teamsTheme', 'teamsFont'], function(result) {
+    storageGet(['teamsTheme', 'teamsFont']).then(result => {
         injectTheme(result.teamsTheme || 'default');
         injectFont(result.teamsFont || 'default');
         injectImprovements(true);
     });
 
     // Listen for changes and apply live
-    chrome.storage.onChanged.addListener(function(changes, areaName) {
+    ext.storage.onChanged.addListener(function (changes, areaName) {
         if (areaName === 'sync') {
             if (changes.teamsTheme) {
                 injectTheme(changes.teamsTheme.newValue || 'default');

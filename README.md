@@ -1,11 +1,11 @@
 ![App Preview](App-Preview.png)
   
-# Themes for Teams - Chrome Extension
+# Themes for Teams - Chrome, Firefox and Edge Extension
 
 I work for a company that recently migrated to Teams.  
 
 I decided to build a Chrome Extension to customize it to
-suit my purposes.
+suit my purposes.  It works with Firefox too!
 
 ## Features
 
@@ -15,7 +15,7 @@ suit my purposes.
 - Moves Post Titles beside avatar - much nicer!
 - Subtle style changes to give Teams an edge!
 
-## Installation
+## Chrome Installation
 
 1. Visit: chrome://extensions/
 2. Enable Developer Mode (top right!)
@@ -23,9 +23,18 @@ suit my purposes.
 4. Select the folder you unzipped this to that contains manifest.json
 5. Reclaim your wasted screen real estate!
 
+## Firefox Installation
+
+1. Visit: about:debugging
+2. Click 'This Firefox' on the left.
+3. 'Load Temporary Add-On'.
+4. Select the manifest.json from this repo.
+5. Extension will not persist (working on submitting)
 
 ## Changelog
 
-v0.0.1
+v0.1.0 - Beta
+  - Gradient UI borders, more tweaks, better themes.  Supports Firefox.
+v0.0.1 - Alhpa
   - Widened Chats, Channels, Reduced Team/Channel List gutter and set default font to Lato
 
