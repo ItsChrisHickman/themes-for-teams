@@ -114,3 +114,8 @@ button[data-tid="diverse-reaction-pill-button"] {
     border: none !important;
     background: #282a2e !important;
 }
+
+/* Fix replies width so emojis can be used */
+div[id*="message-body-"] {
+    max-width: 100% !important;
+}
