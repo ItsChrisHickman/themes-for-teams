@@ -35,6 +35,7 @@ suit my purposes.  It works with Firefox too!
 
 v0.1.0 - Beta
   - Gradient UI borders, more tweaks, better themes.  Supports Firefox.
-v0.0.1 - Alhpa
+
+v0.0.1 - Alpha
   - Widened Chats, Channels, Reduced Team/Channel List gutter and set default font to Lato
 
