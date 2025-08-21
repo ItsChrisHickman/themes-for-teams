@@ -1,34 +1,51 @@
 /* Monokai Theme for Microsoft Teams - VS Code Monokai Style */
 
-/* Comprehensive monokai theme with all color variables */
-:root, .fui-FluentProvider {
+/* ===== COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Monokai Color Scale */
+    --dt_color-plt-monokai-0: 248, 248, 242;   /* Lightest */
+    --dt_color-plt-monokai-5: 230, 219, 116;
+    --dt_color-plt-monokai-10: 166, 226, 46;
+    --dt_color-plt-monokai-20: 102, 217, 239;
+    --dt_color-plt-monokai-30: 249, 38, 114;
+    --dt_color-plt-monokai-40: 253, 151, 31;
+    --dt_color-plt-monokai-50: 174, 129, 255;
+    --dt_color-plt-monokai-60: 117, 113, 94;
+    --dt_color-plt-monokai-70: 73, 72, 62;
+    --dt_color-plt-monokai-80: 62, 61, 50;
+    --dt_color-plt-monokai-90: 39, 40, 34;
+    --dt_color-plt-monokai-100: 15, 16, 14;    /* Darkest */
+}
 
-    /* Primary Brand Colors - Monokai Green/Yellow */
+/* ===== SHARED BRAND COLORS (Both Light and Dark Modes) ===== */
+:root,
+.fui-FluentProvider {
+    /* Primary Brand Colors */
     --colorBrandBackground: #A6E22E !important;
     --colorBrandBackgroundHover: #F92672 !important;
     --colorBrandBackgroundPressed: #FD971F !important;
     --colorBrandBackgroundSelected: #E6DB74 !important;
-    --colorCompoundBrandBackground: #F92672 !important;
-    --colorCompoundBrandBackgroundHover: #FD971F !important;
-    --colorCompoundBrandBackgroundPressed: #E6DB74 !important;
     --colorBrandBackgroundStatic: #E6DB74 !important;
+    
     --colorBrandBackground2: #66D9EF !important;
     --colorBrandBackground2Hover: #A6E22E !important;
     --colorBrandBackground2Pressed: #F92672 !important;
     --colorBrandBackground3Static: #A6E22E !important;
     --colorBrandBackground4Static: #66D9EF !important;
+    
+    --colorCompoundBrandBackground: #F92672 !important;
+    --colorCompoundBrandBackgroundHover: #FD971F !important;
+    --colorCompoundBrandBackgroundPressed: #E6DB74 !important;
 
-    /* Brand Foreground Colors - Monokai */
+    /* Brand Foreground Colors */
     --colorBrandForeground1: #E6DB74 !important;
     --colorBrandForeground2: #A6E22E !important;
-    --colorBrandForegroundLink: #66D9EF !important; 
+    --colorBrandForegroundLink: #66D9EF !important;
     --colorBrandForegroundLinkHover: #E6DB74 !important;
     --colorBrandForegroundLinkPressed: #F92672 !important;
     --colorBrandForegroundLinkSelected: #E6DB74 !important;
     
-    --colorCompoundBrandForeground1: #E6DB74 !important;
-    --colorCompoundBrandForeground1Hover: #A6E22E !important;
-    --colorCompoundBrandForeground1Pressed: #66D9EF !important;
     --colorBrandForegroundInverted: #66D9EF !important;
     --colorBrandForegroundInvertedHover: #F92672 !important;
     --colorBrandForegroundInvertedPressed: #FD971F !important;
@@ -36,26 +53,19 @@
     --colorBrandForegroundOnLightHover: #F92672 !important;
     --colorBrandForegroundOnLightPressed: #FD971F !important;
     --colorBrandForegroundOnLightSelected: #F92672 !important;
+    
+    --colorCompoundBrandForeground1: #E6DB74 !important;
+    --colorCompoundBrandForeground1Hover: #A6E22E !important;
+    --colorCompoundBrandForeground1Pressed: #66D9EF !important;
 
-    /* Neutral Foreground Brand Colors - Monokai */
+    /* Neutral Foreground Brand Colors */
     --colorNeutralForeground2BrandHover: #A6E22E !important;
     --colorNeutralForeground2BrandPressed: #E6DB74 !important;
     --colorNeutralForeground2BrandSelected: #A6E22E !important;
     --colorNeutralForeground3BrandHover: #A6E22E !important;
     --colorNeutralForeground3BrandPressed: #E6DB74 !important;
-    --colorNeutralForeground3BrandSelected: rgba(255,255,255,.8) !important;
 
-    /* Channel Background */
-    --colorNeutralBackground1: rgb(26, 29, 33) !important;
-    --colorNeutralBackground2: rgb(26, 29, 33) !important;
-    --colorNeutralBackground3: rgb(26, 29, 33) !important;
-    --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
-    --colorNeutralBackground4: #3E3D32 !important;
-    /* Hover State on Left Toolbar */
-    --colorNeutralBackground4Selected: transparent !important;
-    --colorNeutralCardBackground: #272822 !important;
-
-    /* Stroke Colors - Monokai */
+    /* Stroke Colors */
     --colorBrandStroke1: #A6E22E !important;
     --colorBrandStroke2: #66D9EF !important;
     --colorBrandStroke2Hover: #A6E22E !important;
@@ -66,16 +76,34 @@
     --colorCompoundBrandStrokePressed: #66D9EF !important;
     --colorNeutralStrokeAccessibleSelected: #A6E22E !important;
 
-    /* Avatar Colors - Monokai */
+    /* Avatar Colors */
     --colorAvatar: #A6E22E !important;
     --colorAvatarBackground: #66D9EF !important;
 
-    /* Teams Specific Colors - Monokai */
+    /* Teams Specific Colors */
     --colorTeamsBrand1Hover: #A6E22E !important;
     --colorTeamsBrand1Pressed: #E6DB74 !important;
     --colorTeamsBrand1Selected: #A6E22E !important;
+}
 
-    /* Default Backgrounds - Monokai, progressively darker */
+/* ===== DARK MODE - Teams' theme-darkV2 ===== */
+html.theme-darkV2 :root,
+html.theme-darkV2 .fui-FluentProvider {
+    /* Neutral Backgrounds - Dark */
+    --colorNeutralBackground1: #272822 !important;
+    --colorNeutralBackground2: #272822 !important;
+    --colorNeutralBackground3: #272822 !important;
+    --colorNeutralBackground4: #3E3D32 !important;
+    --colorNeutralBackground5: #3E3D32 !important;
+    --colorNeutralCardBackground: #272822 !important;
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    --colorNeutralBackground4Selected: transparent !important;
+
+    /* Text Colors - Dark Mode */
+    --colorNeutralForeground3: #F8F8F2 !important;
+    --colorNeutralForeground3BrandSelected: rgba(255, 255, 255, .8) !important;
+
+    /* Default Backgrounds - Dark Mode */
     --colorDefaultBackground1: #A6E22E !important;
     --colorDefaultBackground2: #E6DB74 !important;
     --colorDefaultBackground3: #66D9EF !important;
@@ -84,67 +112,103 @@
     --colorDefaultBackground6: #1E1F1C !important;
     --colorDefaultBackground7: #0F100E !important;
 
-    /* Subtle background - monokai style */
+    /* Subtle Backgrounds - Dark Mode */
     --colorSubtleBackground: transparent !important;
-    --colorNeutralForeground3: #F8F8F2 !important;
     --colorTransparentBackgroundSelected: rgba(166, 226, 46, 0.25) !important;
-    --colorNeutralBackground5: #3E3D32 !important;
-}
 
-/* Monokai accent on primary buttons only */
-.ui-button--primary,
-.ms-Button--primary,
-.fui-Button[data-variant="primary"] {
-    background-color: #A6E22E !important;
-    border-color: #A6E22E !important;
-    color: #272822 !important;
-}
-
-.ui-button--primary:hover,
-.ms-Button--primary:hover,
-.fui-Button[data-variant="primary"]:hover {
-    background-color: #F92672 !important;
-    border-color: #F92672 !important;
-    color: #F8F8F2 !important;
-}
-
-/* Monokai accent on active/selected items */
-.selected,
-.active,
-.is-selected,
-[aria-selected="true"] {
-    border-left-color: #A6E22E !important;
-}
-
-/* Gradient App Border */
-
-:root, .fui-FluentProvider {
+    /* Gradient Colors - Dark Mode */
     --dt_color-plt-monokai-0: 15, 16, 14;
     --dt_color-plt-monokai-10: 39, 40, 34;
     --dt_color-plt-monokai-20: 62, 61, 50;
 }
 
-div[data-tid="experience-layout"] {
-    background: radial-gradient(circle at 50% 50%,
-            rgb(var(--dt_color-plt-monokai-10)) 20%,
-            transparent 80%),
-        conic-gradient(from 45deg at 50% 50%,
-            rgb(var(--dt_color-plt-monokai-0)) 0%,
-            rgb(var(--dt_color-plt-monokai-10)) 25%,
-            rgb(var(--dt_color-plt-monokai-0)) 50%,
-            rgb(var(--dt_color-plt-monokai-10)) 75%,
-            rgb(var(--dt_color-plt-monokai-0)) 100%) !important;
+/* ===== LIGHT MODE - Teams' theme-defaultV2 ===== */
+html.theme-defaultV2 :root,
+html.theme-defaultV2 .fui-FluentProvider {
+    /* Neutral Backgrounds - Light */
+    --colorNeutralBackground1: #ffffff !important;
+    --colorNeutralBackground2: #f8f8f8 !important;
+    --colorNeutralBackground3: #f0f0f0 !important;
+    --colorNeutralBackground4: #f5f5f0 !important;
+    --colorNeutralBackground5: #eeeecc !important;
+    --colorNeutralCardBackground: #ffffff !important;
+    --colorNeutralBackground1Hover: rgba(0, 0, 0, .04) !important;
+    --colorNeutralBackground4Selected: rgba(0, 0, 0, .04) !important;
+
+    /* Brand Background for User Messages - Match Neutral */
+    --colorBrandBackground2: #f8f8f8 !important;
+
+    /* Text Colors - Light Mode */
+    --colorNeutralForeground1: #222 !important;
+    --colorNeutralForeground2: #444 !important;
+    --colorNeutralForeground3: #666 !important;
+    --colorNeutralForeground3BrandSelected: #FAFAFA !important;
+
+    /* Default Backgrounds - Light Mode */
+    --colorDefaultBackground1: #ffffff !important;
+    --colorDefaultBackground2: #f8f8f8 !important;
+    --colorDefaultBackground3: #f0f0f0 !important;
+    --colorDefaultBackground4: #f5f5f0 !important;
+    --colorDefaultBackground5: #eeeecc !important;
+    --colorDefaultBackground6: #fbfbf8 !important;
+    --colorDefaultBackground7: #ffffff !important;
+
+    /* Subtle Backgrounds - Light Mode */
+    --colorSubtleBackground: rgba(166, 226, 46, .02) !important;
+    --colorTransparentBackgroundSelected: rgba(166, 226, 46, .08) !important;
+
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon svg path {
+        fill: var(--colorDefaultBackground2) !important;
+    }
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon span {
+        color: var(--colorDefaultBackground2) !important;
+    }
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon img {
+        filter: none !important;
+    }
+
+    div[data-testid="simple-collab-rail"],
+    div[data-tid="app-layout-area--mid-nav"] {
+        background-color: var(--colorDefaultBackground2) !important;
+    }
+    div[data-item-type="channel"] {
+        background: transparent !important;
+    }
+
+    /* Gradient App Border - Light Mode */
+    div[data-tid="experience-layout"] {
+        background: radial-gradient(circle at 50% 50%, 
+                rgb(var(--dt_color-plt-monokai-70)) 20%, 
+                transparent 80%),
+            conic-gradient(from 45deg at 50% 50%,
+                rgb(var(--dt_color-plt-monokai-90)) 0%,
+                rgb(var(--dt_color-plt-monokai-70)) 25%,
+                rgb(var(--dt_color-plt-monokai-90)) 50%,
+                rgb(var(--dt_color-plt-monokai-70)) 75%,
+                rgb(var(--dt_color-plt-monokai-90)) 100%) !important;
+    }
+
+    /* Allow Gradient Background - Light Mode */
+    button[data-tid="post-new-message-type"],
+    div[data-tid="app-layout-area--nav"],
+    div[data-tid="app-bar-wrapper"] > div,
+    div[data-tid="app-layout-area--header"],
+    div[data-tid="title-bar"] {
+        background-color: transparent !important;
+    }
+
+    button[data-tid="post-new-message-type"],
+    button[data-tid="quick-reply-placeholder-reply"] {
+        color: var(--colorBrandForeground2) !important;
+    }
 }
 
-/* Allow Gradient Background */
-button[data-tid="post-new-message-type"],
-div[data-tid="app-layout-area--nav"],
-div[data-tid="app-bar-wrapper"] > div,
-div[data-tid="app-layout-area--header"],
-div[data-tid="title-bar"] {
-    background-color: transparent !important;
-}
-button[data-tid="post-new-message-type"],
-button[data-tid="quick-reply-placeholder-reply"] {
-    color: var(--colorBrandForeground2) !important;
+/* ===== UI ELEMENTS ===== */
+
+/* Active/Selected Items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: var(--colorBrandForeground1) !important;
 }

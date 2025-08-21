@@ -1,11 +1,10 @@
 /* Purple Theme for Microsoft Teams - Classic Purple Accents */
 
-/* Shared Purple Brand Colors for Both Light and Dark Modes */
+/* ===== COLOR PALETTE ===== */
 :root,
 .fui-FluentProvider {
-
-    /* Base Colors */
-    --dt_color-plt-purple-0: 249, 237, 255;
+    /* Purple Color Scale */
+    --dt_color-plt-purple-0: 249, 237, 255;    /* Lightest */
     --dt_color-plt-purple-5: 246, 228, 255;
     --dt_color-plt-purple-10: 244, 218, 255;
     --dt_color-plt-purple-20: 234, 189, 251;
@@ -16,34 +15,37 @@
     --dt_color-plt-purple-70: 131, 56, 138;
     --dt_color-plt-purple-80: 97, 31, 105;
     --dt_color-plt-purple-90: 74, 21, 75;
-    --dt_color-plt-purple-100: 57, 6, 58;
+    --dt_color-plt-purple-100: 57, 6, 58;        /* Darkest */
+}
 
-    /* Primary Brand Colors - Purple (shared) */
+/* ===== SHARED BRAND COLORS (Both Light and Dark Modes) ===== */
+:root,
+.fui-FluentProvider {
+    /* Primary Brand Colors */
     --colorBrandBackground: #6A5ACD !important;
     --colorBrandBackgroundHover: #9370DB !important;
     --colorBrandBackgroundPressed: #483D8B !important;
     --colorBrandBackgroundSelected: #7B68EE !important;
-    --colorCompoundBrandBackground: #9370DB !important;
-    --colorCompoundBrandBackgroundHover: #BA55D3 !important;
-    --colorCompoundBrandBackgroundPressed: #7B68EE !important;
     --colorBrandBackgroundStatic: #7B68EE !important;
+    
     --colorBrandBackground2: #483D8B !important;
     --colorBrandBackground2Hover: #6A5ACD !important;
     --colorBrandBackground2Pressed: #2E2B5F !important;
     --colorBrandBackground3Static: #6A5ACD !important;
     --colorBrandBackground4Static: #483D8B !important;
+    
+    --colorCompoundBrandBackground: #9370DB !important;
+    --colorCompoundBrandBackgroundHover: #BA55D3 !important;
+    --colorCompoundBrandBackgroundPressed: #7B68EE !important;
 
-    /* Brand Foreground Colors - Purple (shared) */
+    /* Brand Foreground Colors */
     --colorBrandForeground1: #7B68EE !important;
     --colorBrandForeground2: #9370DB !important;
     --colorBrandForegroundLink: #6A5ACD !important;
     --colorBrandForegroundLinkHover: #7B68EE !important;
     --colorBrandForegroundLinkPressed: #483D8B !important;
     --colorBrandForegroundLinkSelected: #7B68EE !important;
-
-    --colorCompoundBrandForeground1: #7B68EE !important;
-    --colorCompoundBrandForeground1Hover: #9370DB !important;
-    --colorCompoundBrandForeground1Pressed: #6A5ACD !important;
+    
     --colorBrandForegroundInverted: #6A5ACD !important;
     --colorBrandForegroundInvertedHover: #483D8B !important;
     --colorBrandForegroundInvertedPressed: #2E2B5F !important;
@@ -51,15 +53,19 @@
     --colorBrandForegroundOnLightHover: #483D8B !important;
     --colorBrandForegroundOnLightPressed: #2E2B5F !important;
     --colorBrandForegroundOnLightSelected: #483D8B !important;
+    
+    --colorCompoundBrandForeground1: #7B68EE !important;
+    --colorCompoundBrandForeground1Hover: #9370DB !important;
+    --colorCompoundBrandForeground1Pressed: #6A5ACD !important;
 
-    /* Neutral Foreground Brand Colors - Purple (shared) */
+    /* Neutral Foreground Brand Colors */
     --colorNeutralForeground2BrandHover: #9370DB !important;
     --colorNeutralForeground2BrandPressed: #7B68EE !important;
     --colorNeutralForeground2BrandSelected: #9370DB !important;
     --colorNeutralForeground3BrandHover: #9370DB !important;
     --colorNeutralForeground3BrandPressed: #7B68EE !important;
 
-    /* Stroke Colors - Purple (shared) */
+    /* Stroke Colors */
     --colorBrandStroke1: #9370DB !important;
     --colorBrandStroke2: #483D8B !important;
     --colorBrandStroke2Hover: #6A5ACD !important;
@@ -70,20 +76,20 @@
     --colorCompoundBrandStrokePressed: #6A5ACD !important;
     --colorNeutralStrokeAccessibleSelected: #9370DB !important;
 
-    /* Avatar Colors - Purple (shared) */
+    /* Avatar Colors */
     --colorAvatar: #9370DB !important;
     --colorAvatarBackground: #6A5ACD !important;
 
-    /* Teams Specific Colors - Purple (shared) */
+    /* Teams Specific Colors */
     --colorTeamsBrand1Hover: #9370DB !important;
     --colorTeamsBrand1Pressed: #7B68EE !important;
     --colorTeamsBrand1Selected: #9370DB !important;
 }
 
-/* Dark Mode - Teams' theme-darkV2 */
+/* ===== DARK MODE - Teams' theme-darkV2 ===== */
 html.theme-darkV2 :root,
 html.theme-darkV2 .fui-FluentProvider {
-    /* Dark mode neutral backgrounds */
+    /* Neutral Backgrounds - Dark */
     --colorNeutralBackground1: rgb(26, 29, 33) !important;
     --colorNeutralBackground2: rgb(26, 29, 33) !important;
     --colorNeutralBackground3: rgb(26, 29, 33) !important;
@@ -93,11 +99,11 @@ html.theme-darkV2 .fui-FluentProvider {
     --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
     --colorNeutralBackground4Selected: transparent !important;
 
-    /* Dark mode text colors */
+    /* Text Colors - Dark Mode */
     --colorNeutralForeground3: #FAFAFA !important;
     --colorNeutralForeground3BrandSelected: rgba(255, 255, 255, .8) !important;
 
-    /* Dark mode default backgrounds - progressively darker */
+    /* Default Backgrounds - Dark Mode */
     --colorDefaultBackground1: #9370DB !important;
     --colorDefaultBackground2: #7B68EE !important;
     --colorDefaultBackground3: #6A5ACD !important;
@@ -106,20 +112,20 @@ html.theme-darkV2 .fui-FluentProvider {
     --colorDefaultBackground6: #1A1833 !important;
     --colorDefaultBackground7: #211125 !important;
 
-    /* Dark mode subtle backgrounds */
+    /* Subtle Backgrounds - Dark Mode */
     --colorSubtleBackground: transparent !important;
     --colorTransparentBackgroundSelected: rgba(147, 112, 219, 0.25) !important;
 
-    /* Dark gradient colors */
+    /* Gradient Colors - Dark Mode */
     --dt_color-plt-purple-0: 32, 2, 33;
     --dt_color-plt-purple-10: 67, 19, 73;
     --dt_color-plt-purple-20: 95, 37, 101;
 }
 
-/* Light Mode - Teams' theme-defaultV2 */
+/* ===== LIGHT MODE - Teams' theme-defaultV2 ===== */
 html.theme-defaultV2 :root,
 html.theme-defaultV2 .fui-FluentProvider {
-    /* Light mode neutral backgrounds */
+    /* Neutral Backgrounds - Light */
     --colorNeutralBackground1: #ffffff !important;
     --colorNeutralBackground2: #f8f8f8 !important;
     --colorNeutralBackground3: #f0f0f0 !important;
@@ -129,13 +135,16 @@ html.theme-defaultV2 .fui-FluentProvider {
     --colorNeutralBackground1Hover: rgba(0, 0, 0, .04) !important;
     --colorNeutralBackground4Selected: rgba(0, 0, 0, .04) !important;
 
-    /* Light mode text colors */
+    /* Brand Background for User Messages - Match Neutral */
+    --colorBrandBackground2: #f8f8f8 !important;
+
+    /* Text Colors - Light Mode */
     --colorNeutralForeground1: #222 !important;
     --colorNeutralForeground2: #444 !important;
     --colorNeutralForeground3: #666 !important;
-    --colorNeutralForeground3BrandSelected:  #FAFAFA !important;
+    --colorNeutralForeground3BrandSelected: #FAFAFA !important;
 
-    /* Light mode default backgrounds */
+    /* Default Backgrounds - Light Mode */
     --colorDefaultBackground1: #ffffff !important;
     --colorDefaultBackground2: #f8f8f8 !important;
     --colorDefaultBackground3: #f0f0f0 !important;
@@ -144,18 +153,18 @@ html.theme-defaultV2 .fui-FluentProvider {
     --colorDefaultBackground6: #fdfcff !important;
     --colorDefaultBackground7: #ffffff !important;
 
-    /* Light mode subtle backgrounds */
+    /* Subtle Backgrounds - Light Mode */
     --colorSubtleBackground: rgba(106, 90, 205, .02) !important;
     --colorTransparentBackgroundSelected: rgba(106, 90, 205, .08) !important;
 
-    /* Light mode left navigation overrides */
-    .fui-Button__icon svg path {
+    /* Left Navigation Overrides - Light Mode */
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon svg path {
         fill: var(--colorDefaultBackground2) !important;
     }
-    .fui-Button__icon span { 
-        color: var(--colorDefaultBackground2) !important; 
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon span {
+        color: var(--colorDefaultBackground2) !important;
     }
-    .fui-Button__icon img {
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon img {
         filter: none !important;
     }
     div[data-testid="simple-collab-rail"],
@@ -165,48 +174,24 @@ html.theme-defaultV2 .fui-FluentProvider {
     div[data-item-type="channel"] {
         background: transparent !important;
     }
-}
 
-/* Purple accent on primary buttons only */
-/*
-.ui-button--primary,
-.ms-Button--primary,
-.fui-Button[data-variant="primary"] {
-    background-color: var(--colorBrandForeground1) !important;
-    border-color: var(--colorBrandForeground1) !important;
-}
-
-
-.ui-button--primary:hover,
-.ms-Button--primary:hover,
-.fui-Button[data-variant="primary"]:hover {
-    background-color: var(--colorBrandForeground2) !important;
-    border-color: var(--colorBrandForeground2) !important;
-}
-*/
-
-/* Purple accent on active/selected items */
-
-.selected,
-.active,
-.is-selected,
-[aria-selected="true"] {
-    border-left-color: var(--colorBrandForeground1) !important;
-}
-
-/* Light Mode - Teams' theme-defaultV2 */
-html.theme-defaultV2 :root,
-html.theme-defaultV2 .fui-FluentProvider {
-
-    /* Gradient App Border */
+    /* Gradient App Border - Light Mode */
     div[data-tid="experience-layout"] {
-        background: radial-gradient(circle at 50% 50%, rgb(var(--dt_color-plt-purple-70)) 20%, transparent 80%), conic-gradient(from 45deg at 50% 50%, rgb(var(--dt_color-plt-purple-90)) 0%, rgb(var(--dt_color-plt-purple-70)) 25%, rgb(var(--dt_color-plt-purple-90)) 50%, rgb(var(--dt_color-plt-purple-70)) 75%, rgb(var(--dt_color-plt-purple-90)) 100%) !important;
+        background: radial-gradient(circle at 50% 50%, 
+                rgb(var(--dt_color-plt-purple-70)) 20%, 
+                transparent 80%),
+            conic-gradient(from 45deg at 50% 50%,
+                rgb(var(--dt_color-plt-purple-90)) 0%,
+                rgb(var(--dt_color-plt-purple-70)) 25%,
+                rgb(var(--dt_color-plt-purple-90)) 50%,
+                rgb(var(--dt_color-plt-purple-70)) 75%,
+                rgb(var(--dt_color-plt-purple-90)) 100%) !important;
     }
 
-    /* Allow Gradient Background */
+    /* Allow Gradient Background - Light Mode */
     button[data-tid="post-new-message-type"],
     div[data-tid="app-layout-area--nav"],
-    div[data-tid="app-bar-wrapper"]>div,
+    div[data-tid="app-bar-wrapper"] > div,
     div[data-tid="app-layout-area--header"],
     div[data-tid="title-bar"] {
         background-color: transparent !important;
@@ -216,4 +201,14 @@ html.theme-defaultV2 .fui-FluentProvider {
     button[data-tid="quick-reply-placeholder-reply"] {
         color: var(--colorBrandForeground2) !important;
     }
+}
+
+/* ===== UI ELEMENTS ===== */
+
+/* Active/Selected Items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: var(--colorBrandForeground1) !important;
 }

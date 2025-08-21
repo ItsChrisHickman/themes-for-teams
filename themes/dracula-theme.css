@@ -1,34 +1,51 @@
 /* Dracula Theme for Microsoft Teams - VS Code Dracula Style */
 
-/* Comprehensive dracula theme with all color variables */
-:root, .fui-FluentProvider {
+/* ===== COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Dracula Color Scale */
+    --dt_color-plt-dracula-0: 248, 248, 242;   /* Lightest */
+    --dt_color-plt-dracula-5: 80, 250, 123;
+    --dt_color-plt-dracula-10: 139, 233, 253;
+    --dt_color-plt-dracula-20: 189, 147, 249;
+    --dt_color-plt-dracula-30: 255, 121, 198;
+    --dt_color-plt-dracula-40: 255, 184, 108;
+    --dt_color-plt-dracula-50: 255, 85, 85;
+    --dt_color-plt-dracula-60: 98, 114, 164;
+    --dt_color-plt-dracula-70: 68, 71, 90;
+    --dt_color-plt-dracula-80: 40, 42, 54;
+    --dt_color-plt-dracula-90: 33, 34, 44;
+    --dt_color-plt-dracula-100: 25, 26, 33;    /* Darkest */
+}
 
-    /* Primary Brand Colors - Dracula Purple/Pink */
+/* ===== SHARED BRAND COLORS (Both Light and Dark Modes) ===== */
+:root,
+.fui-FluentProvider {
+    /* Primary Brand Colors */
     --colorBrandBackground: #BD93F9 !important;
     --colorBrandBackgroundHover: #FF79C6 !important;
     --colorBrandBackgroundPressed: #8BE9FD !important;
     --colorBrandBackgroundSelected: #50FA7B !important;
-    --colorCompoundBrandBackground: #FF79C6 !important;
-    --colorCompoundBrandBackgroundHover: #8BE9FD !important;
-    --colorCompoundBrandBackgroundPressed: #50FA7B !important;
     --colorBrandBackgroundStatic: #50FA7B !important;
+    
     --colorBrandBackground2: #6272A4 !important;
     --colorBrandBackground2Hover: #BD93F9 !important;
     --colorBrandBackground2Pressed: #FF79C6 !important;
     --colorBrandBackground3Static: #BD93F9 !important;
     --colorBrandBackground4Static: #6272A4 !important;
+    
+    --colorCompoundBrandBackground: #FF79C6 !important;
+    --colorCompoundBrandBackgroundHover: #8BE9FD !important;
+    --colorCompoundBrandBackgroundPressed: #50FA7B !important;
 
-    /* Brand Foreground Colors - Dracula */
+    /* Brand Foreground Colors */
     --colorBrandForeground1: #50FA7B !important;
     --colorBrandForeground2: #BD93F9 !important;
-    --colorBrandForegroundLink: #8BE9FD !important; 
+    --colorBrandForegroundLink: #8BE9FD !important;
     --colorBrandForegroundLinkHover: #50FA7B !important;
     --colorBrandForegroundLinkPressed: #FF79C6 !important;
     --colorBrandForegroundLinkSelected: #50FA7B !important;
     
-    --colorCompoundBrandForeground1: #50FA7B !important;
-    --colorCompoundBrandForeground1Hover: #BD93F9 !important;
-    --colorCompoundBrandForeground1Pressed: #8BE9FD !important;
     --colorBrandForegroundInverted: #8BE9FD !important;
     --colorBrandForegroundInvertedHover: #FF79C6 !important;
     --colorBrandForegroundInvertedPressed: #BD93F9 !important;
@@ -36,28 +53,19 @@
     --colorBrandForegroundOnLightHover: #FF79C6 !important;
     --colorBrandForegroundOnLightPressed: #BD93F9 !important;
     --colorBrandForegroundOnLightSelected: #FF79C6 !important;
+    
+    --colorCompoundBrandForeground1: #50FA7B !important;
+    --colorCompoundBrandForeground1Hover: #BD93F9 !important;
+    --colorCompoundBrandForeground1Pressed: #8BE9FD !important;
 
-    /* Neutral Foreground Brand Colors - Dracula */
+    /* Neutral Foreground Brand Colors */
     --colorNeutralForeground2BrandHover: #BD93F9 !important;
     --colorNeutralForeground2BrandPressed: #50FA7B !important;
     --colorNeutralForeground2BrandSelected: #BD93F9 !important;
     --colorNeutralForeground3BrandHover: #BD93F9 !important;
     --colorNeutralForeground3BrandPressed: #50FA7B !important;
-    --colorNeutralForeground3BrandSelected: rgba(248,248,242,.8) !important;
 
-    /* Message Hover */
-    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
-    /* Channel Background */
-    --colorNeutralBackground1: rgb(26, 29, 33) !important;
-    --colorNeutralBackground2: rgb(26, 29, 33) !important;
-    --colorNeutralBackground3: rgb(26, 29, 33) !important;
-    --colorNeutralBackground1Hover: rgb(255,255,255,.1) !important;
-    --colorNeutralBackground4: #44475A !important;
-    /* Hover State on Left Toolbar */
-    --colorNeutralBackground4Selected: transparent !important;
-    --colorNeutralCardBackground: #282A36 !important;
-
-    /* Stroke Colors - Dracula */
+    /* Stroke Colors */
     --colorBrandStroke1: #BD93F9 !important;
     --colorBrandStroke2: #6272A4 !important;
     --colorBrandStroke2Hover: #BD93F9 !important;
@@ -68,16 +76,34 @@
     --colorCompoundBrandStrokePressed: #8BE9FD !important;
     --colorNeutralStrokeAccessibleSelected: #BD93F9 !important;
 
-    /* Avatar Colors - Dracula */
+    /* Avatar Colors */
     --colorAvatar: #BD93F9 !important;
     --colorAvatarBackground: #8BE9FD !important;
 
-    /* Teams Specific Colors - Dracula */
+    /* Teams Specific Colors */
     --colorTeamsBrand1Hover: #BD93F9 !important;
     --colorTeamsBrand1Pressed: #50FA7B !important;
     --colorTeamsBrand1Selected: #BD93F9 !important;
+}
 
-    /* Default Backgrounds - Dracula, progressively darker */
+/* ===== DARK MODE - Teams' theme-darkV2 ===== */
+html.theme-darkV2 :root,
+html.theme-darkV2 .fui-FluentProvider {
+    /* Neutral Backgrounds - Dark */
+    --colorNeutralBackground1: #282A36 !important;
+    --colorNeutralBackground2: #282A36 !important;
+    --colorNeutralBackground3: #282A36 !important;
+    --colorNeutralBackground4: #44475A !important;
+    --colorNeutralBackground5: #44475A !important;
+    --colorNeutralCardBackground: #282A36 !important;
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    --colorNeutralBackground4Selected: transparent !important;
+
+    /* Text Colors - Dark Mode */
+    --colorNeutralForeground3: #F8F8F2 !important;
+    --colorNeutralForeground3BrandSelected: rgba(248, 248, 242, .8) !important;
+
+    /* Default Backgrounds - Dark Mode */
     --colorDefaultBackground1: #BD93F9 !important;
     --colorDefaultBackground2: #50FA7B !important;
     --colorDefaultBackground3: #8BE9FD !important;
@@ -86,67 +112,103 @@
     --colorDefaultBackground6: #21222C !important;
     --colorDefaultBackground7: #191A21 !important;
 
-    /* Subtle background - dracula style */
+    /* Subtle Backgrounds - Dark Mode */
     --colorSubtleBackground: transparent !important;
-    --colorNeutralForeground3: #F8F8F2 !important;
     --colorTransparentBackgroundSelected: rgba(189, 147, 249, 0.25) !important;
-    --colorNeutralBackground5: #44475A !important;
-}
 
-/* Dracula accent on primary buttons only */
-.ui-button--primary,
-.ms-Button--primary,
-.fui-Button[data-variant="primary"] {
-    background-color: #BD93F9 !important;
-    border-color: #BD93F9 !important;
-    color: #282A36 !important;
-}
-
-.ui-button--primary:hover,
-.ms-Button--primary:hover,
-.fui-Button[data-variant="primary"]:hover {
-    background-color: #FF79C6 !important;
-    border-color: #FF79C6 !important;
-    color: #F8F8F2 !important;
-}
-
-/* Dracula accent on active/selected items */
-.selected,
-.active,
-.is-selected,
-[aria-selected="true"] {
-    border-left-color: #BD93F9 !important;
-}
-
-/* Gradient App Border */
-
-:root, .fui-FluentProvider {
+    /* Gradient Colors - Dark Mode */
     --dt_color-plt-dracula-0: 25, 26, 33;
     --dt_color-plt-dracula-10: 40, 42, 54;
     --dt_color-plt-dracula-20: 68, 71, 90;
 }
 
-div[data-tid="experience-layout"] {
-    background: radial-gradient(circle at 50% 50%,
-            rgb(var(--dt_color-plt-dracula-10)) 20%,
-            transparent 80%),
-        conic-gradient(from 45deg at 50% 50%,
-            rgb(var(--dt_color-plt-dracula-0)) 0%,
-            rgb(var(--dt_color-plt-dracula-10)) 25%,
-            rgb(var(--dt_color-plt-dracula-0)) 50%,
-            rgb(var(--dt_color-plt-dracula-10)) 75%,
-            rgb(var(--dt_color-plt-dracula-0)) 100%) !important;
+/* ===== LIGHT MODE - Teams' theme-defaultV2 ===== */
+html.theme-defaultV2 :root,
+html.theme-defaultV2 .fui-FluentProvider {
+    /* Neutral Backgrounds - Light */
+    --colorNeutralBackground1: #ffffff !important;
+    --colorNeutralBackground2: #f8f8f8 !important;
+    --colorNeutralBackground3: #f0f0f0 !important;
+    --colorNeutralBackground4: #f8f0ff !important;
+    --colorNeutralBackground5: #f0e6ff !important;
+    --colorNeutralCardBackground: #ffffff !important;
+    --colorNeutralBackground1Hover: rgba(0, 0, 0, .04) !important;
+    --colorNeutralBackground4Selected: rgba(0, 0, 0, .04) !important;
+
+    /* Brand Background for User Messages - Match Neutral */
+    --colorBrandBackground2: #f8f8f8 !important;
+
+    /* Text Colors - Light Mode */
+    --colorNeutralForeground1: #222 !important;
+    --colorNeutralForeground2: #444 !important;
+    --colorNeutralForeground3: #666 !important;
+    --colorNeutralForeground3BrandSelected: #FAFAFA !important;
+
+    /* Default Backgrounds - Light Mode */
+    --colorDefaultBackground1: #ffffff !important;
+    --colorDefaultBackground2: #f8f8f8 !important;
+    --colorDefaultBackground3: #f0f0f0 !important;
+    --colorDefaultBackground4: #f8f0ff !important;
+    --colorDefaultBackground5: #f0e6ff !important;
+    --colorDefaultBackground6: #fcfaff !important;
+    --colorDefaultBackground7: #ffffff !important;
+
+    /* Subtle Backgrounds - Light Mode */
+    --colorSubtleBackground: rgba(189, 147, 249, .02) !important;
+    --colorTransparentBackgroundSelected: rgba(189, 147, 249, .08) !important;
+
+    /* Left Navigation Overrides - Light Mode */
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon svg path {
+        fill: var(--colorDefaultBackground2) !important;
+    }
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon span {
+        color: var(--colorDefaultBackground2) !important;
+    }
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon img {
+        filter: none !important;
+    }
+    div[data-testid="simple-collab-rail"],
+    div[data-tid="app-layout-area--mid-nav"] {
+        background-color: var(--colorDefaultBackground2) !important;
+    }
+    div[data-item-type="channel"] {
+        background: transparent !important;
+    }
+
+    /* Gradient App Border - Light Mode */
+    div[data-tid="experience-layout"] {
+        background: radial-gradient(circle at 50% 50%, 
+                rgb(var(--dt_color-plt-dracula-70)) 20%, 
+                transparent 80%),
+            conic-gradient(from 45deg at 50% 50%,
+                rgb(var(--dt_color-plt-dracula-90)) 0%,
+                rgb(var(--dt_color-plt-dracula-70)) 25%,
+                rgb(var(--dt_color-plt-dracula-90)) 50%,
+                rgb(var(--dt_color-plt-dracula-70)) 75%,
+                rgb(var(--dt_color-plt-dracula-90)) 100%) !important;
+    }
+
+    /* Allow Gradient Background - Light Mode */
+    button[data-tid="post-new-message-type"],
+    div[data-tid="app-layout-area--nav"],
+    div[data-tid="app-bar-wrapper"] > div,
+    div[data-tid="app-layout-area--header"],
+    div[data-tid="title-bar"] {
+        background-color: transparent !important;
+    }
+
+    button[data-tid="post-new-message-type"],
+    button[data-tid="quick-reply-placeholder-reply"] {
+        color: var(--colorBrandForeground2) !important;
+    }
 }
 
-/* Allow Gradient Background */
-button[data-tid="post-new-message-type"],
-div[data-tid="app-layout-area--nav"],
-div[data-tid="app-bar-wrapper"] > div,
-div[data-tid="app-layout-area--header"],
-div[data-tid="title-bar"] {
-    background-color: transparent !important;
-}
-button[data-tid="post-new-message-type"],
-button[data-tid="quick-reply-placeholder-reply"] {
-    color: var(--colorBrandForeground2) !important;
+/* ===== UI ELEMENTS ===== */
+
+/* Active/Selected Items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: var(--colorBrandForeground1) !important;
 }

@@ -33,9 +33,12 @@ suit my purposes.  It works with Firefox too!
 
 ## Changelog
 
+v0.2.0
+  - Supports Light Mode!
+
 v0.1.4
-   - Handles long titles with full width, no wrap, ellipses ...
-   - Font Smoothing
+  - Handles long titles with full width, no wrap, ellipses ...
+  - Font Smoothing
 
 v0.1.1 
   - Fixed click target area on replies for emojis

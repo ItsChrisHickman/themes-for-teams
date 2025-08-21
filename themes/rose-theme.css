@@ -1,34 +1,51 @@
 /* Rose Theme for Microsoft Teams - Classic Pink Accents */
 
-/* Comprehensive rose theme with all color variables */
-:root, .fui-FluentProvider {
+/* ===== COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Rose Pink Color Scale */
+    --dt_color-plt-rose-0: 253, 244, 255;      /* Lightest */
+    --dt_color-plt-rose-5: 250, 232, 255;
+    --dt_color-plt-rose-10: 243, 204, 255;
+    --dt_color-plt-rose-20: 232, 171, 255;
+    --dt_color-plt-rose-30: 217, 119, 251;
+    --dt_color-plt-rose-40: 196, 69, 243;
+    --dt_color-plt-rose-50: 168, 30, 210;
+    --dt_color-plt-rose-60: 136, 19, 170;
+    --dt_color-plt-rose-70: 112, 26, 117;
+    --dt_color-plt-rose-80: 89, 28, 135;
+    --dt_color-plt-rose-90: 74, 4, 78;
+    --dt_color-plt-rose-100: 59, 7, 100;       /* Darkest */
+}
 
-    /* Primary Brand Colors - Rose Pink */
-    --colorBrandBackground: #C2185B !important;
-    --colorBrandBackgroundHover: #E91E63 !important;
-    --colorBrandBackgroundPressed: #F06292 !important;
+/* ===== SHARED BRAND COLORS (Both Light and Dark Modes) ===== */
+:root,
+.fui-FluentProvider {
+    /* Primary Brand Colors */
+    --colorBrandBackground: #E91E63 !important;
+    --colorBrandBackgroundHover: #F06292 !important;
+    --colorBrandBackgroundPressed: #C2185B !important;
     --colorBrandBackgroundSelected: #F8BBD9 !important;
-    --colorCompoundBrandBackground: #E91E63 !important;
-    --colorCompoundBrandBackgroundHover: #F06292 !important;
-    --colorCompoundBrandBackgroundPressed: #F8BBD9 !important;
     --colorBrandBackgroundStatic: #F8BBD9 !important;
+    
     --colorBrandBackground2: #AD1457 !important;
     --colorBrandBackground2Hover: #E91E63 !important;
-    --colorBrandBackground2Pressed: #C2185B !important;
+    --colorBrandBackground2Pressed: #880E4F !important;
     --colorBrandBackground3Static: #E91E63 !important;
     --colorBrandBackground4Static: #AD1457 !important;
+    
+    --colorCompoundBrandBackground: #F06292 !important;
+    --colorCompoundBrandBackgroundHover: #F8BBD9 !important;
+    --colorCompoundBrandBackgroundPressed: #E91E63 !important;
 
-    /* Brand Foreground Colors - Rose Pink */
+    /* Brand Foreground Colors */
     --colorBrandForeground1: #F8BBD9 !important;
     --colorBrandForeground2: #E91E63 !important;
-    --colorBrandForegroundLink: #E91E63 !important; 
+    --colorBrandForegroundLink: #E91E63 !important;
     --colorBrandForegroundLinkHover: #F8BBD9 !important;
     --colorBrandForegroundLinkPressed: #AD1457 !important;
     --colorBrandForegroundLinkSelected: #F8BBD9 !important;
     
-    --colorCompoundBrandForeground1: #F8BBD9 !important;
-    --colorCompoundBrandForeground1Hover: #E91E63 !important;
-    --colorCompoundBrandForeground1Pressed: #E91E63 !important;
     --colorBrandForegroundInverted: #E91E63 !important;
     --colorBrandForegroundInvertedHover: #AD1457 !important;
     --colorBrandForegroundInvertedPressed: #C2185B !important;
@@ -36,27 +53,19 @@
     --colorBrandForegroundOnLightHover: #AD1457 !important;
     --colorBrandForegroundOnLightPressed: #C2185B !important;
     --colorBrandForegroundOnLightSelected: #AD1457 !important;
+    
+    --colorCompoundBrandForeground1: #F8BBD9 !important;
+    --colorCompoundBrandForeground1Hover: #E91E63 !important;
+    --colorCompoundBrandForeground1Pressed: #E91E63 !important;
 
-    /* Neutral Foreground Brand Colors - Rose Pink */
+    /* Neutral Foreground Brand Colors */
     --colorNeutralForeground2BrandHover: #E91E63 !important;
     --colorNeutralForeground2BrandPressed: #F8BBD9 !important;
     --colorNeutralForeground2BrandSelected: #E91E63 !important;
     --colorNeutralForeground3BrandHover: #E91E63 !important;
     --colorNeutralForeground3BrandPressed: #F8BBD9 !important;
-    --colorNeutralForeground3BrandSelected: rgba(255,255,255,.8) !important;
 
-    /* Message Hover */
-    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
-    /* Channel Background */
-    --colorNeutralBackground1: rgb(26, 29, 33) !important;
-    --colorNeutralBackground2: rgb(26, 29, 33) !important;
-    --colorNeutralBackground3: rgb(26, 29, 33) !important;
-    --colorNeutralBackground4: #AD1457 !important;
-    /* Hover State on Left Toolbar */
-    --colorNeutralBackground4Selected: transparent !important;
-    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
-
-    /* Stroke Colors - Rose Pink */
+    /* Stroke Colors */
     --colorBrandStroke1: #E91E63 !important;
     --colorBrandStroke2: #AD1457 !important;
     --colorBrandStroke2Hover: #E91E63 !important;
@@ -67,16 +76,34 @@
     --colorCompoundBrandStrokePressed: #E91E63 !important;
     --colorNeutralStrokeAccessibleSelected: #E91E63 !important;
 
-    /* Avatar Colors - Rose Pink */
+    /* Avatar Colors */
     --colorAvatar: #E91E63 !important;
     --colorAvatarBackground: #E91E63 !important;
 
-    /* Teams Specific Colors - Rose Pink */
+    /* Teams Specific Colors */
     --colorTeamsBrand1Hover: #E91E63 !important;
     --colorTeamsBrand1Pressed: #F8BBD9 !important;
     --colorTeamsBrand1Selected: #E91E63 !important;
+}
 
-    /* Default Backgrounds - Rose Pink, progressively darker */
+/* ===== DARK MODE - Teams' theme-darkV2 ===== */
+html.theme-darkV2 :root,
+html.theme-darkV2 .fui-FluentProvider {
+    /* Neutral Backgrounds - Dark */
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground4: #AD1457 !important;
+    --colorNeutralBackground5: #C2185B !important;
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    --colorNeutralBackground4Selected: transparent !important;
+
+    /* Text Colors - Dark Mode */
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorNeutralForeground3BrandSelected: rgba(255, 255, 255, .8) !important;
+
+    /* Default Backgrounds - Dark Mode */
     --colorDefaultBackground1: #E91E63 !important;
     --colorDefaultBackground2: #F8BBD9 !important;
     --colorDefaultBackground3: #E91E63 !important;
@@ -85,65 +112,103 @@
     --colorDefaultBackground6: #880E4F !important;
     --colorDefaultBackground7: #4A0E2D !important;
 
-    /* Subtle background - medium pink */
+    /* Subtle Backgrounds - Dark Mode */
     --colorSubtleBackground: transparent !important;
-    --colorNeutralForeground3: #FAFAFA !important;
     --colorTransparentBackgroundSelected: rgba(233, 30, 99, 0.25) !important;
-    --colorNeutralBackground5: #C2185B !important;
-}
 
-/* Rose pink accent on primary buttons only */
-.ui-button--primary,
-.ms-Button--primary,
-.fui-Button[data-variant="primary"] {
-    background-color: #F8BBD9 !important;
-    border-color: #F8BBD9 !important;
-}
-
-.ui-button--primary:hover,
-.ms-Button--primary:hover,
-.fui-Button[data-variant="primary"]:hover {
-    background-color: #E91E63 !important;
-    border-color: #E91E63 !important;
-}
-
-/* Rose pink accent on active/selected items */
-.selected,
-.active,
-.is-selected,
-[aria-selected="true"] {
-    border-left-color: #F8BBD9 !important;
-}
-
-/* Gradient App Border */
-
-:root, .fui-FluentProvider {
+    /* Gradient Colors - Dark Mode */
     --dt_color-plt-rose-0: 74, 14, 45;
     --dt_color-plt-rose-10: 194, 24, 91;
     --dt_color-plt-rose-20: 233, 30, 99;
 }
 
-div[data-tid="experience-layout"] {
-    background: radial-gradient(circle at 50% 50%,
-            rgb(var(--dt_color-plt-rose-10)) 20%,
-            transparent 80%),
-        conic-gradient(from 45deg at 50% 50%,
-            rgb(var(--dt_color-plt-rose-0)) 0%,
-            rgb(var(--dt_color-plt-rose-10)) 25%,
-            rgb(var(--dt_color-plt-rose-0)) 50%,
-            rgb(var(--dt_color-plt-rose-10)) 75%,
-            rgb(var(--dt_color-plt-rose-0)) 100%) !important;
+/* ===== LIGHT MODE - Teams' theme-defaultV2 ===== */
+html.theme-defaultV2 :root,
+html.theme-defaultV2 .fui-FluentProvider {
+    /* Neutral Backgrounds - Light */
+    --colorNeutralBackground1: #ffffff !important;
+    --colorNeutralBackground2: #f8f8f8 !important;
+    --colorNeutralBackground3: #f0f0f0 !important;
+    --colorNeutralBackground4: #fdf2f8 !important;
+    --colorNeutralBackground5: #fce7f3 !important;
+    --colorNeutralCardBackground: #ffffff !important;
+    --colorNeutralBackground1Hover: rgba(0, 0, 0, .04) !important;
+    --colorNeutralBackground4Selected: rgba(0, 0, 0, .04) !important;
+
+    /* Brand Background for User Messages - Match Neutral */
+    --colorBrandBackground2: #f8f8f8 !important;
+
+    /* Text Colors - Light Mode */
+    --colorNeutralForeground1: #222 !important;
+    --colorNeutralForeground2: #444 !important;
+    --colorNeutralForeground3: #666 !important;
+    --colorNeutralForeground3BrandSelected: #FAFAFA !important;
+
+    /* Default Backgrounds - Light Mode */
+    --colorDefaultBackground1: #ffffff !important;
+    --colorDefaultBackground2: #f8f8f8 !important;
+    --colorDefaultBackground3: #f0f0f0 !important;
+    --colorDefaultBackground4: #fdf2f8 !important;
+    --colorDefaultBackground5: #fce7f3 !important;
+    --colorDefaultBackground6: #fef7ff !important;
+    --colorDefaultBackground7: #ffffff !important;
+
+    /* Subtle Backgrounds - Light Mode */
+    --colorSubtleBackground: rgba(233, 30, 99, .02) !important;
+    --colorTransparentBackgroundSelected: rgba(233, 30, 99, .08) !important;
+
+    /* Left Navigation Overrides - Light Mode */
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon svg path {
+        fill: var(--colorDefaultBackground2) !important;
+    }
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon span {
+        color: var(--colorDefaultBackground2) !important;
+    }
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon img {
+        filter: none !important;
+    }
+    div[data-testid="simple-collab-rail"],
+    div[data-tid="app-layout-area--mid-nav"] {
+        background-color: var(--colorDefaultBackground2) !important;
+    }
+    div[data-item-type="channel"] {
+        background: transparent !important;
+    }
+
+    /* Gradient App Border - Light Mode */
+    div[data-tid="experience-layout"] {
+        background: radial-gradient(circle at 50% 50%, 
+                rgb(var(--dt_color-plt-rose-70)) 20%, 
+                transparent 80%),
+            conic-gradient(from 45deg at 50% 50%,
+                rgb(var(--dt_color-plt-rose-90)) 0%,
+                rgb(var(--dt_color-plt-rose-70)) 25%,
+                rgb(var(--dt_color-plt-rose-90)) 50%,
+                rgb(var(--dt_color-plt-rose-70)) 75%,
+                rgb(var(--dt_color-plt-rose-90)) 100%) !important;
+    }
+
+    /* Allow Gradient Background - Light Mode */
+    button[data-tid="post-new-message-type"],
+    div[data-tid="app-layout-area--nav"],
+    div[data-tid="app-bar-wrapper"] > div,
+    div[data-tid="app-layout-area--header"],
+    div[data-tid="title-bar"] {
+        background-color: transparent !important;
+    }
+
+    button[data-tid="post-new-message-type"],
+    button[data-tid="quick-reply-placeholder-reply"] {
+        color: var(--colorBrandForeground2) !important;
+    }
 }
 
-/* Allow Gradient Background */
-button[data-tid="post-new-message-type"],
-div[data-tid="app-layout-area--nav"],
-div[data-tid="app-bar-wrapper"] > div,
-div[data-tid="app-layout-area--header"],
-div[data-tid="title-bar"] {
-    background-color: transparent !important;
-}
-button[data-tid="post-new-message-type"],
-button[data-tid="quick-reply-placeholder-reply"] {
-    color: var(--colorBrandForeground2) !important;
+/* ===== UI ELEMENTS ===== */
+
+/* Active/Selected Items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: var(--colorBrandForeground1) !important;
 }
