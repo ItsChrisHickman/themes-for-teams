@@ -92,6 +92,8 @@ div[data-tid="message-pane-layout"] > .fui-Primitive > .fui-Flex {
 /* Reduce 14px on the left side of the list of chats/channels */
 div[data-tid="simple-collab-dnd-rail"] {
     margin-left: 0 !important; /* 14px */
+    padding: 0 !important;
+    scrollbar-gutter: auto !important; ;
 }
 
 /* Get rid of gap on right side of 'my message' */
@@ -118,6 +120,10 @@ a:hover {
     text-decoration-color: rgb(64, 179, 228) !important;
 }
 
+div[data-testid="simple-collab-rail"] {
+    border-top-left-radius: 16px;
+}
+
 /* Always Blue Links */
 .fui-FluentProvider {
     --colorStrokeFocus2: transparent !important;
@@ -134,9 +140,25 @@ div.ac-adaptiveCard {
 }
 
 /* Better Emojis */
-button[data-tid="diverse-reaction-pill-button"] {
-    border: none !important;
-    background: #282a2e !important;
+/* Light Mode - Teams' theme-defaultV2 */
+html.theme-defaultV2 :root,
+html.theme-defaultV2 .fui-FluentProvider {
+    button[data-tid="add-reaction-picker-entry-point-button"],
+    button[data-tid="diverse-reaction-pill-button"] {
+        border: none !important;
+        background: #f2f2f2 !important;
+    }
+    button[data-tid="add-reaction-picker-entry-point-button"] svg path {
+        fill: var(--colorBrandBackground) !important;
+    }
+}
+/* Better Dark Mode Emojis */
+html.theme-darkV2 :root,
+html.theme-darkV2 .fui-FluentProvider {
+    button[data-tid="diverse-reaction-pill-button"] {
+        border: none !important;
+        background: #282a2e !important;
+    }
 }
 
 /* Fix replies width so emojis can be used */
