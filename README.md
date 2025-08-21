@@ -33,7 +33,7 @@ suit my purposes.  It works with Firefox too!
 
 ## Changelog
 
-v0.1.2
+v0.1.4
    - Handles long titles with full width, no wrap, ellipses ...
    - Font Smoothing
 
