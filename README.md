@@ -1,3 +1,5 @@
+![App Preview](App-Preview.png)
+  
 # Themes for Teams - Chrome Extension
 
 I work for a company that recently migrated to Teams.  
@@ -26,4 +28,4 @@ suit my purposes.
 
 v0.0.1
   - Widened Chats, Channels, Reduced Team/Channel List gutter and set default font to Lato
-  
+
