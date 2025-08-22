@@ -17,7 +17,7 @@ suit my purposes.  It works with Firefox too!
 
 ## Chrome Installation
 
-[https://chromewebstore.google.com/detail/themes-for-teams/odimdoddkdpnifojkpgcmcgehlkdjakj](Install from the Chrome Web Store)
+[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/themes-for-teams/odimdoddkdpnifojkpgcmcgehlkdjakj)
 
 Or Manually Install:
 
@@ -29,7 +29,7 @@ Or Manually Install:
 
 ## Firefox Installation
 
-[https://addons.mozilla.org/en-US/firefox/addon/themes-for-teams/](Install from Firefox Browser Add-Ons)
+[Install from Firefox Browser Add-Ons](https://addons.mozilla.org/en-US/firefox/addon/themes-for-teams/)
 
 Or Manually Install:
 
