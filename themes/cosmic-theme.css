@@ -1,0 +1,69 @@
+/* Cosmic Theme for Microsoft Teams - Color Palette Only */
+
+/* ===== COSMIC COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Cosmic Deep Space Colors - Purple, Blue, and Pink Nebula */
+    --theme-color-0: 248, 250, 252;     /* Lightest - starlight */
+    --theme-color-5: 237, 233, 254;     /* Light cosmic */
+    --theme-color-10: 221, 214, 254;    /* Nebula light */
+    --theme-color-20: 196, 181, 253;    /* Purple nebula */
+    --theme-color-30: 167, 139, 250;    /* Cosmic purple */
+    --theme-color-40: 139, 92, 246;     /* Deep space purple */
+    --theme-color-50: 124, 58, 237;     /* Galaxy purple */
+    --theme-color-60: 109, 40, 217;     /* Dark galaxy */
+    --theme-color-70: 88, 28, 135;      /* Deep cosmic */
+    --theme-color-80: 69, 26, 106;      /* Space depths */
+    --theme-color-90: 49, 17, 76;       /* Black hole */
+    --theme-color-100: 24, 6, 38;       /* Void black */
+}
+
+/* ===== COSMIC GRADIENT OVERRIDE ===== */
+
+/* Dark Mode Cosmic Gradient - Deep space nebula */
+html.theme-darkV2 div[data-tid="experience-layout"] {
+    background: 
+        /* Outer space radial glow - more intense in dark mode */
+        radial-gradient(circle at 30% 20%, 
+            rgba(139, 92, 246, 0.6) 0%,
+            rgba(124, 58, 237, 0.4) 30%,
+            transparent 70%),
+        radial-gradient(circle at 70% 80%, 
+            rgba(196, 181, 253, 0.4) 0%,
+            rgba(167, 139, 250, 0.2) 40%,
+            transparent 70%),
+        /* Deep space nebula sweep */
+        conic-gradient(from 0deg at 50% 50%,
+            rgb(24, 6, 38) 0%,           /* Void black */
+            rgb(49, 17, 76) 15%,         /* Black hole purple */
+            rgb(88, 28, 135) 30%,        /* Deep cosmic */
+            rgb(109, 40, 217) 45%,       /* Dark galaxy */
+            rgb(139, 92, 246) 60%,       /* Deep space purple */
+            rgb(167, 139, 250) 75%,      /* Cosmic purple */
+            rgb(196, 181, 253) 90%,      /* Purple nebula */
+            rgb(24, 6, 38) 100%) !important; /* Back to void */
+}
+
+/* Light Mode Cosmic Gradient - Softer space theme */
+html.theme-defaultV2 div[data-tid="experience-layout"] {
+    background: 
+        /* Softer radial glows for light mode */
+        radial-gradient(circle at 30% 20%, 
+            rgba(139, 92, 246, 0.3) 0%,
+            rgba(124, 58, 237, 0.15) 30%,
+            transparent 70%),
+        radial-gradient(circle at 70% 80%, 
+            rgba(196, 181, 253, 0.25) 0%,
+            rgba(167, 139, 250, 0.1) 40%,
+            transparent 70%),
+        /* Light cosmic sweep */
+        conic-gradient(from 0deg at 50% 50%,
+            rgb(248, 250, 252) 0%,       /* Starlight */
+            rgb(237, 233, 254) 15%,      /* Light cosmic */
+            rgb(221, 214, 254) 30%,      /* Nebula light */
+            rgb(196, 181, 253) 45%,      /* Purple nebula */
+            rgb(167, 139, 250) 60%,      /* Cosmic purple */
+            rgb(139, 92, 246) 75%,       /* Deep space purple */
+            rgb(124, 58, 237) 90%,       /* Galaxy purple */
+            rgb(248, 250, 252) 100%) !important; /* Back to starlight */
+}

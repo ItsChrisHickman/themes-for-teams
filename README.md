@@ -33,6 +33,11 @@ suit my purposes.  It works with Firefox too!
 
 ## Changelog
 
+v0.3.0 
+  - Simplified themes to color values to use with base theme.
+  - Added more themes!
+  - Avatars are now rounded squares, not circles.
+
 v0.2.0
   - Supports Light Mode!
 

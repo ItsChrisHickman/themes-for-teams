@@ -1,0 +1,19 @@
+/* Mint Theme for Microsoft Teams - Color Palette Only */
+
+/* ===== MINT COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Mint Green Color Scale - Fresh and Cool */
+    --theme-color-0: 240, 253, 250;     /* Lightest - mint cream */
+    --theme-color-5: 220, 252, 231;     /* Very light mint */
+    --theme-color-10: 167, 243, 208;    /* Light mint */
+    --theme-color-20: 110, 231, 183;    /* Mint green */
+    --theme-color-30: 52, 211, 153;     /* Fresh mint */
+    --theme-color-40: 16, 185, 129;     /* Primary mint */
+    --theme-color-50: 5, 150, 105;      /* Deep mint */
+    --theme-color-60: 4, 120, 87;       /* Darker mint */
+    --theme-color-70: 6, 95, 70;        /* Forest mint */
+    --theme-color-80: 6, 78, 59;        /* Deep forest */
+    --theme-color-90: 6, 58, 44;        /* Dark mint */
+    --theme-color-100: 4, 41, 31;       /* Darkest mint */
+}

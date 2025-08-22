@@ -1,0 +1,69 @@
+/* Ocean Theme for Microsoft Teams - Color Palette Only */
+
+/* ===== OCEAN COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Ocean Blue Color Scale - From Light Seafoam to Deep Ocean */
+    --theme-color-0: 240, 253, 250;     /* Lightest - seafoam */
+    --theme-color-5: 204, 251, 241;     /* Light seafoam */
+    --theme-color-10: 153, 246, 228;    /* Turquoise */
+    --theme-color-20: 94, 234, 212;     /* Light teal */
+    --theme-color-30: 45, 212, 191;     /* Teal */
+    --theme-color-40: 20, 184, 166;     /* Ocean teal */
+    --theme-color-50: 13, 148, 136;     /* Deep teal */
+    --theme-color-60: 15, 118, 110;     /* Ocean blue */
+    --theme-color-70: 17, 94, 89;       /* Deep ocean */
+    --theme-color-80: 19, 78, 74;       /* Very deep ocean */
+    --theme-color-90: 22, 78, 99;       /* Abyss blue */
+    --theme-color-100: 12, 74, 110;     /* Ocean depths */
+}
+
+/* ===== OCEAN GRADIENT OVERRIDE ===== */
+
+/* Dark Mode Ocean Gradient - Deep ocean depths */
+html.theme-darkV2 div[data-tid="experience-layout"] {
+    background: 
+        /* Deep ocean currents */
+        radial-gradient(circle at 25% 25%, 
+            rgba(20, 184, 166, 0.5) 0%,      /* Ocean teal glow */
+            rgba(13, 148, 136, 0.3) 30%,     /* Deep teal glow */
+            transparent 65%),
+        radial-gradient(circle at 75% 75%, 
+            rgba(15, 118, 110, 0.4) 0%,      /* Ocean blue glow */
+            rgba(17, 94, 89, 0.2) 35%,       /* Deep ocean glow */
+            transparent 70%),
+        /* Ocean depths sweep */
+        conic-gradient(from 120deg at 50% 50%,
+            rgb(12, 74, 110) 0%,              /* Ocean depths */
+            rgb(22, 78, 99) 15%,              /* Abyss blue */
+            rgb(19, 78, 74) 30%,              /* Very deep ocean */
+            rgb(17, 94, 89) 45%,              /* Deep ocean */
+            rgb(15, 118, 110) 60%,            /* Ocean blue */
+            rgb(13, 148, 136) 75%,            /* Deep teal */
+            rgb(20, 184, 166) 90%,            /* Ocean teal */
+            rgb(12, 74, 110) 100%) !important; /* Back to depths */
+}
+
+/* Light Mode Ocean Gradient - Shallow tropical waters */
+html.theme-defaultV2 div[data-tid="experience-layout"] {
+    background: 
+        /* Tropical water shimmer */
+        radial-gradient(circle at 25% 25%, 
+            rgba(20, 184, 166, 0.3) 0%,      /* Ocean teal shimmer */
+            rgba(45, 212, 191, 0.2) 30%,     /* Teal shimmer */
+            transparent 65%),
+        radial-gradient(circle at 75% 75%, 
+            rgba(94, 234, 212, 0.25) 0%,     /* Light teal shimmer */
+            rgba(153, 246, 228, 0.15) 35%,   /* Turquoise shimmer */
+            transparent 70%),
+        /* Shallow to deep ocean sweep */
+        conic-gradient(from 120deg at 50% 50%,
+            rgb(240, 253, 250) 0%,            /* Seafoam */
+            rgb(204, 251, 241) 15%,           /* Light seafoam */
+            rgb(153, 246, 228) 30%,           /* Turquoise */
+            rgb(94, 234, 212) 45%,            /* Light teal */
+            rgb(45, 212, 191) 60%,            /* Teal */
+            rgb(20, 184, 166) 75%,            /* Ocean teal */
+            rgb(13, 148, 136) 90%,            /* Deep teal */
+            rgb(240, 253, 250) 100%) !important; /* Back to seafoam */
+}

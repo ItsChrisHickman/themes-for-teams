@@ -1,0 +1,223 @@
+/* Base Theme for Microsoft Teams - Shared Logic for All Themes */
+
+/* ===== SEMANTIC COLOR ASSIGNMENTS ===== */
+:root,
+.fui-FluentProvider {
+    /* Semantic Color Assignments - Uses theme-color-* variables defined in palette files */
+    --primary-brand: rgb(var(--theme-color-40)) !important;
+    /* Main brand color */
+    --primary-hover: rgb(var(--theme-color-30)) !important;
+    /* Hover state */
+    --primary-pressed: rgb(var(--theme-color-60)) !important;
+    /* Pressed state */
+    --primary-selected: rgb(var(--theme-color-20)) !important;
+    /* Selected state */
+
+    --secondary-brand: rgb(var(--theme-color-60)) !important;
+    /* Secondary elements */
+    --secondary-hover: rgb(var(--theme-color-40)) !important;
+    /* Secondary hover */
+    --secondary-pressed: rgb(var(--theme-color-80)) !important;
+    /* Secondary pressed */
+
+    --accent-light: rgb(var(--theme-color-20)) !important;
+    /* Light accents */
+    --accent-medium: rgb(var(--theme-color-40)) !important;
+    /* Medium accents */
+    --accent-dark: rgb(var(--theme-color-60)) !important;
+    /* Dark accents */
+    --accent-darker: rgb(var(--theme-color-80)) !important;
+    /* Darker accents */
+}
+
+/* ===== SHARED BRAND COLORS (Both Light and Dark Modes) ===== */
+:root,
+.fui-FluentProvider {
+    /* Primary Brand Colors */
+    --colorBrandBackground: var(--primary-brand);
+    --colorBrandBackgroundHover: var(--primary-hover);
+    --colorBrandBackgroundPressed: var(--primary-pressed);
+    --colorBrandBackgroundSelected: var(--primary-selected);
+    --colorBrandBackgroundStatic: var(--primary-selected);
+
+    --colorBrandBackground2Hover: var(--primary-brand);
+    --colorBrandBackground2Pressed: var(--secondary-pressed);
+    --colorBrandBackground3Static: var(--primary-brand);
+    --colorBrandBackground4Static: var(--secondary-brand);
+
+    --colorCompoundBrandBackground: var(--primary-hover);
+    --colorCompoundBrandBackgroundHover: var(--primary-selected);
+    --colorCompoundBrandBackgroundPressed: var(--primary-brand);
+
+    /* Brand Foreground Colors */
+    --colorBrandForeground1: var(--primary-selected);
+    --colorBrandForeground2: var(--primary-brand);
+    --colorBrandForegroundLink: var(--primary-brand);
+    --colorBrandForegroundLinkHover: var(--primary-selected);
+    --colorBrandForegroundLinkPressed: var(--secondary-brand);
+    --colorBrandForegroundLinkSelected: var(--primary-selected);
+
+    --colorBrandForegroundInverted: var(--primary-brand);
+    --colorBrandForegroundInvertedHover: var(--secondary-brand);
+    --colorBrandForegroundInvertedPressed: var(--primary-pressed);
+    --colorBrandForegroundOnLight: var(--primary-brand);
+    --colorBrandForegroundOnLightHover: var(--secondary-brand);
+    --colorBrandForegroundOnLightPressed: var(--primary-pressed);
+    --colorBrandForegroundOnLightSelected: var(--secondary-brand);
+
+    --colorCompoundBrandForeground1: var(--primary-selected);
+    --colorCompoundBrandForeground1Hover: var(--primary-brand);
+    --colorCompoundBrandForeground1Pressed: var(--primary-brand);
+
+    /* Neutral Foreground Brand Colors */
+    --colorNeutralForeground2BrandHover: var(--primary-brand);
+    --colorNeutralForeground2BrandPressed: var(--primary-selected);
+    --colorNeutralForeground2BrandSelected: var(--primary-brand);
+    --colorNeutralForeground3BrandHover: var(--primary-brand);
+    --colorNeutralForeground3BrandPressed: var(--primary-selected);
+
+    /* Stroke Colors */
+    --colorBrandStroke1: var(--primary-brand);
+    --colorBrandStroke2: var(--secondary-brand);
+    --colorBrandStroke2Hover: var(--primary-brand);
+    --colorBrandStroke2Pressed: var(--primary-pressed);
+    --colorBrandStroke2Contrast: var(--secondary-brand);
+    --colorCompoundBrandStroke: var(--primary-selected);
+    --colorCompoundBrandStrokeHover: var(--primary-brand);
+    --colorCompoundBrandStrokePressed: var(--primary-brand);
+    --colorNeutralStrokeAccessibleSelected: var(--primary-brand);
+
+    /* Avatar Colors */
+    --colorAvatar: var(--primary-brand);
+    --colorAvatarBackground: var(--primary-brand);
+
+    /* Teams Specific Colors */
+    --colorTeamsBrand1Hover: var(--primary-brand);
+    --colorTeamsBrand1Pressed: var(--primary-selected);
+    --colorTeamsBrand1Selected: var(--primary-brand);
+}
+
+/* ===== DARK MODE - Teams' theme-darkV2 ===== */
+html.theme-darkV2 :root,
+html.theme-darkV2 .fui-FluentProvider {
+    /* Neutral Backgrounds - Dark */
+    --colorNeutralBackground1: rgb(26, 29, 33) !important;
+    --colorNeutralBackground2: rgb(26, 29, 33) !important;
+    --colorNeutralBackground3: rgb(26, 29, 33) !important;
+    --colorNeutralBackground4: var(--secondary-brand);
+    --colorNeutralBackground5: var(--primary-pressed);
+    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
+    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
+    --colorNeutralBackground4Selected: transparent !important;
+
+    /* Text Colors - Dark Mode */
+    --colorNeutralForeground3: #FAFAFA !important;
+    --colorNeutralForeground3BrandSelected: rgba(255, 255, 255, .8) !important;
+
+    /* Default Backgrounds - Dark Mode */
+    --colorDefaultBackground1: var(--primary-brand);
+    --colorDefaultBackground2: var(--primary-selected);
+    --colorDefaultBackground3: var(--primary-brand);
+    --colorDefaultBackground4: var(--secondary-brand);
+    --colorDefaultBackground5: var(--primary-pressed);
+    --colorDefaultBackground6: var(--secondary-pressed);
+    --colorDefaultBackground7: rgb(var(--theme-color-100)) !important;
+
+    /* Subtle Backgrounds - Dark Mode */
+    --colorSubtleBackground: transparent !important;
+    --colorTransparentBackgroundSelected: rgba(var(--theme-color-40), 0.25) !important;
+
+    /* Gradient Colors - Dark Mode Override */
+    --gradient-color-10: var(--theme-color-70);
+    --gradient-color-20: var(--theme-color-90);
+}
+
+/* ===== LIGHT MODE - Teams' theme-defaultV2 ===== */
+html.theme-defaultV2 :root,
+html.theme-defaultV2 .fui-FluentProvider {
+    /* Neutral Backgrounds - Light */
+    --colorNeutralBackground1: #ffffff !important;
+    --colorNeutralBackground2: #f8f8f8 !important;
+    --colorNeutralBackground3: #f0f0f0 !important;
+    --colorNeutralBackground4: rgb(var(--theme-color-0)) !important;
+    --colorNeutralBackground5: rgb(var(--theme-color-5)) !important;
+    --colorNeutralCardBackground: #ffffff !important;
+    --colorNeutralBackground1Hover: rgba(0, 0, 0, .04) !important;
+    --colorNeutralBackground4Selected: rgba(0, 0, 0, .04) !important;
+
+    /* Brand Background for User Messages - Match Neutral */
+    --colorBrandBackground2: #f8f8f8 !important;
+
+    /* Text Colors - Light Mode */
+    --colorNeutralForeground1: #222 !important;
+    --colorNeutralForeground2: #444 !important;
+    --colorNeutralForeground3: #666 !important;
+    --colorNeutralForeground3BrandSelected: #FAFAFA !important;
+
+    /* Default Backgrounds - Light Mode */
+    --colorDefaultBackground1: #ffffff !important;
+    --colorDefaultBackground2: #f8f8f8 !important;
+    --colorDefaultBackground3: #f0f0f0 !important;
+    --colorDefaultBackground4: rgb(var(--theme-color-0)) !important;
+    --colorDefaultBackground5: rgb(var(--theme-color-5)) !important;
+    --colorDefaultBackground6: rgb(var(--theme-color-0)) !important;
+    --colorDefaultBackground7: #ffffff !important;
+
+    /* Subtle Backgrounds - Light Mode */
+    --colorSubtleBackground: rgba(var(--theme-color-40), .02) !important;
+    --colorTransparentBackgroundSelected: rgba(var(--theme-color-40), .08) !important;
+
+    /* Gradient Colors - Light Mode (use original values) */
+    --gradient-color-10: var(--theme-color-70);
+    --gradient-color-20: var(--theme-color-90);
+
+    /* Left Navigation Overrides - Light Mode */
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon svg path {
+        fill: var(--colorDefaultBackground2) !important;
+    }
+
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon span {
+        color: var(--colorDefaultBackground2) !important;
+    }
+
+    div[data-tid="app-layout-area--nav"] .fui-Button__icon img {
+        filter: none !important;
+    }
+
+    div[data-testid="simple-collab-rail"],
+    div[data-tid="app-layout-area--mid-nav"] {
+        background-color: var(--colorDefaultBackground2) !important;
+    }
+
+    div[data-item-type="channel"] {
+        background: transparent !important;
+    }
+}
+
+
+/* Gradient App Border */
+div[data-tid="experience-layout"] {
+    background: radial-gradient(circle at 50% 50%,
+            rgb(var(--gradient-color-10)) 20%,
+            transparent 80%),
+        conic-gradient(from 45deg at 50% 50%,
+            rgb(var(--gradient-color-20)) 0%,
+            rgb(var(--gradient-color-10)) 25%,
+            rgb(var(--gradient-color-20)) 50%,
+            rgb(var(--gradient-color-10)) 75%,
+            rgb(var(--gradient-color-20)) 100%) !important;
+}
+
+/* Allow Gradient Background  */
+button[data-tid="post-new-message-type"],
+div[data-tid="app-layout-area--nav"],
+div[data-tid="app-bar-wrapper"]>div,
+div[data-tid="app-layout-area--header"],
+div[data-tid="title-bar"] {
+    background-color: transparent !important;
+}
+
+button[data-tid="post-new-message-type"],
+button[data-tid="quick-reply-placeholder-reply"] {
+    color: var(--colorBrandForeground2) !important;
+}

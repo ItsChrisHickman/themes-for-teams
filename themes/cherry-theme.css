@@ -1,0 +1,19 @@
+/* Cherry Theme for Microsoft Teams - Color Palette Only */
+
+/* ===== CHERRY COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Cherry Red Color Scale - From Light Pink to Deep Cherry */
+    --theme-color-0: 255, 241, 242;     /* Lightest - pale pink */
+    --theme-color-5: 254, 226, 226;     /* Light pink */
+    --theme-color-10: 252, 165, 165;    /* Soft coral */
+    --theme-color-20: 248, 113, 113;    /* Light red */
+    --theme-color-30: 239, 68, 68;      /* Coral red */
+    --theme-color-40: 220, 38, 38;      /* Cherry red */
+    --theme-color-50: 185, 28, 28;      /* Deep cherry */
+    --theme-color-60: 153, 27, 27;      /* Dark cherry */
+    --theme-color-70: 127, 29, 29;      /* Very dark cherry */
+    --theme-color-80: 101, 20, 20;      /* Deep red */
+    --theme-color-90: 69, 10, 10;       /* Dark wine */
+    --theme-color-100: 38, 5, 5;        /* Darkest cherry */
+}

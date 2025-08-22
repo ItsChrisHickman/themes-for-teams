@@ -1,15 +1,7 @@
-/* Microsoft Teams Chat Padding Reduction */
+/* Global Teams UI Adjustments */
 
 /* Apply font with anti-aliasing to common Teams elements */
-body,
-div,
-p,
-span,
-button,
-input,
-textarea,
-h1, h2, h3, h4, h5, h6,
-select {   
+body, div, p, span, button, input, textarea, h1, h2, h3, h4, h5, h6, select {   
     /* Enhanced font smoothing and anti-aliasing */
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
@@ -21,22 +13,35 @@ select {
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1 !important;
 }
 
-/* Get rid of excessive padding!! */
+/* Get rid of excessive padding in chats, teams, etc.  */
 div[data-tid='chat-pane-item'],
 div[data-tid="message-pane-layout"] > .fui-Primitive {
     padding-left: 16px !important;
     padding-right: 16px !important;
-    max-width: 100% !important;
+    max-width: 100% !important;    
 }
-
-/* Make chat boxes 100% */
 div[data-tid='message-pane-list-runway'],
-div[data-tid="channel-pane-message"] {
+div[data-tid="channel-pane-runway"] {
     max-width: 100% !important;
+    padding: 0 !important;
+}
+div[data-tid="channel-pane-message"] {
+    max-width: calc(100% - 30px) !important;
     padding: 0 16px 0 0 !important;
 }
 
-/* Borders are ugly */
+/* Avatars are too round! */
+.fui-Avatar__image {
+    border-radius: 4px !important;
+}
+
+/* Reply Avatars are too small */
+span[data-tid="reply-message-header-avatar"] {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+/* Borders are ugly! */
 .fui-Flex,
 div[data-tid="channel-pane-message"] {
     border-bottom-color: transparent !important;
@@ -48,10 +53,6 @@ div[data-tid="title-bar"] {
     border-bottom-width: 0px !important;
 }
 
-div[data-tid="channel-pane-runway"] {
-    max-width: 100% !important;
-    padding: 0 !important;
-}
 
 /* Bold face names in replies */
 div[data-tid="reply-message-header"] > div > div > span {
@@ -110,6 +111,8 @@ div[data-tid="message-tombstone"] {
 }
 
 /* Force all links to be bright blue */
+button[data-tid="post-new-message-type"],
+button[data-tid="response-summary-button"] > span,
 a, a:link, .ui-link {
     color: rgb(29, 155, 209) !important;
     text-decoration-color: rgb(29, 155, 209) !important;
@@ -121,7 +124,7 @@ a:hover {
 }
 
 div[data-testid="simple-collab-rail"] {
-    border-top-left-radius: 16px;
+    border-top-left-radius: 16px !important;
 }
 
 /* Always Blue Links */
@@ -164,4 +167,12 @@ html.theme-darkV2 .fui-FluentProvider {
 /* Fix replies width so emojis can be used */
 div[id*="message-body-"] {
     max-width: 100% !important;
+}
+
+/* Active/Selected Items */
+.selected,
+.active,
+.is-selected,
+[aria-selected="true"] {
+    border-left-color: var(--colorBrandForeground1) !important;
 }

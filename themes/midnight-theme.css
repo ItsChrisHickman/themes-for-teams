@@ -1,215 +1,69 @@
-/* Midnight Theme for Microsoft Teams - Classic Dark Blue Accents */
+/* Midnight Theme for Microsoft Teams - Color Palette Only */
 
-/* ===== COLOR PALETTE ===== */
+/* ===== MIDNIGHT BLUE COLOR PALETTE ===== */
 :root,
 .fui-FluentProvider {
-    /* Midnight Blue Color Scale */
-    --dt_color-plt-midnight-0: 248, 250, 252;  /* Lightest */
-    --dt_color-plt-midnight-5: 241, 245, 249;
-    --dt_color-plt-midnight-10: 226, 232, 240;
-    --dt_color-plt-midnight-20: 203, 213, 225;
-    --dt_color-plt-midnight-30: 148, 163, 184;
-    --dt_color-plt-midnight-40: 100, 116, 139;
-    --dt_color-plt-midnight-50: 71, 85, 105;
-    --dt_color-plt-midnight-60: 51, 65, 85;
-    --dt_color-plt-midnight-70: 30, 41, 59;
-    --dt_color-plt-midnight-80: 15, 23, 42;
-    --dt_color-plt-midnight-90: 2, 6, 23;
-    --dt_color-plt-midnight-100: 1, 4, 17;     /* Darkest */
+    /* Midnight Blue Color Scale - Lightest to Darkest */
+    --theme-color-0: 248, 250, 252;     /* Lightest - #F8FAFC */
+    --theme-color-5: 241, 245, 249;     /* Very light - #F1F5F9 */
+    --theme-color-10: 226, 232, 240;    /* Light - #E2E8F0 */
+    --theme-color-20: 203, 213, 225;    /* Light accent - #CBD5E1 */
+    --theme-color-30: 148, 163, 184;    /* Medium light - #94A3B8 */
+    --theme-color-40: 100, 116, 139;    /* Primary brand - #64748B */
+    --theme-color-50: 71, 85, 105;      /* Main brand - #475569 */
+    --theme-color-60: 51, 65, 85;       /* Secondary brand - #334155 */
+    --theme-color-70: 30, 41, 59;       /* Dark accent - #1E293B */
+    --theme-color-80: 15, 23, 42;       /* Very dark - #0F172A */
+    --theme-color-90: 2, 6, 23;         /* Gradient dark - #020617 */
+    --theme-color-100: 1, 4, 17;        /* Darkest - #010411 */
 }
 
-/* ===== SHARED BRAND COLORS (Both Light and Dark Modes) ===== */
-:root,
-.fui-FluentProvider {
-    /* Primary Brand Colors */
-    --colorBrandBackground: #4169E1 !important;
-    --colorBrandBackgroundHover: #6495ED !important;
-    --colorBrandBackgroundPressed: #191970 !important;
-    --colorBrandBackgroundSelected: #87CEEB !important;
-    --colorBrandBackgroundStatic: #87CEEB !important;
-    
-    --colorBrandBackground2: #2F4F4F !important;
-    --colorBrandBackground2Hover: #4169E1 !important;
-    --colorBrandBackground2Pressed: #191970 !important;
-    --colorBrandBackground3Static: #4169E1 !important;
-    --colorBrandBackground4Static: #2F4F4F !important;
-    
-    --colorCompoundBrandBackground: #6495ED !important;
-    --colorCompoundBrandBackgroundHover: #87CEEB !important;
-    --colorCompoundBrandBackgroundPressed: #4169E1 !important;
+/* ===== MIDNIGHT GRADIENT OVERRIDE ===== */
 
-    /* Brand Foreground Colors */
-    --colorBrandForeground1: #87CEEB !important;
-    --colorBrandForeground2: #4169E1 !important;
-    --colorBrandForegroundLink: #4169E1 !important;
-    --colorBrandForegroundLinkHover: #87CEEB !important;
-    --colorBrandForegroundLinkPressed: #2F4F4F !important;
-    --colorBrandForegroundLinkSelected: #87CEEB !important;
-    
-    --colorBrandForegroundInverted: #4169E1 !important;
-    --colorBrandForegroundInvertedHover: #2F4F4F !important;
-    --colorBrandForegroundInvertedPressed: #191970 !important;
-    --colorBrandForegroundOnLight: #4169E1 !important;
-    --colorBrandForegroundOnLightHover: #2F4F4F !important;
-    --colorBrandForegroundOnLightPressed: #191970 !important;
-    --colorBrandForegroundOnLightSelected: #2F4F4F !important;
-    
-    --colorCompoundBrandForeground1: #87CEEB !important;
-    --colorCompoundBrandForeground1Hover: #4169E1 !important;
-    --colorCompoundBrandForeground1Pressed: #4169E1 !important;
-
-    /* Neutral Foreground Brand Colors */
-    --colorNeutralForeground2BrandHover: #4169E1 !important;
-    --colorNeutralForeground2BrandPressed: #87CEEB !important;
-    --colorNeutralForeground2BrandSelected: #4169E1 !important;
-    --colorNeutralForeground3BrandHover: #4169E1 !important;
-    --colorNeutralForeground3BrandPressed: #87CEEB !important;
-
-    /* Stroke Colors */
-    --colorBrandStroke1: #4169E1 !important;
-    --colorBrandStroke2: #2F4F4F !important;
-    --colorBrandStroke2Hover: #4169E1 !important;
-    --colorBrandStroke2Pressed: #191970 !important;
-    --colorBrandStroke2Contrast: #2F4F4F !important;
-    --colorCompoundBrandStroke: #87CEEB !important;
-    --colorCompoundBrandStrokeHover: #4169E1 !important;
-    --colorCompoundBrandStrokePressed: #4169E1 !important;
-    --colorNeutralStrokeAccessibleSelected: #4169E1 !important;
-
-    /* Avatar Colors */
-    --colorAvatar: #4169E1 !important;
-    --colorAvatarBackground: #4169E1 !important;
-
-    /* Teams Specific Colors */
-    --colorTeamsBrand1Hover: #4169E1 !important;
-    --colorTeamsBrand1Pressed: #87CEEB !important;
-    --colorTeamsBrand1Selected: #4169E1 !important;
+/* Dark Mode Midnight Gradient - Deep night sky */
+html.theme-darkV2 div[data-tid="experience-layout"] {
+    background: 
+        /* Distant city lights */
+        radial-gradient(circle at 15% 85%, 
+            rgba(100, 116, 139, 0.4) 0%,     /* Soft city glow */
+            rgba(71, 85, 105, 0.2) 25%,      /* Distant light */
+            transparent 60%),
+        radial-gradient(circle at 85% 20%, 
+            rgba(148, 163, 184, 0.3) 0%,     /* Moonlight glow */
+            rgba(100, 116, 139, 0.15) 30%,   /* Soft glow */
+            transparent 65%),
+        /* Night sky sweep */
+        conic-gradient(from 180deg at 50% 50%,
+            rgb(1, 4, 17) 0%,                 /* Darkest night */
+            rgb(2, 6, 23) 15%,                /* Deep night */
+            rgb(15, 23, 42) 30%,              /* Very dark */
+            rgb(30, 41, 59) 45%,              /* Dark accent */
+            rgb(51, 65, 85) 60%,              /* Midnight blue */
+            rgb(71, 85, 105) 75%,             /* Main midnight */
+            rgb(100, 116, 139) 90%,           /* Lighter midnight */
+            rgb(1, 4, 17) 100%) !important;   /* Back to darkest */
 }
 
-/* ===== DARK MODE - Teams' theme-darkV2 ===== */
-html.theme-darkV2 :root,
-html.theme-darkV2 .fui-FluentProvider {
-    /* Neutral Backgrounds - Dark */
-    --colorNeutralBackground1: rgb(26, 29, 33) !important;
-    --colorNeutralBackground2: rgb(26, 29, 33) !important;
-    --colorNeutralBackground3: rgb(26, 29, 33) !important;
-    --colorNeutralBackground4: #2F4F4F !important;
-    --colorNeutralBackground5: #191970 !important;
-    --colorNeutralCardBackground: rgb(26, 29, 33) !important;
-    --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
-    --colorNeutralBackground4Selected: transparent !important;
-
-    /* Text Colors - Dark Mode */
-    --colorNeutralForeground3: #FAFAFA !important;
-    --colorNeutralForeground3BrandSelected: rgba(255, 255, 255, .8) !important;
-
-    /* Default Backgrounds - Dark Mode */
-    --colorDefaultBackground1: #4169E1 !important;
-    --colorDefaultBackground2: #87CEEB !important;
-    --colorDefaultBackground3: #4169E1 !important;
-    --colorDefaultBackground4: #2F4F4F !important;
-    --colorDefaultBackground5: #191970 !important;
-    --colorDefaultBackground6: #0B0B2F !important;
-    --colorDefaultBackground7: #050517 !important;
-
-    /* Subtle Backgrounds - Dark Mode */
-    --colorSubtleBackground: transparent !important;
-    --colorTransparentBackgroundSelected: rgba(65, 105, 225, 0.25) !important;
-
-    /* Gradient Colors - Dark Mode */
-    --dt_color-plt-midnight-0: 5, 5, 23;
-    --dt_color-plt-midnight-10: 25, 25, 112;
-    --dt_color-plt-midnight-20: 65, 105, 225;
-}
-
-/* ===== LIGHT MODE - Teams' theme-defaultV2 ===== */
-html.theme-defaultV2 :root,
-html.theme-defaultV2 .fui-FluentProvider {
-    /* Neutral Backgrounds - Light */
-    --colorNeutralBackground1: #ffffff !important;
-    --colorNeutralBackground2: #f8f8f8 !important;
-    --colorNeutralBackground3: #f0f0f0 !important;
-    --colorNeutralBackground4: #f0f4ff !important;
-    --colorNeutralBackground5: #e0e8ff !important;
-    --colorNeutralCardBackground: #ffffff !important;
-    --colorNeutralBackground1Hover: rgba(0, 0, 0, .04) !important;
-    --colorNeutralBackground4Selected: rgba(0, 0, 0, .04) !important;
-
-    /* Brand Background for User Messages - Match Neutral */
-    --colorBrandBackground2: #f8f8f8 !important;
-
-    /* Text Colors - Light Mode */
-    --colorNeutralForeground1: #222 !important;
-    --colorNeutralForeground2: #444 !important;
-    --colorNeutralForeground3: #666 !important;
-    --colorNeutralForeground3BrandSelected: #FAFAFA !important;
-
-    /* Default Backgrounds - Light Mode */
-    --colorDefaultBackground1: #ffffff !important;
-    --colorDefaultBackground2: #f8f8f8 !important;
-    --colorDefaultBackground3: #f0f0f0 !important;
-    --colorDefaultBackground4: #f0f4ff !important;
-    --colorDefaultBackground5: #e0e8ff !important;
-    --colorDefaultBackground6: #f8faff !important;
-    --colorDefaultBackground7: #ffffff !important;
-
-    /* Subtle Backgrounds - Light Mode */
-    --colorSubtleBackground: rgba(65, 105, 225, .02) !important;
-    --colorTransparentBackgroundSelected: rgba(65, 105, 225, .08) !important;
-
-    /* Left Navigation Overrides - Light Mode */
-    div[data-tid="app-layout-area--nav"] .fui-Button__icon svg path {
-        fill: var(--colorDefaultBackground2) !important;
-    }
-    div[data-tid="app-layout-area--nav"] .fui-Button__icon span {
-        color: var(--colorDefaultBackground2) !important;
-    }
-    div[data-tid="app-layout-area--nav"] .fui-Button__icon img {
-        filter: none !important;
-    }
-
-    div[data-testid="simple-collab-rail"],
-    div[data-tid="app-layout-area--mid-nav"] {
-        background-color: var(--colorDefaultBackground2) !important;
-    }
-    div[data-item-type="channel"] {
-        background: transparent !important;
-    }
-
-    /* Gradient App Border - Light Mode */
-    div[data-tid="experience-layout"] {
-        background: radial-gradient(circle at 50% 50%, 
-                rgb(var(--dt_color-plt-midnight-70)) 20%, 
-                transparent 80%),
-            conic-gradient(from 45deg at 50% 50%,
-                rgb(var(--dt_color-plt-midnight-90)) 0%,
-                rgb(var(--dt_color-plt-midnight-70)) 25%,
-                rgb(var(--dt_color-plt-midnight-90)) 50%,
-                rgb(var(--dt_color-plt-midnight-70)) 75%,
-                rgb(var(--dt_color-plt-midnight-90)) 100%) !important;
-    }
-
-    /* Allow Gradient Background - Light Mode */
-    button[data-tid="post-new-message-type"],
-    div[data-tid="app-layout-area--nav"],
-    div[data-tid="app-bar-wrapper"] > div,
-    div[data-tid="app-layout-area--header"],
-    div[data-tid="title-bar"] {
-        background-color: transparent !important;
-    }
-
-    button[data-tid="post-new-message-type"],
-    button[data-tid="quick-reply-placeholder-reply"] {
-        color: var(--colorBrandForeground2) !important;
-    }
-}
-
-/* ===== UI ELEMENTS ===== */
-
-/* Active/Selected Items */
-.selected,
-.active,
-.is-selected,
-[aria-selected="true"] {
-    border-left-color: var(--colorBrandForeground1) !important;
+/* Light Mode Midnight Gradient - Early dawn sky */
+html.theme-defaultV2 div[data-tid="experience-layout"] {
+    background: 
+        /* Dawn light */
+        radial-gradient(circle at 15% 85%, 
+            rgba(100, 116, 139, 0.2) 0%,     /* Soft dawn glow */
+            rgba(148, 163, 184, 0.15) 25%,   /* Light dawn */
+            transparent 60%),
+        radial-gradient(circle at 85% 20%, 
+            rgba(203, 213, 225, 0.25) 0%,    /* Morning light */
+            rgba(226, 232, 240, 0.1) 30%,    /* Soft morning */
+            transparent 65%),
+        /* Dawn to day sweep */
+        conic-gradient(from 180deg at 50% 50%,
+            rgb(248, 250, 252) 0%,            /* Lightest */
+            rgb(241, 245, 249) 15%,           /* Very light */
+            rgb(226, 232, 240) 30%,           /* Light */
+            rgb(203, 213, 225) 45%,           /* Light accent */
+            rgb(148, 163, 184) 60%,           /* Medium light */
+            rgb(100, 116, 139) 75%,           /* Primary brand */
+            rgb(71, 85, 105) 90%,             /* Main brand */
+            rgb(248, 250, 252) 100%) !important; /* Back to lightest */
 }

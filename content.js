@@ -52,15 +52,17 @@
 
         // Define font families with fallbacks
         const fontFamilies = {
-            'default': '-apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif',
-            'lato': '"Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif',
-            'georgia': '"Georgia", "Times New Roman", Times, serif, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui',
-            'noto-sans': '"Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif',
+            'default': 'inherit',
+            'arial' : '"Arial"',
+            'comic-sans' : '"Comic Sans"',
+            'lato': '"Lato"',
+            'georgia': '"Georgia", "Times New Roman", Times, serif',
+            'noto-sans': '"Noto Sans"',
             'roboto-mono': '"Roboto Mono", "Cascadia Mono", Consolas, ui-monospace, Menlo, Monaco, monospace',
-            'verdana': '"Verdana", Geneva, Tahoma, sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui'
+            'verdana': '"Verdana", Geneva, Tahoma',
         };
 
-        const fontFamily = fontFamilies[font];
+        const fontFamily = fontFamilies[font] + ', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif';
         if (!fontFamily) return;
 
         // Inject Google Fonts link for Lato
@@ -94,45 +96,70 @@
         document.head.appendChild(style);
     }
 
-    // Theme selection logic
+        // Theme selection logic - modular system with base + palette
     function injectTheme(theme) {
+        console.log('Teams Theme Extension: Applying theme -', theme);
+        
+        // Remove any previously injected themes
+        const oldBaseStyle = document.getElementById('teams-base-theme-style');
+        const oldPaletteStyle = document.getElementById('teams-palette-style');
+        if (oldBaseStyle) oldBaseStyle.remove();
+        if (oldPaletteStyle) oldPaletteStyle.remove();
 
-        // Remove any previously injected theme
-        const oldStyle = document.getElementById('teams-theme-style');
-        if (oldStyle) {
-            oldStyle.remove();
+        // For default theme, just use the original styles
+        if (theme === 'default') {
+            fetch(ext.runtime.getURL('styles.css'))
+                .then(response => response.text())
+                .then(css => {
+                    const style = document.createElement('style');
+                    style.id = 'teams-base-theme-style';
+                    style.textContent = css;
+                    document.head.appendChild(style);
+                })
+                .catch(error => {
+                    console.error('Teams Theme Extension: Error loading default theme:', error);
+                });
+            return;
         }
 
-        let themeFile = 'styles.css'; // default
-        if (theme === 'purple') themeFile = 'themes/purple-theme.css';
-        if (theme === 'lagoon') themeFile = 'themes/lagoon-theme.css';
-        if (theme === 'amber') themeFile = 'themes/amber-theme.css';
-        if (theme === 'forest') themeFile = 'themes/forest-theme.css';
-        if (theme === 'midnight') themeFile = 'themes/midnight-theme.css';
-        if (theme === 'rose') themeFile = 'themes/rose-theme.css';
-        if (theme === 'sunset') themeFile = 'themes/sunset-theme.css';
-        if (theme === 'laser') themeFile = 'themes/laser-theme.css';
-        if (theme === 'dracula') themeFile = 'themes/dracula-theme.css';
-        if (theme === 'monokai') themeFile = 'themes/monokai-theme.css';
-        if (theme === 'nord') themeFile = 'themes/nord-theme.css';
-        if (theme === 'solarized') themeFile = 'themes/solarized-theme.css';
+        // For themed options, load base + palette
+        const supportedThemes = [
+            'purple', 'lagoon', 'amber', 'forest', 'midnight', 
+            'rose', 'sunset', 'dracula', 'monokai', 'ocean', 
+            'cherry', 'mint', 'cosmic'
+        ];
 
-        fetch(ext.runtime.getURL(themeFile))
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.text();
-            })
-            .then(css => {
-                const style = document.createElement('style');
-                style.id = 'teams-theme-style';
-                style.textContent = css;
-                document.head.appendChild(style);
-            })
-            .catch(error => {
-                console.error('Teams Theme Extension: Error loading theme:', error);
-            });
+        if (!supportedThemes.includes(theme)) {
+            console.warn('Teams Theme Extension: Unknown theme, falling back to default');
+            injectTheme('default');
+            return;
+        }
+
+        // Load base theme first, then palette
+        Promise.all([
+            fetch(ext.runtime.getURL('themes/base-theme.css')).then(r => r.text()),
+            fetch(ext.runtime.getURL(`themes/${theme}-theme.css`)).then(r => r.text())
+        ])
+        .then(([baseCss, paletteCss]) => {
+            // Inject palette first (defines variables)
+            const paletteStyle = document.createElement('style');
+            paletteStyle.id = 'teams-palette-style';
+            paletteStyle.textContent = paletteCss;
+            document.head.appendChild(paletteStyle);
+
+            // Then inject base theme (uses variables)
+            const baseStyle = document.createElement('style');
+            baseStyle.id = 'teams-base-theme-style';
+            baseStyle.textContent = baseCss;
+            document.head.appendChild(baseStyle);
+
+            console.log('Teams Theme Extension: Theme applied successfully -', theme);
+        })
+        .catch(error => {
+            console.error('Teams Theme Extension: Error loading modular theme:', error);
+            // Fallback to default
+            injectTheme('default');
+        });
     }
 
     // Inject Teams Improvements CSS if enabled
