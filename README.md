@@ -17,6 +17,10 @@ suit my purposes.  It works with Firefox too!
 
 ## Chrome Installation
 
+[https://chromewebstore.google.com/detail/themes-for-teams/odimdoddkdpnifojkpgcmcgehlkdjakj](Install from the Chrome Web Store)
+
+Or Manually Install:
+
 1. Visit: chrome://extensions/
 2. Enable Developer Mode (top right!)
 3. Click 'Load Unpacked'
@@ -24,6 +28,10 @@ suit my purposes.  It works with Firefox too!
 5. Reclaim your wasted screen real estate!
 
 ## Firefox Installation
+
+[https://addons.mozilla.org/en-US/firefox/addon/themes-for-teams/](Install from Firefox Browser Add-Ons)
+
+Or Manually Install:
 
 1. Visit: about:debugging
 2. Click 'This Firefox' on the left.
