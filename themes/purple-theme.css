@@ -4,16 +4,16 @@
 :root,
 .fui-FluentProvider {
     /* Purple Color Scale - Lightest to Darkest */
-    --theme-color-0: 249, 237, 255;
-    --theme-color-5: 246, 228, 255;
-    --theme-color-10: 244, 218, 255;
-    --theme-color-20: 234, 189, 251;
-    --theme-color-30: 223, 159, 244;
-    --theme-color-40: 211, 137, 231;
-    --theme-color-50: 196, 116, 211;
-    --theme-color-60: 163, 80, 175;
-    --theme-color-70: 131, 56, 138;
-    --theme-color-80: 97, 31, 105;
-    --theme-color-90: 74, 21, 75;
-    --theme-color-100: 57, 6, 58;
+    --theme-color-100: 32, 2, 33;
+    --theme-color-90: 48, 12, 49;
+    --theme-color-80: 67, 19, 73;
+    --theme-color-70: 95, 37, 101;
+    --theme-color-60: 125, 57, 134;
+    --theme-color-50: 150, 82, 162;
+    --theme-color-40: 178, 110, 195;
+    --theme-color-30: 188, 128, 206;
+    --theme-color-20: 207, 161, 222;
+    --theme-color-10: 216, 186, 225;
+    --theme-color-5: 227, 206, 235;
+    --theme-color-0: 239, 225, 245;
 }

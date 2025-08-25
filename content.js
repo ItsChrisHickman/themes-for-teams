@@ -54,7 +54,7 @@
         const fontFamilies = {
             'default': 'inherit',
             'arial' : '"Arial"',
-            'comic-sans' : '"Comic Sans"',
+            'comic-sans' : '"Comic Sans MS", "Comic Sans", cursive',
             'lato': '"Lato"',
             'georgia': '"Georgia", "Times New Roman", Times, serif',
             'noto-sans': '"Noto Sans"',

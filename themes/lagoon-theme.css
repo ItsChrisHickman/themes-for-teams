@@ -4,16 +4,17 @@
 :root,
 .fui-FluentProvider {
     /* Lagoon Blue Color Scale - Lightest to Darkest */
-    --theme-color-0: 240, 249, 255;     /* Lightest - #F0F9FF */
-    --theme-color-5: 224, 242, 254;     /* Very light - #E0F2FE */
-    --theme-color-10: 186, 230, 253;    /* Light - #BAE6FD */
-    --theme-color-20: 125, 211, 252;    /* Light accent - #7DD3FC */
-    --theme-color-30: 56, 189, 248;     /* Medium light - #38BDF8 */
-    --theme-color-40: 14, 165, 233;     /* Primary brand - #0EA5E9 */
-    --theme-color-50: 32, 178, 170;     /* Main brand - #20B2AA */
-    --theme-color-60: 2, 132, 199;      /* Secondary brand - #0284C7 */
-    --theme-color-70: 3, 105, 161;      /* Dark accent - #0369A1 */
-    --theme-color-80: 12, 74, 110;      /* Very dark - #0C4A6E */
-    --theme-color-90: 14, 58, 87;       /* Gradient dark - #0E3A57 */
-    --theme-color-100: 8, 47, 73;       /* Darkest - #082F49 */
+ --theme-color-0: 227,248,255;
+    --theme-color-5: 193,240,254;
+    --theme-color-10: 159,232,253;
+    --theme-color-20: 103,215,248;
+    --theme-color-30: 54,197,240;
+    --theme-color-40: 28,182,235;
+    --theme-color-50: 14,157,211;
+    --theme-color-60: 4,135,190;
+    --theme-color-70: 0,113,164;
+    --theme-color-80: 11,82,123;
+    --theme-color-90: 28,64,95;
+    --theme-color-100: 13,46,69;
 }
+

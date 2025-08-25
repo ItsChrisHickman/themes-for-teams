@@ -21,6 +21,7 @@ div[data-tid="message-pane-layout"] > .fui-Primitive {
     max-width: 100% !important;    
 }
 div[data-tid='message-pane-list-runway'],
+div[data-tid='channel-replies-runway'],
 div[data-tid="channel-pane-runway"] {
     max-width: 100% !important;
     padding: 0 !important;
@@ -175,4 +176,17 @@ div[id*="message-body-"] {
 .is-selected,
 [aria-selected="true"] {
     border-left-color: var(--colorBrandForeground1) !important;
+}
+
+/* Center the 'See all your teams' Link */
+div[data-tid="see-all-teams-button"] {
+    text-align: center !important;
+}
+
+/* Better code blocks */
+code {
+    color: #e8912d !important;
+    padding: 0 3px !important;
+    line-height: 1.8 !important;
+    border-color: rgba(232, 232, 232, 0.13) !important;
 }

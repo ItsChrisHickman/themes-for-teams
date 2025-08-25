@@ -128,8 +128,8 @@ html.theme-darkV2 .fui-FluentProvider {
     --colorTransparentBackgroundSelected: rgba(var(--theme-color-40), 0.25) !important;
 
     /* Gradient Colors - Dark Mode Override */
-    --gradient-color-10: var(--theme-color-70);
-    --gradient-color-20: var(--theme-color-90);
+    --gradient-color-10: var(--theme-color-80);
+    --gradient-color-20: var(--theme-color-100);
 }
 
 /* ===== LIGHT MODE - Teams' theme-defaultV2 ===== */

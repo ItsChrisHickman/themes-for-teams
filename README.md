@@ -41,6 +41,14 @@ Or Manually Install:
 
 ## Changelog
 
+v0.3.2
+  - Deeper "Purple" Theme
+  - Orange Code Blocks
+  - Fixes Comic Sans (by popular request)
+
+v0.3.1
+  - Fixes channel reply width
+
 v0.3.0 
   - Simplified themes to color values to use with base theme.
   - Added more themes!
