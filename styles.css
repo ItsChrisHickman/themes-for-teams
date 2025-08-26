@@ -14,7 +14,6 @@ body, div, p, span, button, input, textarea, h1, h2, h3, h4, h5, h6, select {
 }
 
 /* Get rid of excessive padding in chats, teams, etc.  */
-div[data-tid='chat-pane-item'],
 div[data-tid="message-pane-layout"] > .fui-Primitive {
     padding-left: 16px !important;
     padding-right: 16px !important;
@@ -29,6 +28,14 @@ div[data-tid="channel-pane-runway"] {
 div[data-tid="channel-pane-message"] {
     max-width: calc(100% - 30px) !important;
     padding: 0 16px 0 0 !important;
+}
+.fui-ChatMessage > div:first-child {
+    margin-left: 55px !important;
+    font-weight: bold !important;
+}
+span[data-tid="message-avatar"] {
+    margin-left: 12px;
+    margin-top: -26px;
 }
 
 /* Avatars are too round! */
@@ -61,8 +68,9 @@ div[data-tid="reply-message-header"] > div > div > span {
 }
 
 /* Fade time stamps and message statuses */
-time[data-tid="timestamp"],
+time,
 div[data-tid="reply-message-header"] > div > div > time {
+    font-weight: normal !important;
     color: #999 !important;
 } 
 div[data-tid="status-bar"] div span {
@@ -100,7 +108,18 @@ div[data-tid="simple-collab-dnd-rail"] {
 
 /* Get rid of gap on right side of 'my message' */
 .fui-ChatMyMessage {
+   margin-left: 55px !important;
    margin-right: 0px !important; /* */
+}
+.fui-ChatMyMessage > div {
+    margin-left: 0 !important;
+    justify-content: normal !important;
+    margin-bottom: 12px !important;
+}
+.fui-ChatMyMessage time:before {
+    content: "You " !important;
+    color: #fff;
+    font-weight: bold;
 }
 
 div[data-tid="entity-header"] {
@@ -189,4 +208,21 @@ code {
     padding: 0 3px !important;
     line-height: 1.8 !important;
     border-color: rgba(232, 232, 232, 0.13) !important;
+}
+/* "strings" */
+code .hljs-string {
+    color: #e6db74 !important;
+}
+/* const, let, function, etc. */
+code .hljs-keyword {
+    color: #00a7aa !important
+}
+/* function names */
+.hljs-function {
+    color: #98e342 !important;
+}
+
+/* Improved Notifications */
+div[data-testid="notification-wrapper"] {
+    opacity: 0.9;
 }

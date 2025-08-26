@@ -41,6 +41,13 @@ Or Manually Install:
 
 ## Changelog
 
+v0.3.3
+  - Set code font to 85% size.
+  - Improved TypeScript / JavaScript Codeblock colors
+  - Improved avatar/name/timestamp in chats.
+  - Subtle transparency on notification overlays
+  - Prefix -your- chat messages with 'You' (left aligned)
+
 v0.3.2
   - Deeper "Purple" Theme
   - Orange Code Blocks
