@@ -41,6 +41,14 @@ Or Manually Install:
 
 ## Changelog
 
+v0.3.4
+  - Automatically show 'Meeting Chats' filter in left column
+  - Remove filters 'expand' icon (no longer needed)
+  - Automatically expand posts, remove See More / See Less
+  - Message replies - added 3px left blue border to visually tie replies to message.
+  - Embedded Content - Smaller footer text, small rounded border, removed left blue border
+  - Default code block text color -> white (inline code remains orange)
+
 v0.3.3
   - Set code font to 85% size.
   - Improved TypeScript / JavaScript Codeblock colors

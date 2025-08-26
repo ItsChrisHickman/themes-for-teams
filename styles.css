@@ -14,6 +14,9 @@ body, div, p, span, button, input, textarea, h1, h2, h3, h4, h5, h6, select {
 }
 
 /* Get rid of excessive padding in chats, teams, etc.  */
+div[data-tid="channel-pane-viewport"] {
+    scrollbar-gutter: both-edges !important;
+}
 div[data-tid="message-pane-layout"] > .fui-Primitive {
     padding-left: 16px !important;
     padding-right: 16px !important;
@@ -26,8 +29,8 @@ div[data-tid="channel-pane-runway"] {
     padding: 0 !important;
 }
 div[data-tid="channel-pane-message"] {
-    max-width: calc(100% - 30px) !important;
-    padding: 0 16px 0 0 !important;
+    max-width: 100% !important;
+    padding: 0 !important;
 }
 .fui-ChatMessage > div:first-child {
     margin-left: 55px !important;
@@ -158,8 +161,28 @@ div[data-testid="simple-collab-rail"] {
     --colorBrandForegroundLinkSelected: #2784ff !important;
 }
 
-div.ac-adaptiveCard {
+/* Indent replies preview, blue left border */
+div[data-tid="response-surface"] {
+    margin-left: 22px;
     border-left: 3px solid #2684ff !important;
+}
+/* Move 'Open X replies from...' to end */
+div[data-tid="response-surface"] > div:first-child {
+    order: 999 !important;
+}
+
+/* Left border for embedded content and replies preview */
+div[data-tid="adaptive-card"] {
+    margin: 0 !important;
+    border: 1px solid #333;
+    border-radius: 4px;
+}
+div[data-tid="adaptive-card"]:hover {
+    background-color: var(--colorNeutralBackground1Hover) !important;
+}
+div[data-tid="message-extension-card-footer"],
+div[data-tid="card-action-failure"] {
+    font-size: 80% !important;
 }
 
 /* Better Emojis */
@@ -204,10 +227,14 @@ div[data-tid="see-all-teams-button"] {
 
 /* Better code blocks */
 code {
+    font-size: 85% !important;
     color: #e8912d !important;
     padding: 0 3px !important;
     line-height: 1.8 !important;
     border-color: rgba(232, 232, 232, 0.13) !important;
+}
+pre code {
+    color: #fff !important;
 }
 /* "strings" */
 code .hljs-string {
@@ -224,5 +251,27 @@ code .hljs-keyword {
 
 /* Improved Notifications */
 div[data-testid="notification-wrapper"] {
-    opacity: 0.9;
+    opacity: 0.85;
+}
+
+/* Show all filters without silly expand arrow  */
+.fui-Overflow {
+    flex-wrap: wrap !important;
+}
+div[data-testid="simple-collab-left-rail-sticky-filter-v2"] {
+    padding-left: 8px !important;
+}
+button[data-testid="simple-collab-left-rail-sticky-filter-collapse-expand-filters-button"] {
+    display: none !important;
+}
+div[data-overflow-item] { display: block !important; }
+
+
+/* Get rid of "see More Content" nonsense */ 
+div[id*="see-more-content"] {
+    overflow-y: auto !important;
+    max-height: none !important;
+}
+#see-more-container {
+    display: none !important;
 }
