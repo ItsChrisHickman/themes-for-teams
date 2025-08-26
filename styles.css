@@ -249,6 +249,12 @@ code .hljs-keyword {
     color: #98e342 !important;
 }
 
+/* Border around images - b/c if image has blank area above/below, it looks like
+   teams is padding it */
+div[data-tid="rich-file-preview-image"] {
+    border: 1px solid #333;
+}
+
 /* Improved Notifications */
 div[data-testid="notification-wrapper"] {
     opacity: 0.85;

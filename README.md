@@ -4,15 +4,15 @@
 
 I work for a company that recently migrated to Teams.  
 
-I decided to build a Chrome Extension to customize it to
-suit my purposes.  It works with Firefox too!
+I decided to build a browser extension to improve the overall experience and make Teams feel like home.
 
 ## Features
 
-- Reduction in unnecessary padding around elements
-- Font Selection
 - Themes Selection
+- Font Selection
+- Reduction in unnecessary padding around elements
 - Moves Post Titles beside avatar - much nicer!
+- Remove the 'expand/collapse' behavior on messages and filters
 - Subtle style changes to give Teams an edge!
 
 ## Chrome Installation
@@ -40,6 +40,9 @@ Or Manually Install:
 5. Extension will not persist (working on submitting)
 
 ## Changelog
+
+v0.3.5
+  - Subtle border around images - fixes 'weirdness' if image has blank pixels above/below
 
 v0.3.4
   - Automatically show 'Meeting Chats' filter in left column
