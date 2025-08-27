@@ -74,7 +74,7 @@
             document.head.appendChild(link);
         }
 
-        // Create CSS for font override with anti-aliasing
+        // Create CSS for font override
         const fontCSS = `
             :root,
             html,

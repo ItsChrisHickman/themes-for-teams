@@ -11,6 +11,9 @@ body, div, p, span, button, input, textarea, h1, h2, h3, h4, h5, h6, select {
     /* Additional rendering improvements */
     font-variant-ligatures: common-ligatures !important;
     font-feature-settings: "kern" 1, "liga" 1, "calt" 1 !important;
+
+    /* Better spacing */
+    line-height: 1.5 !important;
 }
 
 /* Get rid of excessive padding in chats, teams, etc.  */
@@ -45,6 +48,10 @@ span[data-tid="message-avatar"] {
 .fui-Avatar__image {
     border-radius: 4px !important;
 }
+/* Fix an alignment issue */
+.fui-ChatMessage__avatar {
+    width: 40px !important;
+}
 
 /* Reply Avatars are too small */
 span[data-tid="reply-message-header-avatar"] {
@@ -53,8 +60,7 @@ span[data-tid="reply-message-header-avatar"] {
 }
 
 /* Borders are ugly! */
-.fui-Flex,
-div[data-tid="channel-pane-message"] {
+.fui-Flex {
     border-bottom-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
@@ -80,6 +86,25 @@ div[data-tid="status-bar"] div span {
     color: #999 !important;
     font-style: italic;
 }
+/* Fix the @ mentioned you icon -- fell off screen! */
+div[data-tid="reply-message-header"] > div[id*="badge-"] {
+    right: 16px !important;
+}
+
+/*
+div[data-tid="post-message-subheader"] > div:first-child {
+    display: block !important;
+}
+div[data-tid="post-message-subheader"] > div > div {
+    display: inline !important;
+}
+div[data-tid="post-message-subheader"] > div > div div {
+    display: inline !important;
+    float: left !important;
+    padding-right: 8px;
+    width: auto !important;
+}
+    */
 
 /* Move next to avatar */
 h2[data-tid="subject-line"] {
@@ -257,7 +282,7 @@ div[data-tid="rich-file-preview-image"] {
 
 /* Improved Notifications */
 div[data-testid="notification-wrapper"] {
-    opacity: 0.85;
+    opacity: 0.95 !important;
 }
 
 /* Show all filters without silly expand arrow  */

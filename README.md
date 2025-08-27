@@ -42,6 +42,8 @@ Or Manually Install:
 ## Changelog
 
 v0.3.5
+  - New Extension Icon
+  - Themed Theme Selector
   - Subtle border around images - fixes 'weirdness' if image has blank pixels above/below
 
 v0.3.4
