@@ -1,7 +1,7 @@
 /* Global Teams UI Adjustments */
 
 /* Apply font with anti-aliasing to common Teams elements */
-body, div, p, span, button, input, textarea, h1, h2, h3, h4, h5, h6, select {   
+html {   
     /* Enhanced font smoothing and anti-aliasing */
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
@@ -29,7 +29,7 @@ div[data-tid='message-pane-list-runway'],
 div[data-tid='channel-replies-runway'],
 div[data-tid="channel-pane-runway"] {
     max-width: 100% !important;
-    padding: 0 !important;
+    padding: inherit 0 !important;
 }
 div[data-tid="channel-pane-message"] {
     max-width: 100% !important;
@@ -39,10 +39,12 @@ div[data-tid="channel-pane-message"] {
     margin-left: 55px !important;
     font-weight: bold !important;
 }
+
+/* Broke due to threads 
 span[data-tid="message-avatar"] {
     margin-left: 12px;
     margin-top: -26px;
-}
+} */
 
 /* Avatars are too round! */
 .fui-Avatar__image {
@@ -107,6 +109,7 @@ div[data-tid="post-message-subheader"] > div > div div {
     */
 
 /* Move next to avatar */
+/* Disabled - THREADS breaks.
 h2[data-tid="subject-line"] {
     position: absolute !important;
     top: 11px !important;
@@ -121,12 +124,18 @@ div[data-tid="post-message-subheader"] {
     top: 36px !important;
     left: 60px !important;
 }
+*/
+
+]
 
 /* Expand the 'Post in channel' box */
 div[data-tid="message-pane-layout"] > .fui-Primitive > .fui-Flex {
     max-width: 100% !important;
 }
 
+div[data-tid="chat-pane-item"] {
+    margin-bottom: 1em !important;
+}
 /* Reduce 14px on the left side of the list of chats/channels */
 div[data-tid="simple-collab-dnd-rail"] {
     margin-left: 0 !important; /* 14px */

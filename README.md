@@ -42,6 +42,7 @@ Or Manually Install:
 ## Changelog
 
 v0.3.5
+  - Fixes many spacing issues caused by Threads update
   - New Extension Icon
   - Themed Theme Selector
   - Subtle border around images - fixes 'weirdness' if image has blank pixels above/below
