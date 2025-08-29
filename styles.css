@@ -29,7 +29,7 @@ div[data-tid='message-pane-list-runway'],
 div[data-tid='channel-replies-runway'],
 div[data-tid="channel-pane-runway"] {
     max-width: 100% !important;
-    padding: inherit 0 !important;
+    padding: 0 !important;
 }
 div[data-tid="channel-pane-message"] {
     max-width: 100% !important;
