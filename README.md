@@ -41,6 +41,9 @@ Or Manually Install:
 
 ## Changelog
 
+v0.3.6
+  - Removed padding on sides of channels again (compatible with Threads)
+
 v0.3.5
   - Fixes many spacing issues caused by Threads update
   - New Extension Icon
