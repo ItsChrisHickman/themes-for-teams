@@ -126,8 +126,6 @@ div[data-tid="post-message-subheader"] {
 }
 */
 
-]
-
 /* Expand the 'Post in channel' box */
 div[data-tid="message-pane-layout"] > .fui-Primitive > .fui-Flex {
     max-width: 100% !important;
