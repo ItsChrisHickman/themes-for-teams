@@ -13,7 +13,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://teams.microsoft.com/v2/*"],
+      "matches": ["*://teams.microsoft.com/v2/*", "*://teams.cloud.microsoft/*"],
       "css": ["styles.css"],
       "js": ["content.js"],
       "run_at": "document_start"
@@ -22,7 +22,7 @@
   "web_accessible_resources": [
     {
       "resources": ["styles.css", "no-animations.css", "themes/*.css"],
-      "matches": ["*://teams.microsoft.com/*"]
+      "matches": ["*://teams.microsoft.com/*", "*://teams.cloud.microsoft/*"]
     }
   ],
   "action": {
