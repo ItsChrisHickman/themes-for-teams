@@ -1,0 +1,20 @@
+/* Tokyo Night Theme for Microsoft Teams - Color Palette Only */
+/* Colors from the Tokyo Night palette (github.com/folke/tokyonight.nvim, MIT) */
+
+/* ===== TOKYO NIGHT COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Tokyo Night Color Scale - Darkest to Lightest */
+    --theme-color-100: 22, 22, 30;      /* #16161E */
+    --theme-color-90: 26, 27, 38;       /* bg #1A1B26 */
+    --theme-color-80: 36, 40, 59;       /* bg_highlight #24283B */
+    --theme-color-70: 41, 46, 66;       /* #292E42 */
+    --theme-color-60: 65, 72, 104;      /* #414868 */
+    --theme-color-50: 86, 95, 137;      /* comment #565F89 */
+    --theme-color-40: 122, 162, 247;    /* blue #7AA2F7 - brand */
+    --theme-color-30: 125, 207, 255;    /* cyan #7DCFFF */
+    --theme-color-20: 187, 154, 247;    /* purple #BB9AF7 */
+    --theme-color-10: 192, 202, 245;    /* fg #C0CAF5 */
+    --theme-color-5: 214, 220, 248;     /* light fg */
+    --theme-color-0: 233, 236, 252;     /* lightest */
+}

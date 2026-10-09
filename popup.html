@@ -9,7 +9,11 @@
             background: rgb(var(--theme-color-70, 0, 0, 0));
             color: #fff;
             padding: 0;
-            min-width: 240px;
+            margin: 0;
+            width: 340px;
+            overflow-x: hidden;
+            max-height: 580px;
+            overflow-y: auto;
         }
         a { color: #fff; font-weight: normal; }
         .settings-card {
@@ -32,12 +36,87 @@
             font-size: 1.2em;
             font-weight: 600;
         }
-        label {
+        .presets {
+            display: flex;
+            gap: 8px;
+        }
+        button {
+            flex: 1;
+            padding: 6px 8px;
+            white-space: nowrap;
+            min-width: 0;
+            font-size: 0.9em;
+            border-radius: 6px;
+            border: 1px solid rgb(var(--theme-color-40, 34, 197, 94));
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            border-color: rgb(var(--theme-color-30, 74, 222, 128));
+        }
+        [hidden] {
+            display: none !important;
+        }
+        button.active {
+            background: rgb(var(--theme-color-40, 34, 197, 94));
+            color: rgb(var(--theme-color-100, 5, 46, 22));
+        }
+        button:disabled {
+            opacity: 0.4;
+            cursor: default;
+        }
+        #undo {
+            margin-top: 8px;
+            width: 100%;
+        }
+        .section-title {
+            margin: 16px 0 6px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.7;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 4px 0;
             font-weight: 500;
-            display: block;
-            margin-bottom: 8px;
+        }
+        .switch {
+            appearance: none;
+            flex: none;
+            position: relative;
+            width: 34px;
+            height: 18px;
+            margin: 0;
+            border-radius: 9px;
+            background: rgba(255, 255, 255, 0.25);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .switch::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #fff;
+            transition: transform 0.2s;
+        }
+        .switch:checked {
+            background: rgb(var(--theme-color-30, 74, 222, 128));
+        }
+        .switch:checked::before {
+            transform: translateX(16px);
         }
         select {
+            width: 130px;
             padding: 6px 10px;
             border-radius: 6px;
             border: 1px solid rgb(var(--theme-color-40, 34, 197, 94));
@@ -49,7 +128,8 @@
             border-color: rgb(var(--theme-color-30, 74, 222, 128));
         }
         #status {
-            margin-top:10px;
+            min-height: 1.2em;
+            margin-top: 10px;
             color: rgb(var(--theme-color-30, 21, 128, 61));
             font-size: 0.95em;
         }
@@ -61,45 +141,16 @@
             <img src="icon.png" alt="Teams Icon" class="popup-icon">
             <h3><a target="_blank" href="https://github.com/ItsChrisHickman/themes-for-teams">Themes for Teams</a></h3>
         </div>
-        <div style="margin-bottom: 15px;">
-            <label for="theme-select">Theme:</label>
-            <select id="theme-select" style="width: 150px;">
-                <option value="default">Default</option>
-                <option value="purple">Purple</option>
-                <option value="amber">Amber</option>
-                <option value="forest">Forest</option>
-                <option value="lagoon">Lagoon</option>
-                <option value="midnight">Midnight</option>
-                <option value="rose">Rose</option>
-                <option value="sunset">Sunset</option>
-                <option value="ocean">Ocean</option>
-                <option value="cherry">Cherry</option>
-                <option value="mint">Mint</option>
-                <option value="cosmic">Cosmic</option>
-                <option value="monokai">Monokai</option>
-                <option value="dracula">Dracula</option>
-            </select>
+        <div class="presets">
+            <button type="button" data-preset="recommended">Recommended</button>
+            <button type="button" data-preset="streamlined">Streamlined</button>
+            <button type="button" data-preset="teamsDefault">Teams default</button>
         </div>
-        <div style="margin-bottom: 15px;">
-            <label for="font-select">Font:</label>
-            <select id="font-select" style="width: 150px;">
-                <option value="default">Default</option>
-                <option value="arial">Arial</option>
-                <option value="comic-sans">Comic Sans</option>
-                <option value="georgia">Georgia</option>
-                <option value="lato">Lato</option>
-                <option value="noto-sans">Noto Sans</option>
-                <option value="roboto-mono">Roboto Mono</option>
-                <option value="san-francisco-pro">San Francisco Pro</option>
-                <option value="verdana">Verdana</option>
-            </select>
-        </div>
-        <div style="margin-bottom: 15px;">
-            <label for="animations-toggle">Disable Animations:</label>
-            <input type="checkbox" id="animations-toggle">
-        </div>
+        <button type="button" id="undo" disabled>&#8630; Undo</button>
         <div id="status"></div>
+        <div id="settings"></div>
     </div>
+    <script src="settings.js"></script>
     <script src="popup.js"></script>
 </body>
 </html>

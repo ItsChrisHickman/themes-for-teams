@@ -1,0 +1,20 @@
+/* Catppuccin Theme for Microsoft Teams - Color Palette Only */
+/* Colors from the Catppuccin palette (catppuccin.com (Mocha), MIT) */
+
+/* ===== CATPPUCCIN COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Catppuccin Color Scale - Darkest to Lightest */
+    --theme-color-100: 17, 17, 27;      /* crust #11111B */
+    --theme-color-90: 24, 24, 37;       /* mantle #181825 */
+    --theme-color-80: 30, 30, 46;       /* base #1E1E2E */
+    --theme-color-70: 49, 50, 68;       /* surface0 #313244 */
+    --theme-color-60: 69, 71, 90;       /* surface1 #45475A */
+    --theme-color-50: 127, 109, 170;    /* deep mauve */
+    --theme-color-40: 203, 166, 247;    /* mauve #CBA6F7 - brand */
+    --theme-color-30: 180, 190, 254;    /* lavender #B4BEFE */
+    --theme-color-20: 245, 194, 231;    /* pink #F5C2E7 */
+    --theme-color-10: 205, 214, 244;    /* text #CDD6F4 */
+    --theme-color-5: 230, 233, 250;     /* light text */
+    --theme-color-0: 239, 241, 245;     /* Latte base #EFF1F5 */
+}

@@ -1,0 +1,20 @@
+/* Gruvbox Theme for Microsoft Teams - Color Palette Only */
+/* Colors from the Gruvbox palette (github.com/morhetz/gruvbox, MIT) */
+
+/* ===== GRUVBOX COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Gruvbox Color Scale - Darkest to Lightest */
+    --theme-color-100: 29, 32, 33;      /* bg0_h #1D2021 */
+    --theme-color-90: 40, 40, 40;       /* bg #282828 */
+    --theme-color-80: 60, 56, 54;       /* bg1 #3C3836 */
+    --theme-color-70: 80, 73, 69;       /* bg2 #504945 */
+    --theme-color-60: 102, 92, 84;      /* bg3 #665C54 */
+    --theme-color-50: 214, 93, 14;      /* orange #D65D0E */
+    --theme-color-40: 254, 128, 25;     /* bright orange #FE8019 - brand */
+    --theme-color-30: 254, 160, 60;     /* between orange and yellow */
+    --theme-color-20: 250, 189, 47;     /* yellow #FABD2F */
+    --theme-color-10: 235, 219, 178;    /* fg #EBDBB2 */
+    --theme-color-5: 245, 232, 195;     /* light fg */
+    --theme-color-0: 251, 241, 199;     /* fg0 #FBF1C7 */
+}

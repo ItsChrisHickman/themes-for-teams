@@ -1,0 +1,20 @@
+/* Nord Theme for Microsoft Teams - Color Palette Only */
+/* Colors from the Nord palette (nordtheme.com, MIT) */
+
+/* ===== NORD COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Nord Color Scale - Darkest to Lightest */
+    --theme-color-100: 36, 41, 51;      /* darker than Polar Night 0 */
+    --theme-color-90: 46, 52, 64;       /* Polar Night #2E3440 */
+    --theme-color-80: 59, 66, 82;       /* #3B4252 */
+    --theme-color-70: 67, 76, 94;       /* #434C5E */
+    --theme-color-60: 76, 86, 106;      /* #4C566A */
+    --theme-color-50: 94, 129, 172;     /* Frost #5E81AC */
+    --theme-color-40: 129, 161, 193;    /* Frost #81A1C1 - brand */
+    --theme-color-30: 136, 192, 208;    /* Frost #88C0D0 */
+    --theme-color-20: 143, 188, 187;    /* Frost #8FBCBB */
+    --theme-color-10: 216, 222, 233;    /* Snow Storm #D8DEE9 */
+    --theme-color-5: 229, 233, 240;     /* #E5E9F0 */
+    --theme-color-0: 236, 239, 244;     /* #ECEFF4 */
+}

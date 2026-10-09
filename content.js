@@ -1,4 +1,4 @@
-// Teams Chat Padding Fix Content Script
+// Themes for Teams content script
 
 (function () {
     'use strict';
@@ -50,20 +50,10 @@
             return;
         }
 
-        // Define font families with fallbacks
-        const fontFamilies = {
-            'default': 'inherit',
-            'arial' : '"Arial"',
-            'comic-sans' : '"Comic Sans MS", "Comic Sans", cursive',
-            'lato': '"Lato"',
-            'georgia': '"Georgia", "Times New Roman", Times, serif',
-            'noto-sans': '"Noto Sans"',
-            'roboto-mono': '"Roboto Mono", "Cascadia Mono", Consolas, ui-monospace, Menlo, Monaco, monospace',
-            'verdana': '"Verdana", Geneva, Tahoma',
-        };
+        const baseFamily = globalThis.TFT_SETTINGS.fontStack(font);
+        if (!baseFamily) return;
 
-        const fontFamily = fontFamilies[font] + ', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif';
-        if (!fontFamily) return;
+        const fontFamily = baseFamily + ', -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Apple Color Emoji", "Segoe UI Emoji", sans-serif';
 
         // Inject Google Fonts link for Lato
         if (font === 'lato') {
@@ -110,11 +100,8 @@
         }
 
         // For themed options, load base + palette
-        const supportedThemes = [
-            'purple', 'lagoon', 'amber', 'forest', 'midnight', 
-            'rose', 'sunset', 'dracula', 'monokai', 'ocean', 
-            'cherry', 'mint', 'cosmic'
-        ];
+        const supportedThemes = globalThis.TFT_SETTINGS.SETTINGS
+            .find(setting => setting.key === 'theme').choices.map(c => c.value);
 
         if (!supportedThemes.includes(theme)) {
             console.warn('Teams Theme Extension: Unknown theme, falling back to default');
@@ -168,24 +155,53 @@
         }
     }
 
-    storageGet(['teamsTheme', 'teamsFont', 'teamsDisableAnimations']).then(result => {
-        injectTheme(result.teamsTheme || 'default');
-        injectFont(result.teamsFont || 'default');
-        injectNoAnimations(result.teamsDisableAnimations || false);
+    const { SETTINGS, storageKeyOf, datasetKey, toAttr, fromStorage } = globalThis.TFT_SETTINGS;
+
+    // Settings that load files or inject styles beyond the data-tft-* attribute
+    const sideEffects = {
+        theme: injectTheme,
+        font: injectFont,
+        animations: enabled => injectNoAnimations(!enabled),
+    };
+
+    function applySetting(setting, value) {
+        document.documentElement.dataset[datasetKey(setting.key)] = toAttr(setting, value);
+        const sideEffect = sideEffects[setting.key];
+        if (sideEffect) sideEffect(value);
+    }
+
+    // Attributes first, synchronously, so styles.css matches before storage answers
+    SETTINGS.forEach(setting => {
+        document.documentElement.dataset[datasetKey(setting.key)] = toAttr(setting, setting.recommended);
     });
+
+    storageGet(SETTINGS.map(storageKeyOf)).then(result => {
+        SETTINGS.forEach(setting => applySetting(setting, fromStorage(setting, result[storageKeyOf(setting)])));
+    });
+
+    // Tell the popup which message density Teams is showing, so it can hide settings for the other one
+    const DENSITY_KEY = 'tft_density';
+    let reportedDensity;
+    function reportDensity() {
+        const density = document.querySelector('.fui-ChatMessageCompact') ? 'compact'
+            : document.querySelector('.fui-ChatMessage, .fui-ChatMyMessage') ? 'comfy' : undefined;
+        if (!density || density === reportedDensity) return;
+        reportedDensity = density;
+        ext.storage.local.set({ [DENSITY_KEY]: density });
+    }
+    let densityCheck;
+    new MutationObserver(() => {
+        clearTimeout(densityCheck);
+        densityCheck = setTimeout(reportDensity, 1000);
+    }).observe(document.documentElement, { childList: true, subtree: true });
 
     // Listen for changes and apply live
     ext.storage.onChanged.addListener(function (changes, areaName) {
         if (areaName === 'sync') {
-            if (changes.teamsTheme) {
-                injectTheme(changes.teamsTheme.newValue || 'default');
-            }
-            if (changes.teamsFont) {
-                injectFont(changes.teamsFont.newValue || 'default');
-            }
-            if (changes.teamsDisableAnimations) {
-                injectNoAnimations(changes.teamsDisableAnimations.newValue || false);
-            }
+            SETTINGS.forEach(setting => {
+                const change = changes[storageKeyOf(setting)];
+                if (change) applySetting(setting, fromStorage(setting, change.newValue));
+            });
         }
     });
 })();

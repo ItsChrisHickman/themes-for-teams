@@ -1,0 +1,64 @@
+/* Hot Dog Stand Theme for Microsoft Teams - Windows 3.1's finest */
+
+/* ===== HOT DOG STAND COLOR PALETTE ===== */
+:root,
+.fui-FluentProvider {
+    /* Ketchup red scale - frame, title bars and accents */
+    --theme-color-100: 128, 0, 0;
+    --theme-color-90: 160, 0, 0;
+    --theme-color-80: 192, 0, 0;
+    --theme-color-70: 224, 0, 0;
+    --theme-color-60: 255, 0, 0;
+    --theme-color-50: 255, 0, 0;
+    --theme-color-40: 255, 0, 0;
+    --theme-color-30: 255, 64, 64;
+    --theme-color-20: 255, 128, 128;
+    --theme-color-10: 255, 255, 0;
+    --theme-color-5: 255, 255, 0;
+    --theme-color-0: 255, 255, 0;
+}
+
+/* Mustard windows, black text, in light and dark mode alike - beats base-theme's mode blocks */
+html[class] .fui-FluentProvider.fui-FluentProvider {
+    --colorNeutralBackground1: #ffff00 !important;
+    --colorNeutralBackground2: #ffff00 !important;
+    --colorNeutralBackground3: #ffff00 !important;
+    --colorNeutralBackground4: #ffd000 !important;
+    --colorNeutralBackground5: #ffd000 !important;
+    --colorNeutralCardBackground: #ffff00 !important;
+    /* Hover and selection stay mustard - red is for the frame and title bar */
+    --colorNeutralBackground1Hover: #eaea00 !important;
+    --colorNeutralBackground1Pressed: #d8d800 !important;
+    --colorNeutralBackground1Selected: #ffd000 !important;
+    --colorSubtleBackgroundHover: #eaea00 !important;
+    --colorSubtleBackgroundPressed: #d8d800 !important;
+    --colorSubtleBackgroundSelected: #ffd000 !important;
+    --colorTransparentBackgroundHover: #eaea00 !important;
+    --colorTransparentBackgroundSelected: #ffd000 !important;
+    --colorBrandBackground2: #ffff00 !important;
+
+    --colorNeutralForeground1: #000000 !important;
+    --colorNeutralForeground2: #000000 !important;
+    --colorNeutralForeground3: #000000 !important;
+    --colorNeutralForeground4: #000000 !important;
+    --colorNeutralForegroundOnBrand: #ffffff !important;
+
+    --colorNeutralStroke1: #000000 !important;
+    --colorNeutralStroke2: #000000 !important;
+    --colorNeutralStroke3: #000000 !important;
+
+    --colorBrandForeground1: #ff0000 !important;
+    --colorBrandForeground2: #c00000 !important;
+    --colorBrandForegroundLink: #c00000 !important;
+    --colorBrandForegroundLinkHover: #ff0000 !important;
+}
+
+/* Solid ketchup frame, no gradient */
+html div[data-tid="experience-layout"] {
+    background: #ff0000 !important;
+}
+
+/* Chat list is a window too */
+html div[data-testid="simple-collab-rail"] {
+    background-color: #ffff00 !important;
+}

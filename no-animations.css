@@ -1,16 +1,11 @@
 /* Disable Animations and Transitions in Microsoft Teams */
-/* Based on live DOM analysis of teams.microsoft.com/v2/ */
+/* Based on live DOM analysis of teams.cloud.microsoft */
 
 /*
  * The single rule that matters: disable transitions and animations
  * on all elements inside the Teams experience layout.
  *
- * This targets the 246+ elements that have active transitions:
- *   - 166 elements: color, background-color, box-shadow (0.05s) — hover effects
- *   - 41 elements: background, border, color (0.1s) — nav buttons
- *   - 12 elements: transform (0.2s) — SVG icon animations
- *   - 11 elements: height (0.236s) — layout panel resizing
- *   - Layout transitions: transform, visibility, clip-path (0.25s)
+ * Covers every transition and animation inside experience-layout.
  *
  * NOTE: We do NOT reset `transform` itself — Teams uses transforms
  * for positioning (virtual scroll, layout). We only zero out durations.

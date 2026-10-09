@@ -4,16 +4,21 @@
 
 I work for a company that recently migrated to Teams.  
 
-I decided to build a browser extension to improve the overall experience and make Teams feel like home.
+I decided to build a browser extension to improve the overall experience and make Teams feel like home - more like the friendlier chat app I came from.
 
 ## Features
 
-- Themes Selection
-- Font Selection
-- Reduction in unnecessary padding around elements
-- Moves Post Titles beside avatar - much nicer!
-- Remove the 'expand/collapse' behavior on messages and filters
-- Subtle style changes to give Teams an edge!
+Everything is a setting. Open the popup to switch each tweak on or off, or start from a preset: **Recommended** (the author's look), **Streamlined** (flat, tight, hover-highlighted messages) or **Teams default** (every tweak off). Presets never change your theme or font. Settings that only apply to Teams' Comfy message density are hidden while you use Compact.
+
+Apps Teams embeds from other Microsoft sites, like Calendar and OneDrive/SharePoint files, keep their own look.
+
+- Look: theme, font, avatar shape, text size, borders
+- Links: link color, mention chips, Teams link and external link styles
+- Messages: my messages, flat messages, hover highlight, chat background, timestamps, reply summary, reactions, spacing, day dividers
+- Layout: wider and rounded chat list, roomier Threads pane, all chat filters, expanded posts, list density
+- Code & media: code colors and size, image and card borders
+- Distractions: hide Copilot buttons, see-through notifications
+- Motion: turn animations off
 
 ## Chrome Installation
 
@@ -37,9 +42,35 @@ Or Manually Install:
 2. Click 'This Firefox' on the left.
 3. 'Load Temporary Add-On'.
 4. Select the manifest.json from this repo.
-5. Extension will not persist (working on submitting)
+5. Temporary add-ons are removed when Firefox restarts — use the Add-Ons link above for a permanent install.
+
+## Edge Installation
+
+Edge installs Chrome Web Store extensions: [Install from the Chrome Web Store](https://chromewebstore.google.com/detail/themes-for-teams/odimdoddkdpnifojkpgcmcgehlkdjakj). Edge will ask you to 'Allow extensions from other stores' - say yes.
+
+Or Manually Install:
+
+1. Visit: edge://extensions/
+2. Enable Developer Mode
+3. Click 'Load Unpacked'
+4. Select the folder you unzipped this to that contains manifest.json
+
+## Development
+
+Run `node tools/check-settings.mjs` to check that styles.css and settings.js agree.
 
 ## Changelog
+
+v0.5.0
+  - Supports Teams' new address, teams.cloud.microsoft (thanks @ArnoVerstraete)
+  - Channel thread replies restyled for Teams' Threads layout
+  - Removed rules for the retired Posts channel layout, and padding rules that narrowed the message pane now that Teams is full-width itself
+  - Fix: San Francisco Pro font option now works
+  - Every tweak is now a setting, with Recommended, Streamlined and Teams default presets, plus step-by-step Undo
+  - Themes: retired Cosmic, Rose, Ocean and Sunset; new Nord, Tokyo Night, Gruvbox and Catppuccin (palettes from those MIT-licensed projects), and a deliberately awful Hot Dog Stand for Windows 3.1 fans
+  - New: text size, link/mention/Teams-link styles, external-link icon, message spacing, day-divider pills, flat messages, hover highlight, chat backgrounds (doodles, dots, graph paper, honeycomb, waves, plus, tartan, arabesque, confetti) with glassy message surfaces, compact chat list, hide Copilot buttons
+  - Fix: Disable Animations now also stops menu and popover animations
+  - Fix: subtle divider between a channel and its Threads pane is back; Threads pane gets breathing room
 
 v0.4.1
   - Fix: Code block line numbers now display correctly - no overlap or drift

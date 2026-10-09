@@ -1,41 +1,10 @@
 /* Global Teams UI Adjustments */
 
-/* Apply font with anti-aliasing to common Teams elements */
-html {   
-    /* Enhanced font smoothing and anti-aliasing */
-    -webkit-font-smoothing: antialiased !important;
-    -moz-osx-font-smoothing: grayscale !important;
-    text-rendering: optimizeLegibility !important;
-    font-smooth: always !important;
-    
-    /* Additional rendering improvements */
-    font-variant-ligatures: common-ligatures !important;
-    font-feature-settings: "kern" 1, "liga" 1, "calt" 1 !important;
-
-    /* Better spacing */
-    line-height: 1.5 !important;
-}
-
-/* Get rid of excessive padding in chats, teams, etc.  */
-div[data-tid="channel-pane-viewport"] {
-    scrollbar-gutter: both-edges !important;
-}
-div[data-tid="message-pane-body"] > .fui-Primitive {
+/* Threads pane is narrow - give it some breathing room */
+html[data-tft-thread-inset="on"] div[data-tid="right-rail-message-pane-body"] div[data-tid='message-pane-list-runway'] {
     padding-left: 16px !important;
-    padding-right: 16px !important;
-    max-width: 100% !important;
 }
-div[data-tid='message-pane-list-runway'],
-div[data-tid='channel-replies-runway'],
-div[data-tid="channel-pane-runway"] {
-    max-width: 100% !important;
-    padding: 0 !important;
-}
-div[data-tid="channel-pane-message"] {
-    max-width: 100% !important;
-    padding: 0 !important;
-}
-.fui-ChatMessage > div:first-child {
+html[data-tft-my-messages="on"] .fui-ChatMessage > div:first-child {
     margin-left: 55px !important;
     font-weight: bold !important;
 }
@@ -47,50 +16,33 @@ span[data-tid="message-avatar"] {
 } */
 
 /* Avatars are too round! */
-.fui-Avatar__image {
+html[data-tft-avatar="square"] .fui-Avatar__image {
     border-radius: 4px !important;
 }
-/* Fix an alignment issue */
-.fui-ChatMessage__avatar {
-    width: 40px !important;
+html[data-tft-avatar="rounded"] .fui-Avatar__image {
+    border-radius: 10px !important;
 }
 
-/* Reply Avatars are too small */
-span[data-tid="reply-message-header-avatar"] {
-    width: 30px !important;
-    height: 30px !important;
-}
-
-/* Borders are ugly! */
-.fui-Flex {
+/* Borders are ugly! Except the subtle divider between a channel and its Threads pane */
+html[data-tft-borders="on"] .fui-Flex:not([data-tid="message-pane-layout"]) {
     border-bottom-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
     border-top-color: transparent !important;
 }
-div[data-tid="title-bar"] {
+html[data-tft-borders="on"] div[data-tid="title-bar"] {
     border-bottom-width: 0px !important;
 }
 
 
-/* Bold face names in replies */
-div[data-tid="reply-message-header"] > div > div > span {
-    font-weight: bold !important;
-}
-
 /* Fade time stamps and message statuses */
-time,
-div[data-tid="reply-message-header"] > div > div > time {
+html[data-tft-timestamps="on"] time {
     font-weight: normal !important;
     color: #999 !important;
 } 
-div[data-tid="status-bar"] div span {
+html[data-tft-timestamps="on"] div[data-tid="status-bar"] div span {
     color: #999 !important;
     font-style: italic;
-}
-/* Fix the @ mentioned you icon -- fell off screen! */
-div[data-tid="reply-message-header"] > div[id*="badge-"] {
-    right: 16px !important;
 }
 
 /*
@@ -126,64 +78,88 @@ div[data-tid="post-message-subheader"] {
 }
 */
 
-/* Expand the 'Post in channel' box */
-div[data-tid="message-pane-footer"] .fui-Flex {
-    max-width: 100% !important;
+/* Flat messages: drop the Comfy bubbles */
+html[data-tft-flat-messages="on"] .fui-ChatMessage__body,
+html[data-tft-flat-messages="on"] .fui-ChatMyMessage__body {
+    background: transparent !important;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
-div[data-tid="chat-pane-item"] {
+/* Faint full-width tint under the hovered message */
+html[data-tft-hover-highlight="on"] div[data-tid="chat-pane-item"]:hover {
+    background-color: var(--colorNeutralBackground1Hover) !important;
+}
+
+html[data-tft-spacing="tight"] div[data-tid="chat-pane-item"] {
+    margin-bottom: 0.25em !important;
+}
+html[data-tft-spacing="normal"] div[data-tid="chat-pane-item"] {
     margin-bottom: 1em !important;
 }
+html[data-tft-spacing="roomy"] div[data-tid="chat-pane-item"] {
+    margin-bottom: 1.75em !important;
+}
 /* Reduce 14px on the left side of the list of chats/channels */
-div[data-tid="simple-collab-dnd-rail"] {
+html[data-tft-list-gutter="on"] div[data-tid="simple-collab-dnd-rail"] {
     margin-left: 0 !important; /* 14px */
     padding: 0 !important;
     scrollbar-gutter: auto !important; ;
 }
+/* Channel names start under the team icon, not after it */
+html[data-tft-list-gutter="on"] .fui-Tree [role="treeitem"][aria-level="3"] > .fui-TreeItemLayout {
+    padding-left: 16px !important;
+}
 
 /* Get rid of gap on right side of 'my message' */
-.fui-ChatMyMessage {
+html[data-tft-my-messages="on"] .fui-ChatMyMessage {
    margin-left: 55px !important;
    margin-right: 0px !important; /* */
 }
-.fui-ChatMyMessage > div {
+html[data-tft-my-messages="on"] .fui-ChatMyMessage > div {
     margin-left: 0 !important;
     justify-content: normal !important;
     margin-bottom: 12px !important;
 }
-.fui-ChatMyMessage time:before {
+html[data-tft-my-messages="on"] .fui-ChatMyMessage time:before {
     content: "You " !important;
     color: #fff;
     font-weight: bold;
 }
 
-div[data-tid="entity-header"] {
-    width: 100% !important;
-}
-
-div[data-tid="message-tombstone"] {
+html[data-tft-tombstone="on"] div[data-tid="message-tombstone"] {
     color: #666 !important;
 }
 
 /* Force all links to be bright blue */
-button[data-tid="post-new-message-type"],
-button[data-tid="response-summary-button"] > span,
-a, a:link, .ui-link {
+html[data-tft-reply-summary="on"] span[data-testid="total-replies-link"] {
     color: rgb(29, 155, 209) !important;
     text-decoration-color: rgb(29, 155, 209) !important;
     font-weight: 400 !important;
 }
-a:hover {
+html[data-tft-link-style="blue"] a,
+html[data-tft-link-style="blue"] a:link,
+html[data-tft-link-style="blue"] .ui-link {
+    color: rgb(29, 155, 209) !important;
+    text-decoration-color: rgb(29, 155, 209) !important;
+    font-weight: 400 !important;
+}
+html[data-tft-link-style="blue"] a:hover {
     color: rgb(64, 179, 228) !important;
     text-decoration-color: rgb(64, 179, 228) !important;
 }
 
-div[data-testid="simple-collab-rail"] {
+html[data-tft-rounded-list="on"] div[data-testid="simple-collab-rail"] {
     border-top-left-radius: 16px !important;
+}
+/* Start the app bar's separator below the rail's rounded corner */
+html[data-tft-rounded-list="on"] div[data-tid="slot-measurer"]:has([data-tid="app-bar-wrapper"])::after {
+    top: 16px !important;
 }
 
 /* Always Blue Links */
-.fui-FluentProvider {
+html[data-tft-link-style="blue"] .fui-FluentProvider {
     --colorStrokeFocus2: transparent !important;
     --colorBrandForeground1: #2784ff !important;
     --colorBrandForeground2: #2784ff !important;
@@ -193,37 +169,32 @@ div[data-testid="simple-collab-rail"] {
     --colorBrandForegroundLinkSelected: #2784ff !important;
 }
 
-/* Indent replies preview, blue left border */
-div[data-tid="response-surface"] {
-    margin-left: 22px;
+/* Blue left border ties the replies summary to its message */
+html[data-tft-reply-summary="on"] div[data-testid="replies_summary_container_wrapper"] {
     border-left: 3px solid #2684ff !important;
-}
-/* Move 'Open X replies from...' to end */
-div[data-tid="response-surface"] > div:first-child {
-    order: 999 !important;
+    padding-left: 8px !important;
 }
 
 /* Left border for embedded content and replies preview */
-div[data-testid="componentUXWrapperTestId"] {
+html[data-tft-cards="on"] div[data-testid="componentUXWrapperTestId"] {
     margin-top: 1em;
 }
-div[data-tid="adaptive-card"] {
+html[data-tft-cards="on"] div[data-tid="adaptive-card"] {
     margin: 0 !important;
     border: 1px solid #333;
     border-radius: 4px;
 }
-div[data-tid="adaptive-card"]:hover {
+html[data-tft-cards="on"] div[data-tid="adaptive-card"]:hover {
     background-color: var(--colorNeutralBackground1Hover) !important;
 }
-div[data-tid="message-extension-card-footer"],
-div[data-tid="card-action-failure"] {
+html[data-tft-cards="on"] div[data-tid="message-extension-card-footer"],
+html[data-tft-cards="on"] div[data-tid="card-action-failure"] {
     font-size: 80% !important;
 }
 
 /* Better Emojis */
 /* Light Mode - Teams' theme-defaultV2 */
-html.theme-defaultV2 :root,
-html.theme-defaultV2 .fui-FluentProvider {
+html.theme-defaultV2[data-tft-reactions="on"] .fui-FluentProvider {
     button[data-tid="add-reaction-picker-entry-point-button"],
     button[data-tid="diverse-reaction-pill-button"] {
         border: none !important;
@@ -234,92 +205,227 @@ html.theme-defaultV2 .fui-FluentProvider {
     }
 }
 /* Better Dark Mode Emojis */
-html.theme-darkV2 :root,
-html.theme-darkV2 .fui-FluentProvider {
+html.theme-darkV2[data-tft-reactions="on"] .fui-FluentProvider {
     button[data-tid="diverse-reaction-pill-button"] {
         border: none !important;
         background: #282a2e !important;
     }
 }
 
-/* Fix replies width so emojis can be used */
-div[id*="message-body-"] {
-    max-width: 100% !important;
-}
-
-/* Active/Selected Items */
-.selected,
-.active,
-.is-selected,
-[aria-selected="true"] {
-    border-left-color: var(--colorBrandForeground1) !important;
-}
-
-/* Center the 'See all your teams' Link */
-div[data-tid="see-all-teams-button"] {
-    text-align: center !important;
-}
-
 /* Better code blocks */
-code {
+html[data-tft-code-size="85"] code {
     font-size: 85% !important;
+}
+html[data-tft-code-colors="on"] code {
     color: #e8912d !important;
     padding: 0 3px !important;
     border-color: rgba(232, 232, 232, 0.13) !important;
 }
 /* inline code only — block code inherits Teams' line-height so numbers don't drift */
-:not(pre) > code {
+html[data-tft-code-colors="on"] :not(pre) > code {
     line-height: 1.8 !important;
 }
-pre code {
+html[data-tft-code-colors="on"] pre code {
     color: #fff !important;
 }
-/* Fix line numbers overlapping code — Teams removed this padding, restore it stably */
+/* Line numbers overlap code without this padding - always on, a fix rather than a preference */
 pre[itemid^="codeBlockEditor"] {
     padding: 14px 12px 8px 54px !important;
 }
 /* "strings" */
-code .hljs-string {
+html[data-tft-code-colors="on"] code .hljs-string {
     color: #e6db74 !important;
 }
 /* const, let, function, etc. */
-code .hljs-keyword {
+html[data-tft-code-colors="on"] code .hljs-keyword {
     color: #00a7aa !important
 }
 /* function names */
-.hljs-function {
+html[data-tft-code-colors="on"] .hljs-function {
     color: #98e342 !important;
 }
 
 /* Border around images - b/c if image has blank area above/below, it looks like
    teams is padding it */
-div[data-tid="rich-file-preview-image"] {
+html[data-tft-image-border="on"] div[data-tid="rich-file-preview-image"] {
     border: 1px solid #333;
 }
 
 /* Improved Notifications */
-div[data-testid="notification-wrapper"] {
+html[data-tft-notifications="on"] div[data-testid="notification-wrapper"] {
     opacity: 0.95 !important;
 }
 
 /* Show all filters without silly expand arrow  */
-.fui-Overflow {
+html[data-tft-filters="on"] .fui-Overflow {
     flex-wrap: wrap !important;
 }
-div[data-testid="simple-collab-left-rail-sticky-filter-v2"] {
+html[data-tft-filters="on"] div[data-testid="simple-collab-left-rail-sticky-filter-v2"] {
     padding-left: 8px !important;
 }
-button[data-testid="simple-collab-left-rail-sticky-filter-collapse-expand-filters-button"] {
+html[data-tft-filters="on"] button[data-testid="simple-collab-left-rail-sticky-filter-collapse-expand-filters-button"] {
     display: none !important;
 }
-div[data-overflow-item] { display: block !important; }
+html[data-tft-filters="on"] div[data-overflow-item] { display: block !important; }
 
 
 /* Get rid of "see More Content" nonsense */ 
-div[id*="see-more-content"] {
+html[data-tft-see-more="on"] div[id*="see-more-content"] {
     overflow-y: auto !important;
     max-height: none !important;
 }
-#see-more-container {
+html[data-tft-see-more="on"] #see-more-container {
     display: none !important;
+}
+
+/* Text size: scale Fluent's type ramp (base values are Fluent v9 constants) */
+html[data-tft-text-size="90"] { --tft-text-scale: 0.9; }
+html[data-tft-text-size="110"] { --tft-text-scale: 1.1; }
+html[data-tft-text-size="120"] { --tft-text-scale: 1.2; }
+html[data-tft-text-size="90"] .fui-FluentProvider,
+html[data-tft-text-size="110"] .fui-FluentProvider,
+html[data-tft-text-size="120"] .fui-FluentProvider {
+    --fontSizeBase100: calc(var(--tft-text-scale) * 10px) !important;
+    --fontSizeBase200: calc(var(--tft-text-scale) * 12px) !important;
+    --fontSizeBase300: calc(var(--tft-text-scale) * 14px) !important;
+    --fontSizeBase400: calc(var(--tft-text-scale) * 16px) !important;
+    --fontSizeBase500: calc(var(--tft-text-scale) * 20px) !important;
+    --fontSizeBase600: calc(var(--tft-text-scale) * 24px) !important;
+    --lineHeightBase100: calc(var(--tft-text-scale) * 14px) !important;
+    --lineHeightBase200: calc(var(--tft-text-scale) * 16px) !important;
+    --lineHeightBase300: calc(var(--tft-text-scale) * 20px) !important;
+    --lineHeightBase400: calc(var(--tft-text-scale) * 22px) !important;
+    --lineHeightBase500: calc(var(--tft-text-scale) * 28px) !important;
+    --lineHeightBase600: calc(var(--tft-text-scale) * 32px) !important;
+}
+
+/* Mentions as chips */
+html[data-tft-mention-style="chip"] span[itemtype="http://schema.skype.com/Mention"] {
+    padding: 0 4px !important;
+    border-radius: 4px !important;
+    background: color-mix(in srgb, currentColor 14%, transparent) !important;
+    font-weight: 600 !important;
+}
+
+/* Teams deep links read as "#channel" */
+html[data-tft-teams-links="on"] a[href*="teams.cloud.microsoft/l/"],
+html[data-tft-teams-links="on"] a[href*="teams.microsoft.com/l/"] {
+    color: var(--colorBrandForeground1) !important;
+    text-decoration: none !important;
+}
+html[data-tft-teams-links="on"] a[href*="teams.cloud.microsoft/l/"]::before,
+html[data-tft-teams-links="on"] a[href*="teams.microsoft.com/l/"]::before {
+    content: "#";
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+/* Arrow after links that leave Teams */
+html[data-tft-external-icon="on"] [id^="content-"] a[target="_blank"]:not([href*="teams.cloud.microsoft/l/"]):not([href*="teams.microsoft.com/l/"])::after {
+    content: "";
+    display: inline-block;
+    width: 0.8em;
+    height: 0.8em;
+    margin-left: 0.15em;
+    vertical-align: baseline;
+    background-color: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5 3h8v8h-1.5V5.56l-8 7.97-1.06-1.06 7.97-8H5z'/%3E%3C/svg%3E") center / contain no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M5 3h8v8h-1.5V5.56l-8 7.97-1.06-1.06 7.97-8H5z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Compact list rows: chats and channels, not team headers */
+html[data-tft-list-density="compact"] .fui-Tree [role="treeitem"]:not([aria-expanded]) {
+    min-height: 24px !important;
+    margin-bottom: 0 !important;
+}
+html[data-tft-list-density="compact"] .fui-Tree [role="treeitem"]:not([aria-expanded]) > .fui-TreeItemLayout {
+    min-height: 24px !important;
+    height: 24px !important;
+}
+
+/* Hide Copilot buttons in compose, threads and chat (not the app bar) */
+html[data-tft-hide-copilot="on"] button[data-tid="open-compose-copilot"],
+html[data-tft-hide-copilot="on"] button[data-tid="thread-summarize-pill-button"],
+html[data-tft-hide-copilot="on"] button[aria-label="Open Copilot"] {
+    display: none !important;
+}
+
+/* Day dividers: one edge-to-edge hairline, date in an outlined pill */
+html[data-tft-day-dividers="pill"] div[data-tid="message-pane-list-runway"] .fui-Divider[role="heading"] {
+    position: relative !important;
+}
+html[data-tft-day-dividers="pill"] div[data-tid="message-pane-list-runway"] .fui-Divider[role="heading"]::before {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 50% !important;
+    margin: 0 !important;
+}
+html[data-tft-day-dividers="pill"] div[data-tid="message-pane-list-runway"] .fui-Divider[role="heading"]::after {
+    display: none !important;
+}
+html[data-tft-day-dividers="pill"] div[data-tid="message-pane-list-runway"] .fui-Divider[role="heading"] > .fui-Divider__wrapper {
+    position: relative !important;
+    margin: 0 auto !important;
+    padding: 2px 12px !important;
+    border: 1px solid var(--colorNeutralStroke1) !important;
+    border-radius: 999px !important;
+    background: var(--colorNeutralBackground1) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+/* Chat background: a faint neutral pattern behind messages, thread feeds and empty panes */
+html[data-tft-wallpaper="doodles"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' fill='none' stroke='%23808080' stroke-opacity='0.12' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'><path d='M14 18h28a6 6 0 0 1 6 6v14a6 6 0 0 1-6 6H26l-8 7v-7h-4a6 6 0 0 1-6-6V24a6 6 0 0 1 6-6z'/><path d='M112 14l4 9 10 1-7.5 6.5 2.5 9.5-9-5-9 5 2.5-9.5L98 24l10-1z'/><path d='M40 118c-12-8-16-14-16-20a8 8 0 0 1 16-3 8 8 0 0 1 16 3c0 6-4 12-16 20z'/><path d='M92 90h22v14a8 8 0 0 1-8 8h-6a8 8 0 0 1-8-8zM114 94h4a5 5 0 0 1 0 10h-4'/><path d='M70 54v14M63 61h14'/><path d='M136 48l-10 14h8l-4 12 12-16h-8l4-10z'/><path d='M8 146q8-8 16 0t16 0t16 0'/><circle cx='142' cy='136' r='7'/><circle cx='84' cy='140' r='2.5'/><circle cx='22' cy='74' r='2.5'/></svg>") !important;
+}
+html[data-tft-wallpaper="dots"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image: radial-gradient(rgba(128, 128, 128, 0.22) 1px, transparent 1.6px) !important;
+    background-size: 18px 18px !important;
+}
+html[data-tft-wallpaper="grid"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image:
+        linear-gradient(rgba(128, 128, 128, 0.09) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(128, 128, 128, 0.09) 1px, transparent 1px) !important;
+    background-size: 24px 24px !important;
+}
+html[data-tft-wallpaper="honeycomb"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='56' height='100' fill='none' stroke='%23808080' stroke-opacity='0.12' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M28 66L0 50V16L28 0l28 16v34zM28 66v34'/></svg>") !important;
+}
+html[data-tft-wallpaper="waves"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='24' fill='none' stroke='%23808080' stroke-opacity='0.12' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M0 12q10-10 20 0t20 0 20 0 20 0'/></svg>") !important;
+}
+html[data-tft-wallpaper="plus"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' stroke='%23808080' stroke-opacity='0.12' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M16 11v10M11 16h10'/></svg>") !important;
+}
+html[data-tft-wallpaper="confetti"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120' fill='none' stroke='%23808080' stroke-opacity='0.12' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M14 20l8 4M70 14l4 8M100 40l-6 6M30 70l10-2M84 82l2 9M54 104l-8 3M108 102l5-6'/><circle cx='48' cy='40' r='3'/><circle cx='96' cy='66' r='2.5'/><circle cx='18' cy='100' r='2.5'/><path d='M62 62l4 7h-8z'/><path d='M8 48h6v6H8z'/></svg>") !important;
+}
+
+html[data-tft-wallpaper="tartan"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image:
+        repeating-linear-gradient(0deg, rgba(128, 128, 128, 0.06) 0 6px, transparent 6px 22px, rgba(128, 128, 128, 0.04) 22px 24px, transparent 24px 40px),
+        repeating-linear-gradient(90deg, rgba(128, 128, 128, 0.06) 0 6px, transparent 6px 22px, rgba(128, 128, 128, 0.04) 22px 24px, transparent 24px 40px) !important;
+}
+html[data-tft-wallpaper="arabesque"] :is(div[data-tid="app-layout-area--main"], div[data-tid="app-layout-area--sub-nav"]) div[data-tid="slot-measurer"] {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='80' fill='none' stroke='%23808080' stroke-opacity='0.12' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'><path d='M20 0c26.7 13.3 26.7 26.7 0 40s-26.7 26.7 0 40M20 0c-26.7 13.3-26.7 26.7 0 40s26.7 26.7 0 40'/></svg>") !important;
+}
+
+/* Glass: with a chat background on, cards, previews, code and bubbles turn translucent so the pattern shows through.
+   Scoped to those surfaces: avatars and other chrome keep solid backgrounds. */
+html:not([data-tft-wallpaper="none"]) div[data-tid="message-pane-body"] {
+    --tft-glass-1: var(--colorNeutralBackground1);
+    --tft-glass-2: var(--colorNeutralBackground2);
+    --tft-glass-3: var(--colorNeutralBackground3);
+    --tft-glass-card: var(--colorNeutralCardBackground);
+}
+html:not([data-tft-wallpaper="none"]) div[data-tid="message-pane-list-viewport"] :is(div[data-tid="adaptive-card"], div[data-testid="componentUXWrapperTestId"], div[data-tid="url-preview"], pre[itemid^="codeBlockEditor"], .fui-ChatMessage__body, .fui-ChatMyMessage__body),
+html:not([data-tft-wallpaper="none"]) div[data-tid="message-pane-list-viewport"] :is(div[data-tid="adaptive-card"], div[data-testid="componentUXWrapperTestId"], div[data-tid="url-preview"], pre[itemid^="codeBlockEditor"], .fui-ChatMessage__body, .fui-ChatMyMessage__body) .fui-FluentProvider {
+    --colorNeutralBackground1: rgb(from var(--tft-glass-1) r g b / 0.3) !important;
+    --colorNeutralBackground2: rgb(from var(--tft-glass-2) r g b / 0.3) !important;
+    --colorNeutralBackground3: rgb(from var(--tft-glass-3) r g b / 0.3) !important;
+    --colorNeutralCardBackground: rgb(from var(--tft-glass-card) r g b / 0.3) !important;
+}
+html:not([data-tft-wallpaper="none"]) div[data-tid="message-pane-list-viewport"] :is(div[data-tid="adaptive-card"], div[data-testid="componentUXWrapperTestId"], div[data-tid="url-preview"]) {
+    backdrop-filter: blur(1.5px);
 }

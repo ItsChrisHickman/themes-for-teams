@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
+  "minimum_chrome_version": "120",
   "name": "Themes for Teams",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "Custom Styles for Microsoft Teams to boost productivity.",
   "permissions": [
     "storage"
@@ -15,8 +16,14 @@
     {
       "matches": ["*://teams.microsoft.com/v2/*", "*://teams.cloud.microsoft/*"],
       "css": ["styles.css"],
-      "js": ["content.js"],
+      "js": ["settings.js", "content.js"],
       "run_at": "document_start"
+    },
+    {
+      "matches": ["*://teams.microsoft.com/v2/*", "*://teams.cloud.microsoft/*"],
+      "js": ["main-world.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
     }
   ],
   "web_accessible_resources": [
@@ -30,7 +37,8 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "themes-for-teams@goshow.me"
+      "id": "themes-for-teams@goshow.me",
+      "strict_min_version": "128.0"
     }
   }
 }

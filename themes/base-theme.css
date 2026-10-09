@@ -98,14 +98,14 @@
 }
 
 /* ===== DARK MODE - Teams' theme-darkV2 ===== */
-html.theme-darkV2 :root,
 html.theme-darkV2 .fui-FluentProvider {
     /* Neutral Backgrounds - Dark */
     --colorNeutralBackground1: rgb(26, 29, 33) !important;
     --colorNeutralBackground2: rgb(26, 29, 33) !important;
     --colorNeutralBackground3: rgb(26, 29, 33) !important;
-    --colorNeutralBackground4: var(--secondary-brand);
-    --colorNeutralBackground5: var(--primary-pressed);
+    /* Quiet surfaces (app bar flyout and similar) take the darkest palette tints, as light mode takes the lightest */
+    --colorNeutralBackground4: rgb(var(--theme-color-90)) !important;
+    --colorNeutralBackground5: rgb(var(--theme-color-100)) !important;
     --colorNeutralCardBackground: rgb(26, 29, 33) !important;
     --colorNeutralBackground1Hover: rgb(255, 255, 255, .03) !important;
     --colorNeutralBackground4Selected: transparent !important;
@@ -132,8 +132,12 @@ html.theme-darkV2 .fui-FluentProvider {
     --gradient-color-20: var(--theme-color-100);
 }
 
+/* Navigation columns (chat list, Followed threads and other feeds) share the darkest tint; the reading pane stays neutral */
+html.theme-darkV2 div[data-tid="app-layout-area--sub-nav"] div[data-tid="slot-measurer"] {
+    background-color: var(--colorDefaultBackground7) !important;
+}
+
 /* ===== LIGHT MODE - Teams' theme-defaultV2 ===== */
-html.theme-defaultV2 :root,
 html.theme-defaultV2 .fui-FluentProvider {
     /* Neutral Backgrounds - Light */
     --colorNeutralBackground1: #ffffff !important;
@@ -185,7 +189,8 @@ html.theme-defaultV2 .fui-FluentProvider {
     }
 
     div[data-testid="simple-collab-rail"],
-    div[data-tid="app-layout-area--mid-nav"] {
+    div[data-tid="app-layout-area--mid-nav"],
+    div[data-tid="app-layout-area--sub-nav"] div[data-tid="slot-measurer"] {
         background-color: var(--colorDefaultBackground2) !important;
     }
 
@@ -209,15 +214,9 @@ div[data-tid="experience-layout"] {
 }
 
 /* Allow Gradient Background  */
-button[data-tid="post-new-message-type"],
 div[data-tid="app-layout-area--nav"],
 div[data-tid="app-bar-wrapper"]>div,
 div[data-tid="app-layout-area--header"],
 div[data-tid="title-bar"] {
     background-color: transparent !important;
-}
-
-button[data-tid="post-new-message-type"],
-button[data-tid="quick-reply-placeholder-reply"] {
-    color: var(--colorBrandForeground2) !important;
 }
